@@ -1,5 +1,8 @@
 package mos;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
 /**
  * Created by A00990307 on 01/07/2016.
  */
@@ -8,18 +11,18 @@ public class Spot {
     private int y;
     Piece piece;
 
-    public void Spot(Piece piece, int x, int y) {
+    public Spot(int x, int y) {
         this.x = x;
         this.y = y;
-        this.piece = piece;
+        this.piece = null;
     }
 
-    public int getX()
+    public int get_X()
     {
         return this.x;
     }
 
-    public int getY()
+    public int get_Y()
     {
         return this.y;
     }

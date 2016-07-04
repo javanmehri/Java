@@ -28,12 +28,12 @@ public class Piece {
     private int color = Black;
     private Spot spot = null;
 
-    public void Piece(Spot spot, int color, boolean available) {
+    public Piece(Spot spot, int color) {
         this.spot = spot;
         if (color == this.Black | color == this.White) {
             this.color = color;
         }
-        this.available = available;
+        this.available = true;
     }
 
     public boolean isAvailable() {
@@ -55,10 +55,10 @@ public class Piece {
     }
 
     public  boolean isValidMove(Spot toSpot){
-        int fromX = this.getSpot().getX();
-        int fromY = this.getSpot().getY();
-        int toX = toSpot.getX();
-        int toY = toSpot.getY();
+        int fromX = this.getSpot().get_Y();
+        int fromY = this.getSpot().get_Y();
+        int toX = toSpot.get_X();
+        int toY = toSpot.get_Y();
 
         if(toX == fromX && toY == fromY)
             return false; //cannot move nothing

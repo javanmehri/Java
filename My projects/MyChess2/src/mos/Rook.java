@@ -5,16 +5,22 @@ package mos;
  */
 public class Rook extends Piece {
 
+    public Rook(Spot spot, int color)
+    {
+        super(spot, color);
+    }
+
+
     @Override
     public boolean isValidMove(Spot toSpot) {
 
         if (super.isValidMove(toSpot))
         {
             //...
-            int fromX = this.getSpot().getX();
-            int fromY = this.getSpot().getY();
-            int toX = toSpot.getX();
-            int toY = toSpot.getY();
+            int fromX = this.getSpot().get_X();
+            int fromY = this.getSpot().get_Y();
+            int toX = toSpot.get_X();
+            int toY = toSpot.get_Y();
 
             if (toX == fromX && toY != fromY)
             {
