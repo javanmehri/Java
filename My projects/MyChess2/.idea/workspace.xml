@@ -150,12 +150,12 @@
       <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1841#1842#0" expanded="true" />
+                <element signature="e#1801#1802#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,8 +164,8 @@
       <file leaf-file-name="Img.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -204,12 +204,12 @@
         <option value="$PROJECT_DIR$/src/mos/Queen.java" />
         <option value="$PROJECT_DIR$/src/mos/Rook.java" />
         <option value="$PROJECT_DIR$/src/mos/King.java" />
-        <option value="$PROJECT_DIR$/src/mos/Img.java" />
         <option value="$PROJECT_DIR$/src/mos/Board.java" />
         <option value="$PROJECT_DIR$/src/mos/Spot.java" />
         <option value="$PROJECT_DIR$/src/mos/Piece.java" />
         <option value="$PROJECT_DIR$/src/mos/Game.java" />
         <option value="$PROJECT_DIR$/src/mos/Player.java" />
+        <option value="$PROJECT_DIR$/src/mos/Img.java" />
         <option value="$PROJECT_DIR$/src/mos/MainStageController.java" />
       </list>
     </option>
@@ -1096,14 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/King.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1165,14 +1157,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
           </folding>
         </state>
       </provider>

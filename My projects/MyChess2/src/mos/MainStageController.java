@@ -11,7 +11,7 @@ public class MainStageController {
 
 
     @FXML
-    private ImageView A1 = new ImageView(Img.black_Rook);
+    private ImageView A1 = new ImageView(Img.Tile_White);
 
     private ImageView[][] imageViewsBoard = new ImageView[8][8];
 
@@ -42,7 +42,7 @@ public class MainStageController {
     private void moveIn()
     {
 
-        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.white_Rook);
+        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.King_W_in_W);
         rec.setStrokeWidth(3);
         rec.setStroke(Paint.valueOf("Blue"));
         //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
@@ -55,7 +55,7 @@ public class MainStageController {
     private void moveOut()
     {
 
-        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.black_Rook);
+        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.King_B_in_W);
         rec.setStrokeWidth(1);
         rec.setStroke(Paint.valueOf("Black"));
     }
@@ -77,7 +77,7 @@ public class MainStageController {
 
         if (game.getBoard().getSpot(0,0).getPiece().getPieceType() == Piece.Type.KING)
         {
-            imageViewsBoard[0][0].setImage(Img.black_King);
+            imageViewsBoard[0][0].setImage(Img.Tile_Black);
         }
 
 
