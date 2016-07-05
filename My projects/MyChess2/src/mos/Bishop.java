@@ -5,9 +5,9 @@ package mos;
  */
 public class Bishop extends Piece {
 
-    public Bishop(Spot spot, int color)
+    public Bishop(int color)
     {
-        super(spot, color);
+        super(color);
     }
 
 

@@ -21,15 +21,17 @@ package mos;
 
 public class Piece {
 
-    public final int Black = 0;
-    public final int White = 1;
+    public static final int Black = 0;
+    public static final int White = 1;
+    public enum Type { PAWN , KING }
 
+    private Type pieceType;
     private boolean available = true;
     private int color = Black;
     private Spot spot = null;
 
-    public Piece(Spot spot, int color) {
-        this.spot = spot;
+    public Piece(int color) {
+
         if (color == this.Black | color == this.White) {
             this.color = color;
         }
@@ -39,6 +41,10 @@ public class Piece {
     public boolean isAvailable() {
         return available;
     }
+
+    public void setPieceType(Type type) { this.pieceType = type; }
+
+    public Type getPieceType() { return this.pieceType; }
 
     public void setAvailable(boolean available) {
         this.available = available;

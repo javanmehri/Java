@@ -5,9 +5,10 @@ package mos;
  */
 public class King extends Piece {
 
-    public King(Spot spot, int color)
+    public King(int color)
     {
-        super(spot, color);
+        super(color);
+        this.setPieceType(Type.KING);
     }
 
     @Override

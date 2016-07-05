@@ -5,9 +5,9 @@ package mos;
  */
 public class Rook extends Piece {
 
-    public Rook(Spot spot, int color)
+    public Rook(int color)
     {
-        super(spot, color);
+        super(color);
     }
 
 

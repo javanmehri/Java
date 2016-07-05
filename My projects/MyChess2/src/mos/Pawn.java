@@ -5,9 +5,9 @@ package mos;
  */
 public class Pawn extends Piece {
 
-    public Pawn(Spot spot, int color)
+    public Pawn(int color)
     {
-        super(spot, color);
+        super(color);
     }
 
 

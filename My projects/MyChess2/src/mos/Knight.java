@@ -5,9 +5,9 @@ package mos;
  */
 public class Knight extends Piece {
 
-    public Knight(Spot spot, int color)
+    public Knight(int color)
     {
-        super(spot, color);
+        super(color);
     }
 
 

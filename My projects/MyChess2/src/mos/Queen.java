@@ -5,9 +5,9 @@ package mos;
  */
 public class Queen extends Piece {
 
-    public Queen(Spot spot, int color)
+    public Queen(int color)
     {
-        super(spot, color);
+        super(color);
     }
 
 

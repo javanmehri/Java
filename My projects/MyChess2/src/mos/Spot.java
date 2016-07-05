@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
  * Created by A00990307 on 01/07/2016.
  */
 public class Spot {
+
     private int x;
     private int y;
     Piece piece;
@@ -27,13 +28,18 @@ public class Spot {
         return this.y;
     }
 
+    public Piece getPiece() { return piece;}
+
     public void occupy(Piece piece){
         //if piece already here, delete it, i. e. set it dead
+        /*
         if(this.piece != null && this.piece.getColor()!= piece.getColor()) {
             this.piece.setAvailable(false);
             //place piece here
             this.piece = piece;
         }
+        */
+        this.piece = piece;
     }
 
     public boolean isOccupied() {

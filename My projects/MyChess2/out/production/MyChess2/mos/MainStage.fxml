@@ -20,15 +20,15 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="400.0">
          <children>
-            <ImageView fx:id="A1" fitHeight="65.0" fitWidth="82.0" layoutX="156.0" layoutY="141.0" onMouseEntered="#move" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="A1_ImageView" fitHeight="65.0" fitWidth="82.0" layoutX="156.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                <viewport>
                   <Rectangle2D />
                </viewport>
                <image>
-                  <Image url="@black_Rook.png" />
+                  <Image url="@../../img/black_Rook.png" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="92.0" layoutX="144.0" layoutY="127.0" onMouseEntered="#move" stroke="BLACK" strokeType="INSIDE" width="91.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="92.0" layoutX="144.0" layoutY="127.0" onMouseEntered="#moveIn" onMouseExited="#moveOut" stroke="BLACK" strokeType="INSIDE" width="91.0" />
          </children>
          <GridPane.margin>
             <Insets />
