@@ -31,9 +31,7 @@ public class MainStageController {
     @FXML
     private void initialize()
     {
-        game = new Game();
-
-        //game.start();
+        game = new Game("Player 1", "Player 2");
 
         setUpTheBoard();
 
@@ -93,7 +91,7 @@ public class MainStageController {
 
         //game.getBoard().getSpot(0,0).getPiece().getPieceType();
 
-        System.out.println(piece.getPieceType());
+        //System.out.println(piece.getPieceType());
 
         if (piece.getPieceType() == Piece.Type.ROOK)
         {
