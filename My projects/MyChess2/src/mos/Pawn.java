@@ -5,9 +5,10 @@ package mos;
  */
 public class Pawn extends Piece {
 
-    public Pawn(int color)
+    public Pawn(Color color)
     {
         super(color);
+        this.setPieceType(Type.PAWN);
     }
 
 

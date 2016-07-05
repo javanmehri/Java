@@ -10,8 +10,14 @@ import javafx.scene.shape.Rectangle;
 public class MainStageController {
 
 
+    // ----------------------------------------------------
     @FXML
     private ImageView A1 = new ImageView(Img.Tile_White);
+
+    @FXML
+    Rectangle rec = new Rectangle();
+
+    // ----------------------------------------------------
 
     private ImageView[][] imageViewsBoard = new ImageView[8][8];
 
@@ -21,15 +27,14 @@ public class MainStageController {
 
     ColorAdjust colorAdjustSelect = new ColorAdjust();
 
-    @FXML
-    Rectangle rec = new Rectangle();
-
+    // ----------------------------------------------------
     @FXML
     private void initialize()
     {
-
         game = new Game();
-        game.start();
+
+        //game.start();
+
         setUpTheBoard();
 
         updateTheBoard();
@@ -42,7 +47,7 @@ public class MainStageController {
     private void moveIn()
     {
 
-        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.King_W_in_W);
+        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_Black);
         rec.setStrokeWidth(3);
         rec.setStroke(Paint.valueOf("Blue"));
         //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
@@ -55,11 +60,12 @@ public class MainStageController {
     private void moveOut()
     {
 
-        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.King_B_in_W);
+        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_White);
         rec.setStrokeWidth(1);
         rec.setStroke(Paint.valueOf("Black"));
     }
 
+    // ----------------------------------------------------
     private ImageView getImageViewOfSpot(Spot spot)
     {
         int x = spot.get_X();
@@ -68,24 +74,33 @@ public class MainStageController {
     }
 
 
-
-    private void updateTheBoard()
-    {
-
-        //game.getBoard().getSpot(0,0).getPiece().getPieceType();
-
-
-        if (game.getBoard().getSpot(0,0).getPiece().getPieceType() == Piece.Type.KING)
-        {
-            imageViewsBoard[0][0].setImage(Img.Tile_Black);
-        }
-
-
-    }
-
     private void setUpTheBoard()
     {
         imageViewsBoard[0][0] = A1;
     }
+
+
+    private void updateTheBoard()
+    {
+        Spot spot;
+        Piece piece;
+        ImageView imageViewOfSpot;
+
+        spot = game.getBoard().getSpot(0,0);
+        imageViewOfSpot = getImageViewOfSpot(spot);
+        piece = spot.getPiece();
+
+
+        //game.getBoard().getSpot(0,0).getPiece().getPieceType();
+
+        System.out.println(piece.getPieceType());
+
+        if (piece.getPieceType() == Piece.Type.ROOK)
+        {
+            imageViewOfSpot.setImage(Img.Rook_W_in_W);
+        }
+
+    }
+
 
 }

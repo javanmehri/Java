@@ -10,13 +10,19 @@ public class Game {
     private Player player1;
     private Player player2;
 
-    private King king_B = new King(Piece.Black);
-    private King king_W = new King(Piece.White);
+    private King king_B = new King(Piece.Color.BLACK);
+    private King king_W = new King(Piece.Color.WHITE);
 
     public Game()
     {
-        super();
         board = new Board();
+
+        player1 = new Player("Player 1", Piece.Color.WHITE);
+        player2 = new Player("Player 2", Piece.Color.BLACK);
+
+        board = player1.setUpPieces(board);
+        board= player2.setUpPieces(board);
+
         //king_B.setPieceType(Piece.Type.KING);
 
     }
@@ -35,7 +41,7 @@ public class Game {
 
     public void start()
     {
-        board.occupySpot(king_B, 0 ,0 );
+        //board.occupySpot(king_B, 0 ,0 );
         //System.out.println(king_B.getPieceType());
         //System.out.println(board.getSpot(0,0).getPiece());
     }

@@ -21,20 +21,17 @@ package mos;
 
 public class Piece {
 
-    public static final int Black = 0;
-    public static final int White = 1;
-    public enum Type { PAWN , KING, QUEEN, KNIGHT, ROOK, BISHOP }
+    public static enum Type { PAWN , KING, QUEEN, KNIGHT, ROOK, BISHOP }
+    public static enum Color { WHITE, BLACK}
 
     private Type pieceType;
+    private Color color;
     private boolean available = true;
-    private int color = Black;
     private Spot spot = null;
 
-    public Piece(int color) {
+    public Piece(Color color) {
 
-        if (color == this.Black | color == this.White) {
-            this.color = color;
-        }
+        this.color = color;
         this.available = true;
     }
 
@@ -50,13 +47,13 @@ public class Piece {
         this.available = available;
     }
 
-    public int getColor(){ return this.color; }
+    public Color getColor(){ return this.color; }
 
     public Spot getSpot() {
         return spot;
     }
 
-    private void setSpot(Spot spot) {
+    public void setSpot(Spot spot) {
         this.spot = spot;
     }
 

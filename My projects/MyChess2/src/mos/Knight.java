@@ -5,9 +5,10 @@ package mos;
  */
 public class Knight extends Piece {
 
-    public Knight(int color)
+    public Knight(Color color)
     {
         super(color);
+        this.setPieceType(Type.KNIGHT);
     }
 
 

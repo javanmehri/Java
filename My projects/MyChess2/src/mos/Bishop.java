@@ -5,9 +5,10 @@ package mos;
  */
 public class Bishop extends Piece {
 
-    public Bishop(int color)
+    public Bishop(Color color)
     {
         super(color);
+        this.setPieceType(Type.BISHOP);
     }
 
 

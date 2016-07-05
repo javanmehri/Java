@@ -10,7 +10,7 @@ public class Spot {
 
     private int x;
     private int y;
-    Piece piece;
+    private Piece piece;
 
     public Spot(int x, int y) {
         this.x = x;

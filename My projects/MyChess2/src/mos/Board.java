@@ -27,7 +27,9 @@ public class Board {
     public void occupySpot(Piece piece, int i, int j)
 
     {
-        getSpot(i,j).occupy(piece);
+        Spot spot = getSpot(i, j);
+        spot.occupy(piece);
+        piece.setSpot(spot);
     }
 
 
