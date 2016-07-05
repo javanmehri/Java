@@ -1,15 +1,17 @@
 package mos;
 
 import javafx.fxml.FXML;
+import javafx.scene.effect.ColorAdjust;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Rectangle;
 
 public class MainStageController {
 
 
-
-
     @FXML
-    private ImageView A1_ImageView = new ImageView(Img.black_Rook);
+    private ImageView A1 = new ImageView(Img.black_Rook);
 
     private ImageView[][] imageViewsBoard = new ImageView[8][8];
 
@@ -17,12 +19,18 @@ public class MainStageController {
 
     private Game game;
 
+    ColorAdjust colorAdjustSelect = new ColorAdjust();
+
+    @FXML
+    Rectangle rec = new Rectangle();
+
     @FXML
     private void initialize()
     {
 
         game = new Game();
         game.start();
+        setUpTheBoard();
 
         updateTheBoard();
 
@@ -35,6 +43,9 @@ public class MainStageController {
     {
 
         getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.white_Rook);
+        rec.setStrokeWidth(3);
+        rec.setStroke(Paint.valueOf("Blue"));
+        //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
         //A1.setImage(Img.white_Rook);
         //A1.setLayoutX(5);
 
@@ -43,7 +54,10 @@ public class MainStageController {
     @FXML
     private void moveOut()
     {
+
         getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.black_Rook);
+        rec.setStrokeWidth(1);
+        rec.setStroke(Paint.valueOf("Black"));
     }
 
     private ImageView getImageViewOfSpot(Spot spot)
@@ -57,9 +71,9 @@ public class MainStageController {
 
     private void updateTheBoard()
     {
-        imageViewsBoard[0][0] = A1_ImageView;
 
         //game.getBoard().getSpot(0,0).getPiece().getPieceType();
+
 
         if (game.getBoard().getSpot(0,0).getPiece().getPieceType() == Piece.Type.KING)
         {
@@ -69,6 +83,9 @@ public class MainStageController {
 
     }
 
-    //private void setUpTheBoard()  { }
+    private void setUpTheBoard()
+    {
+        imageViewsBoard[0][0] = A1;
+    }
 
 }

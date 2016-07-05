@@ -7,11 +7,11 @@ public class Game {
 
     private Board board;
 
-    private Player player_W;
-    private Player player_B;
+    private Player player1;
+    private Player player2;
 
-    public King king_B = new King(Piece.Black);
-    public King king_W = new King(Piece.White);
+    private King king_B = new King(Piece.Black);
+    private King king_W = new King(Piece.White);
 
     public Game()
     {
@@ -21,13 +21,13 @@ public class Game {
 
     }
 
-    public void setBlackPlayer(Player player) { this.player_B = player; }
+    public void setPlayer1(Player player) { this.player1 = player; }
 
-    public void setWhitePlayer(Player player) { this.player_W = player; }
+    public void setPlayer2(Player player) { this.player2 = player; }
 
-    public Player getBlackPlayer() { return player_B; }
+    public Player getPlayer1() { return player1; }
 
-    public Player getWhitePlayer() { return player_W; }
+    public Player getPlayer2() { return player2; }
 
     public Board getBoard() { return board; }
 

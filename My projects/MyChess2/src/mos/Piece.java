@@ -23,7 +23,7 @@ public class Piece {
 
     public static final int Black = 0;
     public static final int White = 1;
-    public enum Type { PAWN , KING }
+    public enum Type { PAWN , KING, QUEEN, KNIGHT, ROOK, BISHOP }
 
     private Type pieceType;
     private boolean available = true;
