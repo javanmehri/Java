@@ -45,7 +45,10 @@ public class MainStageController {
 
     private Game game;
 
-    ColorAdjust colorAdjustSelect = new ColorAdjust();
+    private Paint paint_DeSelect = Paint.valueOf("#e121ff00");
+    private Paint paint_Select = Paint.valueOf("#de21ff66");
+
+    //ColorAdjust colorAdjustSelect = new ColorAdjust();
 
     // ----------------------------------------------------
     @FXML
@@ -73,13 +76,13 @@ public class MainStageController {
         //System.out.println(rec.getFill().equals(Paint.valueOf("#e521ff1f")));
         rectangle = (Rectangle) event.getSource();
 
-        if (rectangle.getFill().equals(Paint.valueOf("#e521ff1f")))
+        if (rectangle.getFill().equals(paint_DeSelect))
         {
-            rectangle.setFill(Paint.valueOf("#e121ff00"));
+            rectangle.setFill(paint_Select);
         }
         else
         {
-            rectangle.setFill(Paint.valueOf("#e521ff1f"));
+            rectangle.setFill(paint_DeSelect);
         }
         //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
         //A1.setImage(Img.white_Rook);

@@ -126,14 +126,14 @@
       <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+            <state relative-caret-position="405">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-                <element signature="e#2641#2642#0" expanded="true" />
-                <element signature="e#2673#2674#0" expanded="true" />
+                <element signature="e#2730#2731#0" expanded="true" />
+                <element signature="e#2762#2763#0" expanded="true" />
                 <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#updateTheBoard#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
@@ -1179,14 +1179,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
             <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="e#2641#2642#0" expanded="true" />
-            <element signature="e#2673#2674#0" expanded="true" />
+            <element signature="e#2730#2731#0" expanded="true" />
+            <element signature="e#2762#2763#0" expanded="true" />
             <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#updateTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
