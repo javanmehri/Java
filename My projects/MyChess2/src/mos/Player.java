@@ -69,4 +69,13 @@ public class Player {
 
     public Piece[] getPieceBag() { return pieceBag; }
 
+
+    public Board move(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
+    {
+        Piece piece = chessBoard.removePiece(from_i,from_j);
+        chessBoard.occupySpot(piece,to_i,to_j);
+
+        return chessBoard;
+    }
+
 }

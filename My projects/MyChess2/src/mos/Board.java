@@ -32,5 +32,12 @@ public class Board {
         piece.setSpot(spot);
     }
 
+    public Piece removePiece(int i, int j)
+    {
+        Spot spot = this.getSpot(i,j);
+        Piece piece = spot.getPiece();
+        spot.occupy(null);
+        return piece;
+    }
 
 }

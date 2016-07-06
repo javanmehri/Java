@@ -224,7 +224,7 @@ public class MainStageController {
 
     private ImageView[][] imageViewsBoard = new ImageView[8][8];
 
-    private Board board = new Board();
+    //private Board board = new Board();
 
     private Game game;
 
@@ -249,17 +249,17 @@ public class MainStageController {
     private void mouseClick(Event event)
     {
         //System.out.println("click");
+        ImageView selected = (ImageView)event.getSource();
         if (isAnyPieceSelected == false)
             select(event);
 
         else if (isAnyPieceSelected == true )
-            if (selectedPiece == (ImageView)event.getSource())
+            if (selectedPiece == selected)
                 de_select();
 
         else if (isAnyPieceSelected == true)
-            if (selectedPiece != (ImageView)event.getSource())
+            if (selectedPiece != selected && isImageViewEmpty(selected))
             {
-                de_select();
                 select(event);
             }
     }
@@ -375,8 +375,7 @@ public class MainStageController {
         {
             for(int j = 0; j<8; j++)
             {
-                if (!board.getSpot(i,j).isOccupied())
-                {
+
                     if ((i+j)%2 == 0)
                     {
                         imageViewsBoard[i][j].setImage(Img.Tile_Black);
@@ -386,7 +385,7 @@ public class MainStageController {
                         imageViewsBoard[i][j].setImage(Img.Tile_White);
                     }
 
-                }
+
             }
         }
     }
@@ -424,6 +423,13 @@ public class MainStageController {
                     update_Spot_On_Screen(imageViewOfSpot, type, pieceColor, backgroundColor);
 
                 }
+                else
+                {
+                    if(backgroundColor== Piece.Color.BLACK)
+                        imageViewOfSpot.setImage(Img.Tile_Black);
+                    else
+                        imageViewOfSpot.setImage(Img.Tile_White);
+                }
 
             }
         }
@@ -439,6 +445,7 @@ public class MainStageController {
 
     private void select(Event event)
     {
+        //System.out.println(" > Select :  i = "+get_XIndex(selectedPiece));
 
         if (!isAnyPieceSelected && !isImageViewEmpty((ImageView)event.getSource()))
         {
@@ -447,11 +454,22 @@ public class MainStageController {
             isAnyPieceSelected = true;
             System.out.println("Select");
         }
-        else if (isAnyPieceSelected)
+        else if (isAnyPieceSelected && isImageViewEmpty((ImageView)event.getSource()))
         {
             moveToSopt = (ImageView)event.getSource();
+            System.out.println("Select moveTo");
+            System.out.println(" > Select : i ="+get_XIndex(selectedPiece)+ "  j = "+get_YIndex(selectedPiece) );
+            System.out.println(" > Select move to : i ="+get_XIndex(moveToSopt)+ "  j = "+get_YIndex(moveToSopt) );
+
+            //System.out.println(get_XIndex(moveToSopt));
+            move();
+            updateTheBoard();
 
         }
+        //System.out.println(isImageViewEmpty((ImageView)event.getSource()));
+        //System.out.println(isAnyPieceSelected);
+        //System.out.println(selectedPiece.getImage());
+
     }
 
     private boolean isImageViewEmpty(ImageView imageView)
@@ -466,16 +484,68 @@ public class MainStageController {
     {
         selectedPiece.setOpacity(1);
         isAnyPieceSelected = false;
-        //System.out.println("DeSelect");
+        System.out.println("DeSelect");
     }
 
     private void move()
     {
         if (isAnyPieceSelected && moveToSopt!=null)
         {
+            //System.out.println(selectedPiece);
+            Piece.Color color = get_Color_Of(selectedPiece);
+            Player player;
+            if (color == Piece.Color.WHITE)
+                player = game.getPlayer_White();
+            else
+                player = game.getPlayer_Black();
 
+            int from_i = get_XIndex(selectedPiece);
+            int from_j = get_YIndex(selectedPiece);
+            int to_i = get_XIndex(moveToSopt);
+            int to_j = get_YIndex(moveToSopt);
+
+            game.move(player, from_i, from_j, to_i, to_j);
+
+            de_select();
         }
     }
+
+    private int get_XIndex(ImageView imageView)
+    {
+        for (int i =0; i<8; i++)
+            for (int j=0; j<8; j++)
+                if (imageViewsBoard[i][j].equals(imageView))
+                {
+                    return i;
+                }
+
+        return -1;
+    }
+
+    private int get_YIndex(ImageView imageView)
+    {
+        for (int i =0; i<8; i++)
+            for (int j=0; j<8; j++)
+                if (imageViewsBoard[i][j].equals(imageView))
+                {
+                    return j;
+                }
+
+        return -1;
+    }
+
+    private Piece.Color get_Color_Of(ImageView imageView)
+    {
+        int i = get_XIndex(imageView);
+        int j = get_YIndex(imageView);
+        //System.out.println(" > get_Color_OF : i ="+i+"  j = "+j);
+        //System.out.println(board.getSpot(i,j).getPiece());
+        Piece.Color color = game.getBoard().getSpot(i,j).getPiece().getColor();
+
+        return color;
+    }
+
+
 
 
 }

@@ -37,5 +37,10 @@ public class Game {
         //System.out.println(board.getSpot(0,0).getPiece());
     }
 
+    public void move(Player player, int from_i, int from_j, int to_i, int to_j)
+    {
+        board = player.move(board, from_i, from_j, to_i,to_j);
+    }
+
 }
 
