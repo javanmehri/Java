@@ -262,10 +262,8 @@ public class MainStageController {
                 de_select();
                 select(event);
             }
-
-
-
     }
+
 
     @FXML
     private void mouseOn()
@@ -441,11 +439,28 @@ public class MainStageController {
 
     private void select(Event event)
     {
-        selectedPiece = (ImageView)event.getSource();
-        selectedPiece.setOpacity(0.5);
-        isAnyPieceSelected = true;
-        //System.out.println("Select");
+
+        if (!isAnyPieceSelected && !isImageViewEmpty((ImageView)event.getSource()))
+        {
+            selectedPiece = (ImageView)event.getSource();
+            selectedPiece.setOpacity(0.5);
+            isAnyPieceSelected = true;
+            System.out.println("Select");
+        }
+        else if (isAnyPieceSelected)
+        {
+            moveToSopt = (ImageView)event.getSource();
+
+        }
     }
+
+    private boolean isImageViewEmpty(ImageView imageView)
+    {
+        if (imageView.getImage()==Img.Tile_Black || imageView.getImage()==Img.Tile_White)
+            return true;
+        return false;
+    }
+
 
     private void de_select()
     {
@@ -454,6 +469,13 @@ public class MainStageController {
         //System.out.println("DeSelect");
     }
 
+    private void move()
+    {
+        if (isAnyPieceSelected && moveToSopt!=null)
+        {
+
+        }
+    }
 
 
 }
