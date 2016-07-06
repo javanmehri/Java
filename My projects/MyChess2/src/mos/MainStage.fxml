@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
@@ -48,14 +49,35 @@
                         <Rectangle2D />
                      </viewport>
                      <image>
-                        <Image url="@../../img/White.png" />
+                        <Image url="@../../img/Black.png" />
                      </image>
                   </ImageView>
-                  <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
+                  <ImageView fx:id="B1" fitHeight="66.0" fitWidth="66.0" layoutX="143.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="C1" fitHeight="66.0" fitWidth="66.0" layoutX="212.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Rectangle fx:id="rec_A1" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
+                  <Rectangle fx:id="rec_B1" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="140.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
+                  <Rectangle fx:id="rec_C1" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="210.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
                </children></Pane>
          </center>
          <right>
-            <Pane prefHeight="600.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+            <Pane prefHeight="600.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="start_button" layoutX="34.0" layoutY="57.0" mnemonicParsing="false" onAction="#start" text="Start" />
+               </children></Pane>
          </right>
       </BorderPane>
    </children>

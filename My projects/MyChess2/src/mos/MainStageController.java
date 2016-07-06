@@ -1,8 +1,10 @@
 package mos;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.Effect;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Paint;
@@ -13,10 +15,25 @@ public class MainStageController {
 
     // ----------------------------------------------------
     @FXML
-    private ImageView A1 = new ImageView(Img.Tile_White);
+    private Button start_button = new Button();
 
     @FXML
-    Rectangle rec = new Rectangle();
+    private ImageView A1 = new ImageView();
+
+    @FXML
+    private ImageView B1 = new ImageView();
+
+    @FXML
+    private ImageView C1 = new ImageView();
+
+    @FXML
+    Rectangle rec_A1 = new Rectangle();
+
+    @FXML
+    Rectangle rec_B1 = new Rectangle();
+
+    @FXML
+    Rectangle rec_C1 = new Rectangle();
 
     // ----------------------------------------------------
 
@@ -36,7 +53,7 @@ public class MainStageController {
 
         setUpTheBoard();
 
-        updateTheBoard();
+        //updateTheBoard();
 
         //game.getBoard().occupySpot(game.king_B, 0, 0);
 
@@ -51,13 +68,13 @@ public class MainStageController {
         //rec.setStroke(Paint.valueOf("Blue"));
 
         //System.out.println(rec.getFill().equals(Paint.valueOf("#e521ff1f")));
-        if (rec.getFill().equals(Paint.valueOf("#e521ff1f")))
+        if (rec_A1.getFill().equals(Paint.valueOf("#e521ff1f")))
         {
-            rec.setFill(Paint.valueOf("#e121ff00"));
+            rec_A1.setFill(Paint.valueOf("#e121ff00"));
         }
         else
         {
-            rec.setFill(Paint.valueOf("#e521ff1f"));
+            rec_A1.setFill(Paint.valueOf("#e521ff1f"));
         }
         //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
         //A1.setImage(Img.white_Rook);
@@ -76,7 +93,7 @@ public class MainStageController {
     private void moveOut()
     {
 
-        if((int)rec.getStrokeWidth()==3)
+        if((int)rec_A1.getStrokeWidth()==3)
         {
             //rec.setStrokeWidth(1);
 
@@ -84,6 +101,12 @@ public class MainStageController {
         //getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_White);
         //rec.setStrokeWidth(1);
         //rec.setStroke(Paint.valueOf("Black"));
+    }
+
+    @FXML
+    private void start()
+    {
+        updateTheBoard();
     }
 
     // ----------------------------------------------------
@@ -98,6 +121,32 @@ public class MainStageController {
     private void setUpTheBoard()
     {
         imageViewsBoard[0][0] = A1;
+        imageViewsBoard[0][1] = B1;
+        imageViewsBoard[0][2] = C1;
+
+        setUpTiles();
+    }
+
+    private void setUpTiles()
+    {
+        for (int i = 0; i<1; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                if (!board.getSpot(i,j).isOccupied())
+                {
+                    if ((i+j)%2 == 0)
+                    {
+                        imageViewsBoard[i][j].setImage(Img.Tile_Black);
+                    }
+                    else
+                    {
+                        imageViewsBoard[i][j].setImage(Img.Tile_White);
+                    }
+
+                }
+            }
+        }
     }
 
 
@@ -106,21 +155,36 @@ public class MainStageController {
         Spot spot;
         Piece piece;
         ImageView imageViewOfSpot;
+        Piece.Type type;
+        Piece.Color pieceColor;
+        Piece.Color backgroundColor;
 
-        spot = game.getBoard().getSpot(0,0);
-        imageViewOfSpot = getImageViewOfSpot(spot);
-        piece = spot.getPiece();
-
-
-        //game.getBoard().getSpot(0,0).getPiece().getPieceType();
-
-        //System.out.println(piece.getPieceType());
-
-        if (piece.getPieceType() == Piece.Type.ROOK)
+        for (int i = 0; i<3; i++)
         {
-            imageViewOfSpot.setImage(Img.Rook_W_in_W);
+            spot = game.getBoard().getSpot(0,i);
+            imageViewOfSpot = getImageViewOfSpot(spot);
+            piece = spot.getPiece();
+            type = piece.getPieceType();
+            pieceColor = piece.getColor();
+            backgroundColor = Piece.Color.WHITE;
+
+            //System.out.println(i%2);
+            if ((i%2) == 0)
+            {
+                backgroundColor = Piece.Color.BLACK;
+            }
+
+            update_Spot_On_Screen(imageViewOfSpot, type, pieceColor, backgroundColor);
+
+
         }
 
+
+    }
+
+    private void update_Spot_On_Screen(ImageView imageView, Piece.Type type, Piece.Color pieceColor, Piece.Color backgroundColor)
+    {
+        imageView.setImage(Img.getPiece(type,pieceColor,backgroundColor));
     }
 
 
