@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
@@ -42,12 +43,22 @@ public class MainStageController {
     }
 
     @FXML
-    private void moveIn()
+    private void mouseClick()
     {
 
-        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_Black);
-        rec.setStrokeWidth(3);
-        rec.setStroke(Paint.valueOf("Blue"));
+        //getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_Black);
+        //rec.setStrokeWidth(5);
+        //rec.setStroke(Paint.valueOf("Blue"));
+
+        //System.out.println(rec.getFill().equals(Paint.valueOf("#e521ff1f")));
+        if (rec.getFill().equals(Paint.valueOf("#e521ff1f")))
+        {
+            rec.setFill(Paint.valueOf("#e121ff00"));
+        }
+        else
+        {
+            rec.setFill(Paint.valueOf("#e521ff1f"));
+        }
         //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
         //A1.setImage(Img.white_Rook);
         //A1.setLayoutX(5);
@@ -55,12 +66,24 @@ public class MainStageController {
     }
 
     @FXML
+    private void mouseOn()
+    {
+        //rec.setStrokeWidth(3);
+        //rec.setStroke();
+    }
+
+    @FXML
     private void moveOut()
     {
 
-        getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_White);
-        rec.setStrokeWidth(1);
-        rec.setStroke(Paint.valueOf("Black"));
+        if((int)rec.getStrokeWidth()==3)
+        {
+            //rec.setStrokeWidth(1);
+
+        }
+        //getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_White);
+        //rec.setStrokeWidth(1);
+        //rec.setStroke(Paint.valueOf("Black"));
     }
 
     // ----------------------------------------------------

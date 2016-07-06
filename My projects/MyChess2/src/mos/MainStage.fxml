@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
@@ -18,21 +20,43 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="400.0" prefWidth="400.0">
-         <children>
-            <ImageView fx:id="A1" fitHeight="65.0" fitWidth="82.0" layoutX="156.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
-               <viewport>
-                  <Rectangle2D />
-               </viewport>
-               <image>
-                  <Image url="@../../img/black_Rook.png" />
-               </image>
-            </ImageView>
-            <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="92.0" layoutX="144.0" layoutY="127.0" onMouseEntered="#moveIn" onMouseExited="#moveOut" stroke="BLACK" strokeType="INSIDE" width="91.0" />
-         </children>
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-      </Pane>
+      <BorderPane prefHeight="700.0" prefWidth="840.0">
+         <center>
+            <Pane prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" layoutX="40.0" layoutY="40.0" mouseTransparent="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="620.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
+                     <effect>
+                        <Glow />
+                     </effect></Rectangle>
+                  <Line endX="560.0" layoutX="70.0" layoutY="140.0" />
+                  <Line endX="560.0" layoutX="70.0" layoutY="210.0" />
+                  <Line endX="560.0" layoutX="70.0" layoutY="280.0" />
+                  <Line endX="560.0" layoutX="70.0" layoutY="350.0" />
+                  <Line endX="560.0" layoutX="70.0" layoutY="420.0" />
+                  <Line endX="560.0" layoutX="70.0" layoutY="490.0" />
+                  <Line endX="560.0" layoutX="70.0" layoutY="560.0" />
+                  <Line endY="560.0" layoutX="140.0" layoutY="70.0" />
+                  <Line endY="560.0" layoutX="210.0" layoutY="70.0" />
+                  <Line endY="560.0" layoutX="280.0" layoutY="70.0" />
+                  <Line endY="560.0" layoutX="350.0" layoutY="70.0" />
+                  <Line endY="560.0" layoutX="420.0" layoutY="70.0" />
+                  <Line endY="560.0" layoutX="490.0" layoutY="70.0" />
+                  <Line endY="560.0" layoutX="560.0" layoutY="70.0" />
+                  <ImageView fx:id="A1" fitHeight="66.0" fitWidth="66.0" layoutX="72.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
+               </children></Pane>
+         </center>
+         <right>
+            <Pane prefHeight="600.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
    </children>
 </GridPane>
