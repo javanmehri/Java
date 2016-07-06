@@ -373,7 +373,7 @@ public class MainStageController {
 
     private void setUpTiles()
     {
-        for (int i = 0; i<3; i++)
+        for (int i = 0; i<8; i++)
         {
             for(int j = 0; j<8; j++)
             {
@@ -404,7 +404,7 @@ public class MainStageController {
         Piece.Color backgroundColor;
 
 
-        for (int i = 0; i<3; i++)
+        for (int i = 0; i<8; i++)
         {
             for (int j = 0; j<8; j++)
             {
