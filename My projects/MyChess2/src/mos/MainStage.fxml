@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
@@ -26,25 +27,205 @@
             <Pane prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" layoutX="40.0" layoutY="40.0" mouseTransparent="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="620.0" />
+                  <Group>
+                     <children>
+                        <Line endX="560.0" layoutX="70.0" layoutY="420.0" />
+                        <Line endY="560.0" layoutX="140.0" layoutY="70.0" />
+                        <Line endX="560.0" layoutX="70.0" layoutY="140.0" />
+                        <Line endY="560.0" layoutX="490.0" layoutY="70.0" />
+                        <Line endY="560.0" layoutX="560.0" layoutY="70.0" />
+                        <Line endX="560.0" layoutX="70.0" layoutY="280.0" />
+                        <Line endY="560.0" layoutX="420.0" layoutY="70.0" />
+                        <Line endX="560.0" layoutX="70.0" layoutY="490.0" />
+                        <Line endY="560.0" layoutX="350.0" layoutY="70.0" />
+                        <Line endX="560.0" layoutX="70.0" layoutY="350.0" />
+                        <Line endY="560.0" layoutX="280.0" layoutY="70.0" />
+                        <Line endX="560.0" layoutX="70.0" layoutY="560.0" />
+                        <Line endY="560.0" layoutX="210.0" layoutY="70.0" />
+                        <Line endX="560.0" layoutX="70.0" layoutY="210.0" />
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <Label layoutX="48.0" layoutY="300.0" text="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="230.0" text="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="162.0" text="7">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="586.0" text="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="442.0" text="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="371.0" text="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="92.0" text="8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="512.0" text="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="594.0" layoutY="-1.0">
+                     <children>
+                        <Label layoutX="48.0" layoutY="300.0" text="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="230.0" text="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="162.0" text="7">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="586.0" text="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="442.0" text="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="371.0" text="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="92.0" text="8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="512.0" text="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <Label layoutX="587.0" layoutY="632.0" text="H">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="449.0" layoutY="632.0" text="F">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="519.0" layoutY="632.0" text="G">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="168.0" layoutY="632.0" text="B">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="308.0" layoutY="632.0" text="D">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="632.0" text="C">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="378.0" layoutY="632.0" text="E">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="99.0" layoutY="632.0" text="A">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="-1.0" layoutY="-587.0">
+                     <children>
+                        <Label layoutX="587.0" layoutY="632.0" text="H">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="449.0" layoutY="632.0" text="F">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="519.0" layoutY="632.0" text="G">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="168.0" layoutY="632.0" text="B">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="308.0" layoutY="632.0" text="D">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="632.0" text="C">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="378.0" layoutY="632.0" text="E">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="99.0" layoutY="632.0" text="A">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
                      <effect>
                         <Glow />
                      </effect></Rectangle>
-                  <Line endX="560.0" layoutX="70.0" layoutY="140.0" />
-                  <Line endX="560.0" layoutX="70.0" layoutY="210.0" />
-                  <Line endX="560.0" layoutX="70.0" layoutY="280.0" />
-                  <Line endX="560.0" layoutX="70.0" layoutY="350.0" />
-                  <Line endX="560.0" layoutX="70.0" layoutY="420.0" />
-                  <Line endX="560.0" layoutX="70.0" layoutY="490.0" />
-                  <Line endX="560.0" layoutX="70.0" layoutY="560.0" />
-                  <Line endY="560.0" layoutX="140.0" layoutY="70.0" />
-                  <Line endY="560.0" layoutX="210.0" layoutY="70.0" />
-                  <Line endY="560.0" layoutX="280.0" layoutY="70.0" />
-                  <Line endY="560.0" layoutX="350.0" layoutY="70.0" />
-                  <Line endY="560.0" layoutX="420.0" layoutY="70.0" />
-                  <Line endY="560.0" layoutX="490.0" layoutY="70.0" />
-                  <Line endY="560.0" layoutX="560.0" layoutY="70.0" />
-                  <ImageView fx:id="A1" fitHeight="66.0" fitWidth="66.0" layoutX="72.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
                      <viewport>
                         <Rectangle2D />
                      </viewport>
@@ -52,7 +233,7 @@
                         <Image url="@../../img/Black.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="B1" fitHeight="66.0" fitWidth="66.0" layoutX="143.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../img/White.png" />
                      </image>
@@ -60,7 +241,7 @@
                         <Rectangle2D />
                      </viewport>
                   </ImageView>
-                  <ImageView fx:id="C1" fitHeight="66.0" fitWidth="66.0" layoutX="212.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="C1" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../img/Black.png" />
                      </image>
@@ -68,15 +249,250 @@
                         <Rectangle2D />
                      </viewport>
                   </ImageView>
-                  <Rectangle fx:id="rec_A1" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
-                  <Rectangle fx:id="rec_B1" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="140.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
-                  <Rectangle fx:id="rec_C1" arcHeight="5.0" arcWidth="5.0" fill="#e121ff00" height="70.0" layoutX="210.0" layoutY="560.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" stroke="#010008" strokeType="INSIDE" width="70.0" />
+                  <ImageView fx:id="D1" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="E1" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="F1" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="G1" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="H1" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="A2" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="B2" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="C2" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="D2" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="E2" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="F2" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="G2" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="H2" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="490.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="H3" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="G3" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="F3" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="E3" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="D3" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="C3" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="B3" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="A3" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="420.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="B4" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="D4" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="F4" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="H4" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Black.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="A4" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="C4" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="E4" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="G4" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="350.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/White.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
                </children></Pane>
          </center>
          <right>
             <Pane prefHeight="600.0" prefWidth="150.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="start_button" layoutX="34.0" layoutY="57.0" mnemonicParsing="false" onAction="#start" text="Start" />
+                  <Button fx:id="start_button" graphicTextGap="5.0" layoutX="27.0" layoutY="57.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="97.0" text="Start" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <ColorAdjust brightness="0.12" contrast="0.07" hue="-1.0" saturation="0.04" />
+                     </effect></Button>
                </children></Pane>
          </right>
       </BorderPane>
