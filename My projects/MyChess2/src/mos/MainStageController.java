@@ -1,6 +1,8 @@
 package mos;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.Effect;
@@ -60,25 +62,29 @@ public class MainStageController {
     }
 
     @FXML
-    private void mouseClick()
+    private void mouseClick(Event event)
     {
 
+        Rectangle rectangle;
         //getImageViewOfSpot(board.getSpot(0,0)).setImage(Img.Tile_Black);
         //rec.setStrokeWidth(5);
         //rec.setStroke(Paint.valueOf("Blue"));
 
         //System.out.println(rec.getFill().equals(Paint.valueOf("#e521ff1f")));
-        if (rec_A1.getFill().equals(Paint.valueOf("#e521ff1f")))
+        rectangle = (Rectangle) event.getSource();
+
+        if (rectangle.getFill().equals(Paint.valueOf("#e521ff1f")))
         {
-            rec_A1.setFill(Paint.valueOf("#e121ff00"));
+            rectangle.setFill(Paint.valueOf("#e121ff00"));
         }
         else
         {
-            rec_A1.setFill(Paint.valueOf("#e521ff1f"));
+            rectangle.setFill(Paint.valueOf("#e521ff1f"));
         }
         //getImageViewOfSpot(board.getSpot(0,0)).setSmooth(true);
         //A1.setImage(Img.white_Rook);
         //A1.setLayoutX(5);
+        System.out.println(rectangle.getId());
 
     }
 

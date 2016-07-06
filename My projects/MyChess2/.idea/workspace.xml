@@ -123,18 +123,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
+            <state relative-caret-position="346">
+              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#mouseClick#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-                <element signature="e#2440#2441#0" expanded="true" />
-                <element signature="e#2472#2473#0" expanded="true" />
+                <element signature="e#2641#2642#0" expanded="true" />
+                <element signature="e#2673#2674#0" expanded="true" />
                 <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#updateTheBoard#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
@@ -155,7 +154,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Img.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Img.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -218,8 +217,8 @@
         <option value="$PROJECT_DIR$/src/mos/Game.java" />
         <option value="$PROJECT_DIR$/src/mos/MainStage.java" />
         <option value="$PROJECT_DIR$/src/mos/MainStage.fxml" />
-        <option value="$PROJECT_DIR$/src/mos/MainStageController.java" />
         <option value="$PROJECT_DIR$/src/mos/Img.java" />
+        <option value="$PROJECT_DIR$/src/mos/MainStageController.java" />
       </list>
     </option>
   </component>
@@ -1168,30 +1167,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#mouseClick#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="e#2440#2441#0" expanded="true" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#updateTheBoard#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
             <element signature="method#getPiece#0;class#Img#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="e#2641#2642#0" expanded="true" />
+            <element signature="e#2673#2674#0" expanded="true" />
+            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#updateTheBoard#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
