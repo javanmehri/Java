@@ -12,6 +12,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
+import java.io.IOException;
+
 public class MainStageController {
 
 
@@ -277,8 +279,8 @@ public class MainStageController {
     }
 
     @FXML
-    private void start()
-    {
+    private void start() throws IOException {
+        Sounds.play();
         updateTheBoard();
     }
 
