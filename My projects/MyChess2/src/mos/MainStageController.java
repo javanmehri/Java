@@ -16,7 +16,6 @@ import java.io.IOException;
 
 public class MainStageController {
 
-
     // ----------------------------------------
     @FXML
     private Button start_button = new Button();
@@ -248,8 +247,7 @@ public class MainStageController {
     }
 
     @FXML
-    private void mouseClick(Event event)
-    {
+    private void mouseClick(Event event) throws IOException {
         //System.out.println("click");
         ImageView selected = (ImageView)event.getSource();
         if (isAnyPieceSelected == false)
@@ -280,7 +278,7 @@ public class MainStageController {
 
     @FXML
     private void start() throws IOException {
-        Sounds.play();
+        Sounds.play(Sounds.SoundEffects.START);
         updateTheBoard();
     }
 
@@ -445,8 +443,7 @@ public class MainStageController {
         //System.out.println(type);
     }
 
-    private void select(Event event)
-    {
+    private void select(Event event) throws IOException {
         //System.out.println(" > Select :  i = "+get_XIndex(selectedPiece));
 
         if (!isAnyPieceSelected && !isImageViewEmpty((ImageView)event.getSource()))
@@ -489,8 +486,7 @@ public class MainStageController {
         System.out.println("DeSelect");
     }
 
-    private void move()
-    {
+    private void move() throws IOException {
         if (isAnyPieceSelected && moveToSopt!=null)
         {
             //System.out.println(selectedPiece);
@@ -509,6 +505,8 @@ public class MainStageController {
             game.move(player, from_i, from_j, to_i, to_j);
 
             de_select();
+
+            Sounds.play(Sounds.SoundEffects.MOVE);
         }
     }
 
