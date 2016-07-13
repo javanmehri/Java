@@ -14,23 +14,30 @@ public class GameManager {
         activePlayer = game.getPlayer_White();
     }
 
+
     public static void updateTheGame(Game newGame)
     {
         game = newGame;
     }
+
 
     public static Game getTheGame()
     {
         return game;
     }
 
-    public static void setActivePlayer(Player player)
-    {
-        activePlayer = player;
-    }
 
-    public static Player giveActivePlayer()
+    public static Player getActivePlayer()
     {
         return activePlayer;
+    }
+
+
+    public static void switchTheActivePlayer()
+    {
+        if (activePlayer == game.getPlayer_White())
+            activePlayer = game.getPlayer_Black();
+        else
+            activePlayer = game.getPlayer_White();
     }
 }

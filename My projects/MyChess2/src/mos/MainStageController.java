@@ -239,7 +239,6 @@ public class MainStageController {
     {
         setUpTheBoard();
 
-
     }
 
     @FXML
