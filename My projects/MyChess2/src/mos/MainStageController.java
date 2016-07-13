@@ -251,7 +251,6 @@ public class MainStageController {
     private void mouseClick(Event event) throws IOException {
 
         this.game = ScreenManager.clickOnBoard(game, imageViewsBoard,event);
-        updateTheBoard();
 
     }
 
@@ -269,17 +268,10 @@ public class MainStageController {
 
     @FXML
     private void start() throws IOException {
-        Sounds.play(Sounds.SoundEffects.START);
-        updateTheBoard();
+        ScreenManager.start(game, imageViewsBoard);
     }
 
     // ----------------------------------------------------
-    private ImageView getImageViewOfSpot(Spot spot)
-    {
-        int x = spot.get_X();
-        int y = spot.get_Y();
-        return imageViewsBoard[x][y];
-    }
 
 
     private void setUpTheBoard()
@@ -382,57 +374,8 @@ public class MainStageController {
     }
 
 
-    private void updateTheBoard()
-    {
-        Spot spot;
-        Piece piece;
-        ImageView imageViewOfSpot;
-        Piece.Type type;
-        Piece.Color pieceColor;
-        Piece.Color backgroundColor;
 
 
-        for (int i = 0; i<8; i++)
-        {
-            for (int j = 0; j<8; j++)
-            {
-                spot = game.getBoard().getSpot(i,j);
-                imageViewOfSpot = getImageViewOfSpot(spot);
-                backgroundColor = Piece.Color.WHITE;
-                //System.out.println(i%2);
-                if ((i+j)%2 == 0)
-                {
-                    backgroundColor = Piece.Color.BLACK;
-                }
-
-                if (spot.isOccupied())
-                {
-                    piece = spot.getPiece();
-                    type = piece.getPieceType();
-                    pieceColor = piece.getColor();
-
-                    update_Spot_On_Screen(imageViewOfSpot, type, pieceColor, backgroundColor);
-
-                }
-                else
-                {
-                    if(backgroundColor== Piece.Color.BLACK)
-                        imageViewOfSpot.setImage(Img.Tile_Black);
-                    else
-                        imageViewOfSpot.setImage(Img.Tile_White);
-                }
-
-            }
-        }
-
-
-    }
-
-    private void update_Spot_On_Screen(ImageView imageView, Piece.Type type, Piece.Color pieceColor, Piece.Color backgroundColor)
-    {
-        imageView.setImage(Img.getPiece(type,pieceColor,backgroundColor));
-        //System.out.println(type);
-    }
 
 
 

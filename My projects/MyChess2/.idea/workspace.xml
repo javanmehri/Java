@@ -105,15 +105,12 @@
       <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-445">
-              <caret line="272" column="22" selection-start-line="272" selection-start-column="8" selection-end-line="272" selection-end-column="22" />
+            <state relative-caret-position="210">
+              <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-                <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-                <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,16 +119,21 @@
       <file leaf-file-name="ScreenManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/ScreenManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="465">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#select#0;class#ScreenManager#0" expanded="false" />
                 <element signature="method#de_select#0;class#ScreenManager#0" expanded="false" />
+                <element signature="method#move#0;class#ScreenManager#0" expanded="false" />
                 <element signature="method#isImageViewEmpty#0;class#ScreenManager#0" expanded="false" />
                 <element signature="method#getColorOfPiece#0;class#ScreenManager#0" expanded="false" />
                 <element signature="method#get_XIndex#0;class#ScreenManager#0" expanded="false" />
                 <element signature="method#get_YIndex#0;class#ScreenManager#0" expanded="false" />
+                <element signature="method#getBackgroundColor#0;class#ScreenManager#0" expanded="false" />
+                <element signature="method#updateTheTile#0;class#ScreenManager#0" expanded="false" />
+                <element signature="method#getImageViewOfSpot#0;class#ScreenManager#0" expanded="false" />
+                <element signature="method#updateTheChessBoard#0;class#ScreenManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -215,8 +217,8 @@
         <option value="$PROJECT_DIR$/src/mos/Game.java" />
         <option value="$PROJECT_DIR$/src/mos/Sounds.java" />
         <option value="$PROJECT_DIR$/src/mos/Interface.java" />
-        <option value="$PROJECT_DIR$/src/mos/ScreenManager.java" />
         <option value="$PROJECT_DIR$/src/mos/MainStageController.java" />
+        <option value="$PROJECT_DIR$/src/mos/ScreenManager.java" />
       </list>
     </option>
   </component>
@@ -722,11 +724,8 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,11 +809,8 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -854,11 +850,8 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -909,11 +902,8 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,11 +936,8 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,11 +970,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1131,22 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/ScreenManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#select#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#de_select#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#isImageViewEmpty#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#getColorOfPiece#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#get_XIndex#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#get_YIndex#0;class#ScreenManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1155,17 +1123,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
+    <entry file="file://$PROJECT_DIR$/src/mos/ScreenManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-445">
-          <caret line="272" column="22" selection-start-line="272" selection-start-column="8" selection-end-line="272" selection-end-column="22" />
+        <state relative-caret-position="465">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#select#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#de_select#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#move#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#isImageViewEmpty#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#getColorOfPiece#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#get_XIndex#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#get_YIndex#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#getBackgroundColor#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#updateTheTile#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#getImageViewOfSpot#0;class#ScreenManager#0" expanded="false" />
+            <element signature="method#updateTheChessBoard#0;class#ScreenManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#update_Spot_On_Screen#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
       </provider>
