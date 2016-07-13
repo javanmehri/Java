@@ -84,7 +84,7 @@ public class ScreenManager {
 
             de_select();
 
-            Sounds.play(Sounds.SoundEffects.MOVE);
+            //Sounds.play(Sounds.SoundEffects.MOVE);
 
             return game;
     }

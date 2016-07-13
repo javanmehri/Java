@@ -225,14 +225,6 @@ public class MainStageController {
 
     private ImageView[][] imageViewsBoard = new ImageView[8][8];
 
-    //private Board board = new Board();
-
-    private Game game;
-
-    private boolean isAnyPieceSelected = false;
-    private ImageView selectedPiece;
-    private ImageView moveToSopt;
-
     // ===================================================================
     //                            METHODS
     // ===================================================================
@@ -242,15 +234,16 @@ public class MainStageController {
     @FXML
     private void initialize()
     {
-        game = new Game("Player 1", "Player 2");
         setUpTheBoard();
+
+
     }
 
 
     @FXML
     private void mouseClick(Event event) throws IOException {
 
-        this.game = ScreenManager.clickOnBoard(game, imageViewsBoard,event);
+        GameManager.updateTheGame(ScreenManager.clickOnBoard(GameManager.giveTheGame(), imageViewsBoard, event));
 
     }
 
@@ -268,7 +261,9 @@ public class MainStageController {
 
     @FXML
     private void start() throws IOException {
-        ScreenManager.start(game, imageViewsBoard);
+
+        GameManager.startAGame();
+        ScreenManager.start(GameManager.giveTheGame(), imageViewsBoard);
     }
 
     // ----------------------------------------------------
@@ -347,7 +342,6 @@ public class MainStageController {
         imageViewsBoard[7][5] = F8;
         imageViewsBoard[7][6] = G8;
         imageViewsBoard[7][7] = H8;
-
 
         setUpTiles();
     }
