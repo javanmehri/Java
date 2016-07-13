@@ -2,15 +2,8 @@ package mos;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.effect.ColorAdjust;
-import javafx.scene.effect.Effect;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 
@@ -223,12 +216,22 @@ public class MainStageController {
 
     // ----------------------------------------------------
 
-    private ImageView[][] imageViewsBoard = new ImageView[8][8];
+    private static ImageView[][] imageViewsBoard = new ImageView[8][8];
 
     // ===================================================================
     //                            METHODS
     // ===================================================================
 
+    public static ImageView[][] getImageViewsBoard()
+    {
+        return imageViewsBoard;
+    }
+
+
+    public static void setImageViewsBoard(ImageView[][] board)
+    {
+        imageViewsBoard = board;
+    }
 
 
     @FXML
@@ -239,14 +242,12 @@ public class MainStageController {
 
     }
 
-
     @FXML
     private void mouseClick(Event event) throws IOException {
 
-        GameManager.updateTheGame(ScreenManager.clickOnBoard(GameManager.giveTheGame(), imageViewsBoard, event));
+        ScreenBoard.clickOnBoard(event);
 
     }
-
 
     @FXML
     private void mouseOn()
@@ -262,8 +263,11 @@ public class MainStageController {
     @FXML
     private void start() throws IOException {
 
+        Sounds.play(Sounds.SoundEffects.START);
+
         GameManager.startAGame();
-        ScreenManager.start(GameManager.giveTheGame(), imageViewsBoard);
+
+        ScreenBoard.updateTheChessBoard();
     }
 
     // ----------------------------------------------------

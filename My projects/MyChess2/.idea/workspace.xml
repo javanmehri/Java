@@ -105,11 +105,17 @@
       <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,34 +124,40 @@
       <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4065">
-              <caret line="271" column="32" selection-start-line="271" selection-start-column="32" selection-end-line="271" selection-end-column="32" />
+            <state relative-caret-position="155">
+              <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4601#4602#0" expanded="true" />
+                <element signature="e#4639#4640#0" expanded="true" />
+                <element signature="e#4710#4711#0" expanded="true" />
+                <element signature="e#4749#4750#0" expanded="true" />
+                <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+                <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+                <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+                <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScreenManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mos/ScreenManager.java">
+      <file leaf-file-name="ScreenBoard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#clickOnBoard#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#select#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#de_select#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#isImageViewEmpty#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#getColorOfPiece#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#get_XIndex#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#get_YIndex#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#getBackgroundColor#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#updateTheTile#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#getImageViewOfSpot#0;class#ScreenManager#0" expanded="false" />
-                <element signature="method#updateTheChessBoard#0;class#ScreenManager#0" expanded="false" />
+                <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#de_select#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#isImageViewEmpty#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#getColorOfPiece#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#get_XIndex#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#getImageViewOfSpot#0;class#ScreenBoard#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -231,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/mos/Interface.java" />
         <option value="$PROJECT_DIR$/src/mos/ScreenManager.java" />
         <option value="$PROJECT_DIR$/src/mos/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/mos/ScreenBoard.java" />
         <option value="$PROJECT_DIR$/src/mos/MainStageController.java" />
       </list>
     </option>
@@ -675,7 +688,7 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -728,6 +741,14 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
@@ -737,6 +758,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,6 +831,14 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
@@ -815,6 +848,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -842,6 +879,14 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
@@ -862,6 +907,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -889,6 +938,14 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
@@ -909,6 +966,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -918,6 +979,14 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
@@ -938,6 +1007,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -947,6 +1020,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>
@@ -1009,6 +1090,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1086,44 +1171,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/ScreenManager.java">
+    <entry file="file://$PROJECT_DIR$/src/mos/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#clickOnBoard#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#select#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#de_select#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#isImageViewEmpty#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#getColorOfPiece#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#get_XIndex#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#get_YIndex#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#getBackgroundColor#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#updateTheTile#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#getImageViewOfSpot#0;class#ScreenManager#0" expanded="false" />
-            <element signature="method#updateTheChessBoard#0;class#ScreenManager#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/GameManager.java">
+    <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="195">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding>
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#de_select#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#isImageViewEmpty#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#getColorOfPiece#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#get_XIndex#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#getImageViewOfSpot#0;class#ScreenBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4065">
-          <caret line="271" column="32" selection-start-line="271" selection-start-column="32" selection-end-line="271" selection-end-column="32" />
+        <state relative-caret-position="155">
+          <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#moveOut#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
             <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
           </folding>
         </state>

@@ -8,9 +8,8 @@ import java.io.IOException;
 /**
  * Created by MOS on 2016-07-12.
  */
-public class ScreenManager {
+public class ScreenBoard {
 
-    //private static ImageView[][] imageViewsBoard = new ImageView[8][8];
     private static boolean isAnyPieceSelected = false;
     private static ImageView selectedPiece;
     private static ImageView moveToSopt;
@@ -20,9 +19,8 @@ public class ScreenManager {
     //                    Helper Methods
     // =============================================================
 
-
-
-    public static Game clickOnBoard(Game game,ImageView[][] imageViewsBoard, Event event) throws IOException {
+    public static void clickOnBoard(Event event) throws IOException
+    {
         ImageView clickedTile = (ImageView)event.getSource();
 
         if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile))
@@ -34,18 +32,53 @@ public class ScreenManager {
                 de_select();
 
             else if (isImageViewEmpty(clickedTile))
-                game = move(game, imageViewsBoard, event);
+                move(event);
         }
-        updateTheChessBoard(game, imageViewsBoard);
-        return game;
+        updateTheChessBoard();
     }
 
 
-    public static void start(Game game, ImageView[][] imageViewsBoard) throws IOException {
-        Sounds.play(Sounds.SoundEffects.START);
-        updateTheChessBoard(game, imageViewsBoard);
-    }
+    public static void updateTheChessBoard()
+    {
+        Spot spot;
+        Piece piece;
+        ImageView imageViewOfSpot;
+        Piece.Type type;
+        Piece.Color pieceColor;
+        Piece.Color backgroundColor;
 
+        Game game = GameManager.getTheGame();
+
+        for (int i = 0; i<8; i++)
+        {
+            for (int j = 0; j<8; j++)
+            {
+                spot = game.getBoard().getSpot(i,j);
+                imageViewOfSpot = getImageViewOfSpot(spot);
+                backgroundColor = getBackgroundColor(i,j);
+
+                if (spot.isOccupied())
+                {
+                    piece = spot.getPiece();
+                    type = piece.getPieceType();
+                    pieceColor = piece.getColor();
+
+                    updateTheTile(imageViewOfSpot, type, pieceColor, backgroundColor);
+
+                }
+                else
+                {
+                    if(backgroundColor== Piece.Color.BLACK)
+                        imageViewOfSpot.setImage(Img.Tile_Black);
+                    else
+                        imageViewOfSpot.setImage(Img.Tile_White);
+                }
+
+            }
+        }
+
+
+    }
 
     // =============================================================
     //                    Helper Methods
@@ -63,22 +96,23 @@ public class ScreenManager {
         isAnyPieceSelected = false;
     }
 
-    private static Game move(Game game, ImageView[][] imageViewsBoard, Event event) throws IOException {
+    private static void move(Event event) throws IOException {
 
-            moveToSopt = (ImageView)event.getSource();
+            Game game = GameManager.getTheGame();
 
-            //System.out.println(selectedPiece);
-            Piece.Color color = getColorOfPiece(game, imageViewsBoard, selectedPiece);
+            Piece.Color color = getColorOfPiece(selectedPiece);
             Player player;
             if (color == Piece.Color.WHITE)
                 player = game.getPlayer_White();
             else
                 player = game.getPlayer_Black();
 
-            int from_i = get_XIndex(imageViewsBoard, selectedPiece);
-            int from_j = get_YIndex(imageViewsBoard, selectedPiece);
-            int to_i = get_XIndex(imageViewsBoard, moveToSopt);
-            int to_j = get_YIndex(imageViewsBoard, moveToSopt);
+            moveToSopt = (ImageView)event.getSource();
+
+            int from_i = get_XIndex(selectedPiece);
+            int from_j = get_YIndex(selectedPiece);
+            int to_i = get_XIndex(moveToSopt);
+            int to_j = get_YIndex(moveToSopt);
 
             game.move(player, from_i, from_j, to_i, to_j);
 
@@ -86,7 +120,7 @@ public class ScreenManager {
 
             //Sounds.play(Sounds.SoundEffects.MOVE);
 
-            return game;
+            GameManager.updateTheGame(game);
     }
 
 
@@ -97,17 +131,21 @@ public class ScreenManager {
         return false;
     }
 
-    private static Piece.Color getColorOfPiece(Game game, ImageView[][] imageViewsBoard, ImageView imageView)
+    private static Piece.Color getColorOfPiece(ImageView imageView)
     {
-        int i = get_XIndex(imageViewsBoard, imageView);
-        int j = get_YIndex(imageViewsBoard, imageView);
+        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
+
+        int i = get_XIndex(imageView);
+        int j = get_YIndex(imageView);
+        Game game = GameManager.getTheGame();
         Piece.Color color = game.getBoard().getSpot(i,j).getPiece().getColor();
 
         return color;
     }
 
-    private static int get_XIndex(ImageView[][] imageViewsBoard, ImageView imageView)
+    private static int get_XIndex(ImageView imageView)
     {
+        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
         for (int i =0; i<8; i++)
             for (int j=0; j<8; j++)
                 if (imageViewsBoard[i][j].equals(imageView))
@@ -118,8 +156,9 @@ public class ScreenManager {
         return -1;
     }
 
-    private static int get_YIndex(ImageView[][] imageViewsBoard, ImageView imageView)
+    private static int get_YIndex(ImageView imageView)
     {
+        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
         for (int i =0; i<8; i++)
             for (int j=0; j<8; j++)
                 if (imageViewsBoard[i][j].equals(imageView))
@@ -145,54 +184,15 @@ public class ScreenManager {
         return imageView;
     }
 
-    private static ImageView getImageViewOfSpot(ImageView[][] imageViewsBoard, Spot spot)
+    private static ImageView getImageViewOfSpot(Spot spot)
     {
         int x = spot.get_X();
         int y = spot.get_Y();
-        return imageViewsBoard[x][y];
+        return MainStageController.getImageViewsBoard()[x][y];
     }
 
 
-    private static void updateTheChessBoard(Game game, ImageView[][] imageViewsBoard)
-    {
-        Spot spot;
-        Piece piece;
-        ImageView imageViewOfSpot;
-        Piece.Type type;
-        Piece.Color pieceColor;
-        Piece.Color backgroundColor;
 
-
-        for (int i = 0; i<8; i++)
-        {
-            for (int j = 0; j<8; j++)
-            {
-                spot = game.getBoard().getSpot(i,j);
-                imageViewOfSpot = getImageViewOfSpot(imageViewsBoard, spot);
-                backgroundColor = getBackgroundColor(i,j);
-
-                if (spot.isOccupied())
-                {
-                    piece = spot.getPiece();
-                    type = piece.getPieceType();
-                    pieceColor = piece.getColor();
-
-                    updateTheTile(imageViewOfSpot, type, pieceColor, backgroundColor);
-
-                }
-                else
-                {
-                    if(backgroundColor== Piece.Color.BLACK)
-                        imageViewOfSpot.setImage(Img.Tile_Black);
-                    else
-                        imageViewOfSpot.setImage(Img.Tile_White);
-                }
-
-            }
-        }
-
-
-    }
 
 
 }

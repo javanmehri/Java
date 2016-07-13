@@ -17,12 +17,20 @@ public class GameManager {
     public static void updateTheGame(Game newGame)
     {
         game = newGame;
-        //System.out.println("Updat the Game!");
     }
 
-    public static Game giveTheGame()
+    public static Game getTheGame()
     {
         return game;
     }
 
+    public static void setActivePlayer(Player player)
+    {
+        activePlayer = player;
+    }
+
+    public static Player giveActivePlayer()
+    {
+        return activePlayer;
+    }
 }
