@@ -21,7 +21,7 @@ public class ScreenBoard {
 
     public static void clickOnBoard(Event event) throws IOException
     {
-        ImageView clickedTile = (ImageView)event.getSource();
+        ImageView clickedTile = getSelectedImageView(event);
 
         if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile))
             select(event);
@@ -85,7 +85,7 @@ public class ScreenBoard {
     // =============================================================
     private static void select(Event event)
     {
-        selectedPiece = (ImageView)event.getSource();
+        selectedPiece = getSelectedImageView(event);
         selectedPiece.setOpacity(0.5);
         isAnyPieceSelected = true;
     }
@@ -109,7 +109,7 @@ public class ScreenBoard {
 
             game.setSelectedPlayer(player);
 
-                moveToSopt = (ImageView)event.getSource();
+                moveToSopt = getSelectedImageView(event);
 
                 int from_i = get_XIndex(selectedPiece);
                 int from_j = get_YIndex(selectedPiece);
@@ -127,6 +127,11 @@ public class ScreenBoard {
 
                 }
 
+    }
+
+    public static ImageView getSelectedImageView(Event event)
+    {
+        return (ImageView)event.getSource();
     }
 
 

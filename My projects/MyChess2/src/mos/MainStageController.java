@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
+import java.awt.geom.Rectangle2D;
 import java.io.IOException;
 
 public class MainStageController {
@@ -249,8 +250,10 @@ public class MainStageController {
     }
 
     @FXML
-    private void mouseOn()
+    private void mouseOn(Event event)
     {
+        //ScreenBoard.getSelectedImageView(event);
+
     }
 
     @FXML

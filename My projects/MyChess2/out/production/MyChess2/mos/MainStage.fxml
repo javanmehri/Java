@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
@@ -711,21 +712,30 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="70.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
                            <viewport>
                               <Rectangle2D />
                            </viewport>
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow color="#ffde05a5" height="255.0" radius="127.0" width="255.0" />
+                           </effect>
                         </ImageView>
-                        <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="140.0" layoutY="560.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
                            <viewport>
                               <Rectangle2D />
                            </viewport>
+                           <effect>
+                              <InnerShadow color="#ffde05a5" height="255.0" radius="127.0" width="255.0" />
+                           </effect>
                         </ImageView>
                         <ImageView fx:id="F5" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="280.0" onMouseClicked="#mouseClick" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -736,6 +746,9 @@
                            </viewport>
                         </ImageView>
                      </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Group>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
                      <effect>
