@@ -23,6 +23,11 @@ public class Board {
         return spots[x][y];
     }
 
+    public Piece getPieceOnTheSpot(int x, int y)
+    {
+        return getSpot(x, y).getPiece();
+    }
+
 
     public void occupySpot(Piece piece, int i, int j)
 
@@ -32,12 +37,10 @@ public class Board {
         piece.setSpot(spot);
     }
 
-    public Piece removePiece(int i, int j)
+    public void removePiece(int i, int j)
     {
-        Spot spot = this.getSpot(i,j);
-        Piece piece = spot.getPiece();
-        spot.occupy(null);
-        return piece;
+        getSpot(i,j).occupy(null);
+
     }
 
 }

@@ -72,8 +72,14 @@ public class Player {
 
     public Board move(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
-        Piece piece = chessBoard.removePiece(from_i,from_j);
-        chessBoard.occupySpot(piece,to_i,to_j);
+        Piece piece = chessBoard.getPieceOnTheSpot(from_i,from_j);
+        if (piece.isValidMove(to_i,to_j))
+        {
+            chessBoard.removePiece(from_i,from_j);
+            chessBoard.occupySpot(piece,to_i,to_j);
+            piece.wasMoved = true;
+
+        }
 
         return chessBoard;
     }

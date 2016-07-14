@@ -5,30 +5,56 @@ package mos;
  */
 public class Pawn extends Piece {
 
+
     public Pawn(Color color)
     {
         super(color);
         this.setPieceType(Type.PAWN);
+        wasMoved = false;
     }
 
 
     @Override
-    public boolean isValidMove(Spot toSpot) {
+    public boolean isValidMove(int toX, int toY) {
+        int fromX = this.getSpot().get_X();
+        int fromY = this.getSpot().get_Y();
 
-        if (super.isValidMove(toSpot))
+        if (super.isValidMove(toX,toY))
         {
             //...
-            int fromX = this.getSpot().get_X();
-            int fromY = this.getSpot().get_Y();
-            int toX = toSpot.get_X();
-            int toY = toSpot.get_Y();
 
-            if (toX == fromX && (toY-fromY)==1)
+            if (wasMoved)
             {
-                return true;
+                if (toY == fromY && Math.abs(toX-fromX)==1 )
+                {
+                    //wasMoved = true;
+                    return true;
+                }
             }
+            else
+            {
+                if (toY == fromY && (Math.abs(toX-fromX)==1 || Math.abs(toX-fromX)==2))
+                {
+                    //wasMoved = true;
+                    return true;
+                }
+
+            }
+
         }
+
+
+        System.out.println(" Pawn isValideMove -> false");
+        System.out.println(" toX: "+toX);
+        System.out.println(" fromX: "+fromX);
+        System.out.println(" toY: "+toY);
+        System.out.println(" fromY: "+fromY);
+
+
+
         return false;
     }
+
+
 
 }

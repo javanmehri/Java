@@ -13,15 +13,13 @@ public class Rook extends Piece {
 
 
     @Override
-    public boolean isValidMove(Spot toSpot) {
+    public boolean isValidMove(int toX, int toY) {
 
-        if (super.isValidMove(toSpot))
+        if (super.isValidMove(toX,toY))
         {
             //...
             int fromX = this.getSpot().get_X();
             int fromY = this.getSpot().get_Y();
-            int toX = toSpot.get_X();
-            int toY = toSpot.get_Y();
 
             if (toX == fromX && toY != fromY)
             {

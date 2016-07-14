@@ -61,15 +61,20 @@ public class Game {
 
     public boolean move(Player player, int from_i, int from_j, int to_i, int to_j)
     {
-        if (player == activePlayer) {
-            board = player.move(board, from_i, from_j, to_i, to_j);
-            return true;
-        }
-        else
+        if (player == activePlayer)
         {
-            return false;
+            if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(to_i,to_j))
+            {
+                board = player.move(board, from_i, from_j, to_i, to_j);
+                return true;
+            }
 
         }
+
+
+        return false;
+
+
     }
 
 

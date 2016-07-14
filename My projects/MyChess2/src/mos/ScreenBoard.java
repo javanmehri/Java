@@ -113,8 +113,10 @@ public class ScreenBoard {
 
                 int from_i = get_XIndex(selectedPiece);
                 int from_j = get_YIndex(selectedPiece);
+                //Spot fromSpot = game.getBoard().getSpot(from_i, from_j);
                 int to_i = get_XIndex(moveToSopt);
                 int to_j = get_YIndex(moveToSopt);
+                //Spot toSpot = game.getBoard().getSpot(to_i,to_j);
 
                 if(game.move(player, from_i, from_j, to_i, to_j))
                 {

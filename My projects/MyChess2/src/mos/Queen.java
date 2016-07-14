@@ -13,14 +13,12 @@ public class Queen extends Piece {
 
 
     @Override
-    public boolean isValidMove(Spot toSpot) {
-        if (super.isValidMove(toSpot))
+    public boolean isValidMove(int toX, int toY) {
+        if (super.isValidMove(toX,toY))
         {
             //...
             int fromX = this.getSpot().get_X();
             int fromY = this.getSpot().get_Y();
-            int toX = toSpot.get_X();
-            int toY = toSpot.get_Y();
 
             if (Math.abs(toX-fromX)== Math.abs(toY-fromY))
             {
