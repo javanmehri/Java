@@ -224,7 +224,7 @@
                   </Group>
                   <Group>
                      <children>
-                        <ImageView fx:id="D3" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D3" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -232,7 +232,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H4" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H4" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -240,7 +240,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E1" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E1" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -248,7 +248,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G3" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G3" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -256,7 +256,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C5" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C5" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -264,7 +264,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G4" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G4" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -272,7 +272,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F4" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F4" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -280,7 +280,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D8" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D8" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -288,7 +288,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H6" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H6" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -296,7 +296,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A6" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A6" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -304,7 +304,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D6" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D6" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -312,7 +312,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H2" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H2" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -320,7 +320,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C7" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C7" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -328,7 +328,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D5" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D5" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -336,7 +336,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G8" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G8" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -344,7 +344,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B8" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B8" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -352,7 +352,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G2" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G2" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -360,7 +360,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D1" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D1" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -368,7 +368,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A7" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A7" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -376,7 +376,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G7" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G7" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -384,7 +384,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G1" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G1" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -392,7 +392,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D4" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D4" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -400,7 +400,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B5" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B5" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -408,7 +408,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B2" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B2" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -416,7 +416,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B4" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B4" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -424,7 +424,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H1" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H1" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -432,7 +432,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E7" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E7" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -440,7 +440,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C8" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C8" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -448,7 +448,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E6" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E6" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -456,7 +456,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A4" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A4" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -464,7 +464,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E4" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E4" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -472,7 +472,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A2" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A2" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -480,7 +480,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C1" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C1" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -488,7 +488,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F3" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F3" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -496,7 +496,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H5" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H5" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -504,7 +504,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C3" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C3" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -512,7 +512,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A5" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A5" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -520,7 +520,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B7" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B7" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -528,7 +528,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F8" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F8" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -536,7 +536,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E3" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E3" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -544,7 +544,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C2" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C2" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -552,7 +552,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B6" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B6" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -560,7 +560,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E8" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E8" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -568,7 +568,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F2" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F2" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -576,7 +576,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D7" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D7" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -584,7 +584,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C4" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C4" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -592,7 +592,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="C6" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="C6" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -600,7 +600,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E5" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E5" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -608,7 +608,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A3" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A3" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -616,7 +616,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="D2" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="D2" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -624,7 +624,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="B3" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B3" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -632,7 +632,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G5" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G5" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -640,7 +640,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A8" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A8" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -648,7 +648,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F7" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F7" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -656,7 +656,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H8" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H8" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -664,7 +664,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H7" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H7" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -672,7 +672,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F1" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F1" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -680,7 +680,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F6" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F6" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/Black.png" />
                            </image>
@@ -688,7 +688,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="E2" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="E2" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -696,7 +696,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="G6" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="G6" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -704,7 +704,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="H3" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="H3" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -712,7 +712,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="70.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="70.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <viewport>
                               <Rectangle2D />
                            </viewport>
@@ -723,7 +723,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="140.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="140.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>
@@ -731,7 +731,7 @@
                               <Rectangle2D />
                            </viewport>
                         </ImageView>
-                        <ImageView fx:id="F5" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#moveOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#moveOut" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="F5" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/White.png" />
                            </image>

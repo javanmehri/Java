@@ -253,14 +253,13 @@ public class MainStageController {
     @FXML
     private void mouseOn(Event event)
     {
-        ScreenBoard.highlight(event);
+        ScreenBoard.mouseOn(event);
     }
 
     @FXML
-    private void moveOut(Event event)
+    private void mouseOut(Event event)
     {
-        ScreenBoard.undoHighlight(event);
-
+        ScreenBoard.mouseOut(event);
     }
 
     @FXML

@@ -34,7 +34,11 @@ public class ScreenBoard {
                 de_select();
 
             else if (isImageViewEmpty(clickedTile))
+            {
                 move(event);
+                undoHighlight(event);
+
+            }
         }
         updateTheChessBoard();
     }
@@ -80,6 +84,41 @@ public class ScreenBoard {
         }
 
 
+    }
+
+
+    public static void mouseOn(Event event)
+    {
+        if (isAnyPieceSelected)
+        {
+            if (getSelectedImageView(event)!=selectedPiece)
+            {
+                highlight(event);
+            }
+        }
+    }
+
+    public static void mouseOut(Event event)
+    {
+        if (isAnyPieceSelected)
+            undoHighlight(event);
+    }
+
+    private static ImageView getSelectedImageView(Event event)
+    {
+        return (ImageView)event.getSource();
+    }
+
+
+    private static void highlight(Event event)
+    {
+        highlight(getSelectedImageView(event));
+    }
+
+
+    private static void undoHighlight(Event event)
+    {
+        undoHighlight(getSelectedImageView(event));
     }
 
     // =============================================================
@@ -129,22 +168,6 @@ public class ScreenBoard {
 
                 }
 
-    }
-
-    public static ImageView getSelectedImageView(Event event)
-    {
-        return (ImageView)event.getSource();
-    }
-
-
-    public static void highlight(Event event)
-    {
-        highlight(getSelectedImageView(event));
-    }
-
-    public static void undoHighlight(Event event)
-    {
-        undoHighlight(getSelectedImageView(event));
     }
 
     private static void undoHighlight(ImageView imageView)
