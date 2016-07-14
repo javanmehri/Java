@@ -3,6 +3,7 @@ package mos;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 
 import java.awt.geom.Rectangle2D;
@@ -252,13 +253,13 @@ public class MainStageController {
     @FXML
     private void mouseOn(Event event)
     {
-        //ScreenBoard.getSelectedImageView(event);
-
+        ScreenBoard.highlight(event);
     }
 
     @FXML
-    private void moveOut()
+    private void moveOut(Event event)
     {
+        ScreenBoard.undoHighlight(event);
 
     }
 

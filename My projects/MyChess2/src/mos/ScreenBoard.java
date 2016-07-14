@@ -1,7 +1,9 @@
 package mos;
 
 import javafx.event.Event;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 
 import java.io.IOException;
 
@@ -135,6 +137,32 @@ public class ScreenBoard {
     }
 
 
+    public static void highlight(Event event)
+    {
+        highlight(getSelectedImageView(event));
+    }
+
+    public static void undoHighlight(Event event)
+    {
+        undoHighlight(getSelectedImageView(event));
+    }
+
+    private static void undoHighlight(ImageView imageView)
+    {
+        imageView.setEffect(null);
+    }
+
+    private static void highlight(ImageView imageView)
+    {
+        InnerShadow effect = new InnerShadow();
+        effect.setColor(Color.valueOf("#ffde05a5"));
+        effect.setHeight(255);
+        effect.setRadius(127);
+        effect.setWidth(255);
+        imageView.setEffect(effect);
+    }
+
+
     private static boolean isImageViewEmpty(ImageView imageView)
     {
         if (imageView.getImage()==Img.Tile_Black || imageView.getImage()==Img.Tile_White)
@@ -201,7 +229,6 @@ public class ScreenBoard {
         int y = spot.get_Y();
         return MainStageController.getImageViewsBoard()[x][y];
     }
-
 
 
 
