@@ -107,8 +107,8 @@ public class ScreenBoard {
             else
                 player = game.getPlayer_Black();
 
-            if (player == GameManager.getActivePlayer())
-            {
+            game.setSelectedPlayer(player);
+
                 moveToSopt = (ImageView)event.getSource();
 
                 int from_i = get_XIndex(selectedPiece);
@@ -116,13 +116,15 @@ public class ScreenBoard {
                 int to_i = get_XIndex(moveToSopt);
                 int to_j = get_YIndex(moveToSopt);
 
-                game.move(player, from_i, from_j, to_i, to_j);
+                if(game.move(player, from_i, from_j, to_i, to_j))
+                {
+                    de_select();
+                    //Sounds.play(Sounds.SoundEffects.MOVE);
+                    GameManager.updateTheGame(game);
+                    game.switchTheActivePlayer();
 
-                de_select();
-                //Sounds.play(Sounds.SoundEffects.MOVE);
-                GameManager.updateTheGame(game);
-                GameManager.switchTheActivePlayer();
-            }
+                }
+
     }
 
 

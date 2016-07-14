@@ -6,12 +6,10 @@ package mos;
 public class GameManager {
 
     private static Game game;
-    private static Player activePlayer;
 
     public static void startAGame()
     {
         game = new Game("Player 1", "Player 2");
-        activePlayer = game.getPlayer_White();
     }
 
 
@@ -27,17 +25,6 @@ public class GameManager {
     }
 
 
-    public static Player getActivePlayer()
-    {
-        return activePlayer;
-    }
 
 
-    public static void switchTheActivePlayer()
-    {
-        if (activePlayer == game.getPlayer_White())
-            activePlayer = game.getPlayer_Black();
-        else
-            activePlayer = game.getPlayer_White();
-    }
 }

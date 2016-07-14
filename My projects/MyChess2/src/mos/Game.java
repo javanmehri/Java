@@ -8,6 +8,9 @@ public class Game {
     private Board board;
     private Player player1;
     private Player player2;
+    private Player activePlayer;
+    private Player selectedPlayer;
+
 
 
     public Game(String player_White, String player_Black)
@@ -17,11 +20,31 @@ public class Game {
         player1 = new Player(player_White, Piece.Color.WHITE);
         player2 = new Player(player_Black, Piece.Color.BLACK);
 
+        activePlayer = getPlayer_White();
+
         board = player1.setUpPieces(board);
         board = player2.setUpPieces(board);
 
     }
 
+
+    public Player getActivePlayer()
+    {
+        return activePlayer;
+    }
+
+    public void setSelectedPlayer(Player player)
+    {
+        selectedPlayer = player;
+    }
+
+    public void switchTheActivePlayer()
+    {
+        if (activePlayer == player1)
+            activePlayer = player2;
+        else
+            activePlayer = player1;
+    }
 
     public Player getPlayer_White() { return player1; }
 
@@ -31,16 +54,24 @@ public class Game {
 
     public void setBoard(Board board) { this.board = board; }
 
-    public void start()
+    public boolean isActivePlayer(Player player)
     {
-        //System.out.println(king_B.getPieceType());
-        //System.out.println(board.getSpot(0,0).getPiece());
+        return player==activePlayer;
     }
 
-    public void move(Player player, int from_i, int from_j, int to_i, int to_j)
+    public boolean move(Player player, int from_i, int from_j, int to_i, int to_j)
     {
-        board = player.move(board, from_i, from_j, to_i,to_j);
+        if (player == activePlayer) {
+            board = player.move(board, from_i, from_j, to_i, to_j);
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
     }
+
 
 }
 
