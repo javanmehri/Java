@@ -74,14 +74,13 @@ public class Player {
     {
         Piece piece = chessBoard.getPieceOnTheSpot(from_i,from_j);
 
-        System.out.println(piece.getPieceType());
+        //System.out.println(piece.getPieceType());
 
-        if (piece.isValidMove(to_i,to_j))
+        if (piece.isValidMove(chessBoard, to_i,to_j))
         {
             chessBoard.removePiece(from_i,from_j);
             chessBoard.occupySpot(piece,to_i,to_j);
             piece.wasMoved = true;
-
         }
 
         return chessBoard;

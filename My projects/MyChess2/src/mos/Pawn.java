@@ -15,11 +15,11 @@ public class Pawn extends Piece {
 
 
     @Override
-    public boolean isValidMove(int toX, int toY) {
+    public boolean isValidMove(Board chessBoard, int toX, int toY) {
         int fromX = this.getSpot().get_X();
         int fromY = this.getSpot().get_Y();
 
-        if (super.isValidMove(toX,toY))
+        if (super.isValidMove(chessBoard, toX,toY))
         {
             //...
 
@@ -44,11 +44,11 @@ public class Pawn extends Piece {
         }
 
 
-        System.out.println(" Pawn isValideMove -> false");
-        System.out.println(" toX: "+toX);
-        System.out.println(" fromX: "+fromX);
-        System.out.println(" toY: "+toY);
-        System.out.println(" fromY: "+fromY);
+        //System.out.println(" Pawn isValideMove -> false");
+        //System.out.println(" toX: "+toX);
+        //System.out.println(" fromX: "+fromX);
+        //System.out.println(" toY: "+toY);
+        //System.out.println(" fromY: "+fromY);
 
 
 

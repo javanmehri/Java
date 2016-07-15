@@ -63,7 +63,7 @@ public class Game {
     {
         if (player == activePlayer)
         {
-            if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(to_i,to_j))
+            if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j))
             {
                 board = player.move(board, from_i, from_j, to_i, to_j);
                 return true;

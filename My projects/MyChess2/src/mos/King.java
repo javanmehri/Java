@@ -12,19 +12,19 @@ public class King extends Piece {
     }
 
     @Override
-    public boolean isValidMove(int toX, int toY) {
+    public boolean isValidMove(Board chessBoard, int toX, int toY) {
 
-        if (super.isValidMove(toX,toY))
+        if (super.isValidMove(chessBoard, toX,toY))
         {
             //...
             int fromX = this.getSpot().get_X();
             int fromY = this.getSpot().get_Y();
 
-            if (Math.abs(toX-fromX)==1 && Math.abs(toY-fromY)<=2)
+            if (Math.abs(toX-fromX)==1 && Math.abs(toY-fromY)<=1)
             {
                 return true;
             }
-            if (Math.abs(toY-fromY)==1 && Math.abs(toX-fromX)<=2)
+            if (Math.abs(toY-fromY)==1 && Math.abs(toX-fromX)<=1)
             {
                 return true;
             }

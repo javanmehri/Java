@@ -13,9 +13,9 @@ public class Rook extends Piece {
 
 
     @Override
-    public boolean isValidMove(int toX, int toY) {
+    public boolean isValidMove(Board chessBoard, int toX, int toY) {
 
-        if (super.isValidMove(toX,toY))
+        if (super.isValidMove(chessBoard, toX,toY))
         {
             //...
             int fromX = this.getSpot().get_X();

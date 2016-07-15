@@ -19,23 +19,20 @@ public class ScreenBoard {
 
 
     // =============================================================
-    //                    Helper Methods
+    //                           Methods
     // =============================================================
 
-    public static void clickOnBoard(Event event) throws IOException
-    {
+    public static void clickOnBoard(Event event) throws IOException {
         ImageView clickedTile = getSelectedImageView(event);
 
         if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile))
             select(event);
 
-        else if (isAnyPieceSelected)
-        {
+        else if (isAnyPieceSelected) {
             if (selectedPiece == clickedTile)
                 de_select();
 
-            else if (isImageViewEmpty(clickedTile))
-            {
+            else if (isImageViewEmpty(clickedTile)) {
                 move(event);
                 undoHighlight(event);
 
@@ -45,8 +42,7 @@ public class ScreenBoard {
     }
 
 
-    public static void updateTheChessBoard()
-    {
+    public static void updateTheChessBoard() {
         Spot spot;
         Piece piece;
         ImageView imageViewOfSpot;
@@ -56,26 +52,21 @@ public class ScreenBoard {
 
         Game game = GameManager.getTheGame();
 
-        for (int i = 0; i<8; i++)
-        {
-            for (int j = 0; j<8; j++)
-            {
-                spot = game.getBoard().getSpot(i,j);
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                spot = game.getBoard().getSpot(i, j);
                 imageViewOfSpot = getImageViewOfSpot(spot);
-                backgroundColor = getBackgroundColor(i,j);
+                backgroundColor = getBackgroundColor(i, j);
 
-                if (spot.isOccupied())
-                {
+                if (spot.isOccupied()) {
                     piece = spot.getPiece();
                     type = piece.getPieceType();
                     pieceColor = piece.getColor();
 
                     updateTheTile(imageViewOfSpot, type, pieceColor, backgroundColor);
 
-                }
-                else
-                {
-                    if(backgroundColor== Piece.Color.BLACK)
+                } else {
+                    if (backgroundColor == Piece.Color.BLACK)
                         imageViewOfSpot.setImage(Img.Tile_Black);
                     else
                         imageViewOfSpot.setImage(Img.Tile_White);
@@ -88,20 +79,25 @@ public class ScreenBoard {
     }
 
 
-    public static void mouseOn(Event event)
-    {
+    public static void mouseOn(Event event) {
 
-        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event))
+        if (!isAnyPieceSelected && isActivePlayer(event))
         {
+            changeCursorToHand(event);
+        }
+
+        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event)) {
             highlight(event);
             changeCursorToHand(event);
         }
     }
 
-    public static void mouseOut(Event event)
-    {
-        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event))
+    public static void mouseOut(Event event) {
+        if (!isAnyPieceSelected && isActivePlayer(event))
         {
+            changeCursorToNormal(event);
+        }
+        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event)) {
             undoHighlight(event);
             changeCursorToNormal(event);
         }
@@ -110,59 +106,44 @@ public class ScreenBoard {
     // =============================================================
     //                    Helper Methods
     // =============================================================
-    private static void select(Event event)
-    {
-        selectedPiece = getSelectedImageView(event);
-        selectedPiece.setOpacity(0.5);
-        isAnyPieceSelected = true;
-    }
-
-    private static void de_select()
-    {
-        selectedPiece.setOpacity(1);
-        isAnyPieceSelected = false;
-    }
 
     private static void move(Event event) throws IOException {
 
-            Game game = GameManager.getTheGame();
+        Game game = GameManager.getTheGame();
 
-            Piece.Color color = getColorOfPiece(selectedPiece);
-            Player player;
-            if (color == Piece.Color.WHITE)
-                player = game.getPlayer_White();
-            else
-                player = game.getPlayer_Black();
+        Piece.Color color = getColorOfPiece(selectedPiece);
+        Player player;
+        if (color == Piece.Color.WHITE)
+            player = game.getPlayer_White();
+        else
+            player = game.getPlayer_Black();
 
-            game.setSelectedPlayer(player);
+        game.setSelectedPlayer(player);
 
-                moveToSopt = getSelectedImageView(event);
+        moveToSopt = getSelectedImageView(event);
 
-                int from_i = get_XIndex(selectedPiece);
-                int from_j = get_YIndex(selectedPiece);
-                //Spot fromSpot = game.getBoard().getSpot(from_i, from_j);
-                int to_i = get_XIndex(moveToSopt);
-                int to_j = get_YIndex(moveToSopt);
-                //Spot toSpot = game.getBoard().getSpot(to_i,to_j);
+        int from_i = get_XIndex(selectedPiece);
+        int from_j = get_YIndex(selectedPiece);
+        //Spot fromSpot = game.getBoard().getSpot(from_i, from_j);
+        int to_i = get_XIndex(moveToSopt);
+        int to_j = get_YIndex(moveToSopt);
+        //Spot toSpot = game.getBoard().getSpot(to_i,to_j);
 
-                if(game.move(player, from_i, from_j, to_i, to_j))
-                {
-                    de_select();
-                    //Sounds.play(Sounds.SoundEffects.MOVE);
-                    GameManager.updateTheGame(game);
-                    game.switchTheActivePlayer();
+        if (game.move(player, from_i, from_j, to_i, to_j)) {
+            de_select();
+            //Sounds.play(Sounds.SoundEffects.MOVE);
+            GameManager.updateTheGame(game);
+            game.switchTheActivePlayer();
 
-                }
+        }
 
     }
 
-    private static void undoHighlight(ImageView imageView)
-    {
+    private static void undoHighlight(ImageView imageView) {
         imageView.setEffect(null);
     }
 
-    private static void highlight(ImageView imageView)
-    {
+    private static void highlight(ImageView imageView) {
         InnerShadow effect = new InnerShadow();
         effect.setColor(Color.valueOf("#ffde05a5"));
         effect.setHeight(255);
@@ -172,107 +153,146 @@ public class ScreenBoard {
     }
 
 
-    private static boolean isImageViewEmpty(ImageView imageView)
-    {
-        if (imageView.getImage()==Img.Tile_Black || imageView.getImage()==Img.Tile_White)
+
+
+// =================================================================================================================
+
+    private static ImageView updateTheTile(ImageView imageView, Piece.Type type, Piece.Color pieceColor, Piece.Color backgroundColor) {
+        imageView.setImage(Img.getPiece(type, pieceColor, backgroundColor));
+        return imageView;
+    }
+
+
+    private static void select(Event event) {
+        selectedPiece = getSelectedImageView(event);
+        selectedPiece.setOpacity(0.5);
+        isAnyPieceSelected = true;
+    }
+
+
+    private static void de_select() {
+        selectedPiece.setOpacity(1);
+        isAnyPieceSelected = false;
+    }
+
+
+    private static boolean isImageViewEmpty(ImageView imageView) {
+        if (imageView.getImage() == Img.Tile_Black || imageView.getImage() == Img.Tile_White)
             return true;
         return false;
     }
 
-    private static Piece.Color getColorOfPiece(ImageView imageView)
-    {
-        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
 
+    private static void changeCursorToHand(Event event) {
+        getSelectedImageView(event).setCursor(Cursor.HAND);
+    }
+
+
+    private static void changeCursorToNormal(Event event) {
+        getSelectedImageView(event).setCursor(Cursor.DEFAULT);
+    }
+
+
+    private static boolean isMouseOnSelectedPiece(Event event) {
+        if (isAnyPieceSelected)
+            return getSelectedImageView(event) == selectedPiece;
+        return false;
+    }
+
+
+    private static void highlight(Event event) {
+        highlight(getSelectedImageView(event));
+    }
+
+
+    private static void undoHighlight(Event event) {
+        undoHighlight(getSelectedImageView(event));
+    }
+
+
+    private static ImageView getSelectedImageView(Event event) {
+        return (ImageView) event.getSource();
+    }
+
+    private static Spot getSelectedSpot(Event event)
+    {
+        ImageView imageView = getSelectedImageView(event);
         int i = get_XIndex(imageView);
         int j = get_YIndex(imageView);
-        Game game = GameManager.getTheGame();
-        Piece.Color color = game.getBoard().getSpot(i,j).getPiece().getColor();
-
-        return color;
+        return GameManager.getTheGame().getBoard().getSpot(i,j);
     }
 
-    private static int get_XIndex(ImageView imageView)
+    private static boolean isTileEmpty(Event event)
     {
-        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
-        for (int i =0; i<8; i++)
-            for (int j=0; j<8; j++)
-                if (imageViewsBoard[i][j].equals(imageView))
-                {
-                    return i;
-                }
-
-        return -1;
+        ImageView imageView = getSelectedImageView(event);
+        return isImageViewEmpty(imageView);
     }
 
-    private static int get_YIndex(ImageView imageView)
+    private static boolean isActivePlayer(Event event)
     {
-        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
-        for (int i =0; i<8; i++)
-            for (int j=0; j<8; j++)
-                if (imageViewsBoard[i][j].equals(imageView))
-                {
-                    return j;
-                }
+        if (!isTileEmpty(event))
+        {
+            Piece.Color color = getColorOfPiece(getSelectedImageView(event));
+            Player player;
+            if (color== Piece.Color.WHITE)
+                player = GameManager.getTheGame().getPlayer_White();
+            else
+                player = GameManager.getTheGame().getPlayer_Black();
 
-        return -1;
+            return GameManager.getTheGame().isActivePlayer(player);
+        }
+        return false;
     }
 
-    private static Piece.Color getBackgroundColor(int i, int j)
-    {
-        Piece.Color backgroundColor = Piece.Color.WHITE;
-        if ((i+j)%2 == 0)
-            backgroundColor = Piece.Color.BLACK;
-        return backgroundColor;
-
-    }
-
-    private static ImageView updateTheTile(ImageView imageView, Piece.Type type, Piece.Color pieceColor, Piece.Color backgroundColor)
-    {
-        imageView.setImage(Img.getPiece(type,pieceColor,backgroundColor));
-        return imageView;
-    }
-
-    private static ImageView getImageViewOfSpot(Spot spot)
-    {
+    private static ImageView getImageViewOfSpot(Spot spot) {
         int x = spot.get_X();
         int y = spot.get_Y();
         return MainStageController.getImageViewsBoard()[x][y];
     }
 
 
-    private static ImageView getSelectedImageView(Event event)
-    {
-        return (ImageView)event.getSource();
+    private static Piece.Color getColorOfPiece(ImageView imageView) {
+        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
+
+        int i = get_XIndex(imageView);
+        int j = get_YIndex(imageView);
+        Game game = GameManager.getTheGame();
+        Piece.Color color = game.getBoard().getSpot(i, j).getPiece().getColor();
+
+        return color;
     }
 
 
-    private static void highlight(Event event)
-    {
-        highlight(getSelectedImageView(event));
+    private static int get_XIndex(ImageView imageView) {
+        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++)
+                if (imageViewsBoard[i][j].equals(imageView)) {
+                    return i;
+                }
+
+        return -1;
     }
 
 
-    private static void undoHighlight(Event event)
-    {
-        undoHighlight(getSelectedImageView(event));
+    private static int get_YIndex(ImageView imageView) {
+        ImageView[][] imageViewsBoard = MainStageController.getImageViewsBoard();
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++)
+                if (imageViewsBoard[i][j].equals(imageView)) {
+                    return j;
+                }
+
+        return -1;
     }
 
 
-    private static boolean isMouseOnSelectedPiece(Event event)
-    {
-        if (isAnyPieceSelected)
-            return  getSelectedImageView(event)==selectedPiece;
-        return false;
-    }
+    private static Piece.Color getBackgroundColor(int i, int j) {
+        Piece.Color backgroundColor = Piece.Color.WHITE;
+        if ((i + j) % 2 == 0)
+            backgroundColor = Piece.Color.BLACK;
+        return backgroundColor;
 
-    private static void changeCursorToHand(Event event)
-    {
-        getSelectedImageView(event).setCursor(Cursor.HAND);
-    }
-
-    private static void changeCursorToNormal(Event event)
-    {
-        getSelectedImageView(event).setCursor(Cursor.DEFAULT);
     }
 
 }
