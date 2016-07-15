@@ -28,8 +28,8 @@ public class Player {
         pieces[0][0] = new Rook(color);
         pieces[0][1] = new Knight(color);
         pieces[0][2] = new Bishop(color);
-        pieces[0][3] = new Queen(color);
-        pieces[0][4] = new King(color);
+        pieces[0][3] = new King(color);
+        pieces[0][4] = new Queen(color);
         pieces[0][5] = new Bishop(color);
         pieces[0][6] = new Knight(color);
         pieces[0][7] = new Rook(color);
@@ -73,6 +73,9 @@ public class Player {
     public Board move(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
         Piece piece = chessBoard.getPieceOnTheSpot(from_i,from_j);
+
+        System.out.println(piece.getPieceType());
+
         if (piece.isValidMove(to_i,to_j))
         {
             chessBoard.removePiece(from_i,from_j);

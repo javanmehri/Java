@@ -22,14 +22,17 @@ public class Queen extends Piece {
 
             if (Math.abs(toX-fromX)== Math.abs(toY-fromY))
             {
+                //System.out.println("1");
                 return true;
             }
             if (toX == fromX && toY != fromY)
             {
+                //System.out.println("2");
                 return true;
             }
             if (toX != fromX && toY == fromY)
             {
+                //System.out.println("3");
                 return true;
             }
 

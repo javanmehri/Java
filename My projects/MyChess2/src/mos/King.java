@@ -20,11 +20,11 @@ public class King extends Piece {
             int fromX = this.getSpot().get_X();
             int fromY = this.getSpot().get_Y();
 
-            if (Math.abs(toX-fromX)==1)
+            if (Math.abs(toX-fromX)==1 && Math.abs(toY-fromY)<=2)
             {
                 return true;
             }
-            if (Math.abs(toY-fromY)==1)
+            if (Math.abs(toY-fromY)==1 && Math.abs(toX-fromX)<=2)
             {
                 return true;
             }

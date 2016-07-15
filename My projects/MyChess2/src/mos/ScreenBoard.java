@@ -1,6 +1,7 @@
 package mos;
 
 import javafx.event.Event;
+import javafx.scene.Cursor;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -89,36 +90,21 @@ public class ScreenBoard {
 
     public static void mouseOn(Event event)
     {
-        if (isAnyPieceSelected)
+
+        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event))
         {
-            if (getSelectedImageView(event)!=selectedPiece)
-            {
-                highlight(event);
-            }
+            highlight(event);
+            changeCursorToHand(event);
         }
     }
 
     public static void mouseOut(Event event)
     {
-        if (isAnyPieceSelected)
+        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event))
+        {
             undoHighlight(event);
-    }
-
-    private static ImageView getSelectedImageView(Event event)
-    {
-        return (ImageView)event.getSource();
-    }
-
-
-    private static void highlight(Event event)
-    {
-        highlight(getSelectedImageView(event));
-    }
-
-
-    private static void undoHighlight(Event event)
-    {
-        undoHighlight(getSelectedImageView(event));
+            changeCursorToNormal(event);
+        }
     }
 
     // =============================================================
@@ -254,6 +240,39 @@ public class ScreenBoard {
     }
 
 
+    private static ImageView getSelectedImageView(Event event)
+    {
+        return (ImageView)event.getSource();
+    }
 
+
+    private static void highlight(Event event)
+    {
+        highlight(getSelectedImageView(event));
+    }
+
+
+    private static void undoHighlight(Event event)
+    {
+        undoHighlight(getSelectedImageView(event));
+    }
+
+
+    private static boolean isMouseOnSelectedPiece(Event event)
+    {
+        if (isAnyPieceSelected)
+            return  getSelectedImageView(event)==selectedPiece;
+        return false;
+    }
+
+    private static void changeCursorToHand(Event event)
+    {
+        getSelectedImageView(event).setCursor(Cursor.HAND);
+    }
+
+    private static void changeCursorToNormal(Event event)
+    {
+        getSelectedImageView(event).setCursor(Cursor.DEFAULT);
+    }
 
 }

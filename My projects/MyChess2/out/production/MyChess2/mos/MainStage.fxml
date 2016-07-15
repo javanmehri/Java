@@ -753,9 +753,9 @@
          <right>
             <Pane prefHeight="600.0" prefWidth="150.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="start_button" graphicTextGap="5.0" layoutX="27.0" layoutY="57.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="97.0" text="Start" textAlignment="CENTER">
+                  <Button fx:id="start_button" graphicTextGap="5.0" layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="135.0" text="Start a new game" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold Italic" size="18.0" />
+                        <Font name="System Bold Italic" size="13.0" />
                      </font>
                      <effect>
                         <ColorAdjust brightness="0.12" contrast="0.07" hue="-1.0" saturation="0.04" />
