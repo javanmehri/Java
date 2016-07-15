@@ -105,12 +105,13 @@
       <file leaf-file-name="ScreenBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="243" column="21" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+            <state relative-caret-position="155">
+              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#clickOnBoard#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#mouseOn#0;class#ScreenBoard#0" expanded="false" />
+                <element signature="method#mouseOut#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#highlight#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
@@ -122,7 +123,6 @@
                 <element signature="method#getImageViewOfSpot#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#get_XIndex#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
-                <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1194,12 +1194,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="243" column="21" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+        <state relative-caret-position="155">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#clickOnBoard#0;class#ScreenBoard#0" expanded="false" />
             <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#mouseOn#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#mouseOut#0;class#ScreenBoard#0" expanded="false" />
             <element signature="method#highlight#0;class#ScreenBoard#0" expanded="false" />
             <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
             <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
@@ -1211,7 +1212,6 @@
             <element signature="method#getImageViewOfSpot#0;class#ScreenBoard#0" expanded="false" />
             <element signature="method#get_XIndex#0;class#ScreenBoard#0" expanded="false" />
             <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>

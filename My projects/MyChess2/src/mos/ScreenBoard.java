@@ -25,7 +25,7 @@ public class ScreenBoard {
     public static void clickOnBoard(Event event) throws IOException {
         ImageView clickedTile = getSelectedImageView(event);
 
-        if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile))
+        if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile) && isActivePlayer(event))
             select(event);
 
         else if (isAnyPieceSelected) {
@@ -35,6 +35,7 @@ public class ScreenBoard {
             else if (isImageViewEmpty(clickedTile)) {
                 move(event);
                 undoHighlight(event);
+                changeCursorToNormal(event);
 
             }
         }
@@ -288,6 +289,7 @@ public class ScreenBoard {
 
 
     private static Piece.Color getBackgroundColor(int i, int j) {
+
         Piece.Color backgroundColor = Piece.Color.WHITE;
         if ((i + j) % 2 == 0)
             backgroundColor = Piece.Color.BLACK;
