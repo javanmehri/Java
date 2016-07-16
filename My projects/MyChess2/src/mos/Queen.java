@@ -39,4 +39,11 @@ public class Queen extends Piece {
         }
         return false;
     }
+
+    @Override
+    public boolean isValidRemove(Board chessBoard, int toX, int toY)
+    {
+        return false;
+    }
+
 }

@@ -56,5 +56,12 @@ public class Pawn extends Piece {
     }
 
 
+    @Override
+    public boolean isValidRemove(Board chessBoard, int toX, int toY)
+    {
+        return false;
+    }
+
+
 
 }

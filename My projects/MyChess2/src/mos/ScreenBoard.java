@@ -32,13 +32,14 @@ public class ScreenBoard {
             if (selectedPiece == clickedTile)
                 de_select();
 
-            else if (isImageViewEmpty(clickedTile)) {
+            else if (isImageViewEmpty(clickedTile) || !isActivePlayer(event)) {
                 move(event);
                 undoHighlight(event);
                 undoHighlightTheWay(event);
                 changeCursorToNormal(event);
 
             }
+
         }
         updateTheChessBoard();
     }
@@ -93,6 +94,8 @@ public class ScreenBoard {
             //highlight(event);
             highlightTheWay(event);
         }
+
+
     }
 
     public static void mouseOut(Event event) {

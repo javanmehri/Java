@@ -59,23 +59,36 @@ public class Game {
         return player==activePlayer;
     }
 
+
     public boolean move(Player player, int from_i, int from_j, int to_i, int to_j)
     {
         if (player == activePlayer)
         {
-            if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
+            if (getPlayer(to_i,to_j)==null)
             {
-                board = player.move(board, from_i, from_j, to_i, to_j);
-                return true;
+                if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
+                {
+                    board = player.move(board, from_i, from_j, to_i, to_j);
+                    return true;
+                }
+
+            }
+            else if (getPlayer(to_i,to_j)!=activePlayer)
+            {
+                if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
+                {
+                    board = player.remove(board, from_i, from_j, to_i, to_j);
+                    return true;
+                }
             }
 
         }
 
-
         return false;
 
-
     }
+
+
 
     public Spot[] getSpotsOnTheWay(int from_i, int from_j, int to_i, int to_j)
     {
@@ -130,6 +143,28 @@ public class Game {
         return false;
     }
 
+
+    public Player getPlayer(int i, int j)
+    {
+        if (board.getSpot(i,j).isOccupied())
+        {
+            if (board.getPieceOnTheSpot(i,j).getColor()== Piece.Color.WHITE)
+            {
+                return getPlayer_White();
+            }
+            else
+            {
+                return getPlayer_Black();
+            }
+        }
+        return null;
+
+    }
+
+    public boolean isActivePlayer(int i, int j)
+    {
+        return getPlayer(i,j)==activePlayer;
+    }
 
 }
 

@@ -74,13 +74,30 @@ public class Player {
     {
         Piece piece = chessBoard.getPieceOnTheSpot(from_i,from_j);
 
-        //System.out.println(piece.getPieceType());
-
         if (piece.isValidMove(chessBoard, to_i,to_j))
         {
             chessBoard.removePiece(from_i,from_j);
             chessBoard.occupySpot(piece,to_i,to_j);
             piece.wasMoved = true;
+        }
+
+        return chessBoard;
+    }
+
+
+    public Board remove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
+    {
+        Piece piece1 = chessBoard.getPieceOnTheSpot(from_i,from_j);
+        Piece piece2 = chessBoard.getPieceOnTheSpot(to_i,to_j);
+
+
+        if (piece1.isValidRemove(chessBoard, to_i,to_j))
+        {
+            chessBoard.removePiece(from_i,from_j);
+            chessBoard.removePiece(to_i,to_j);
+            chessBoard.occupySpot(piece1,to_i,to_j);
+            piece1.wasMoved = true;
+            piece2.setAvailable(false);
         }
 
         return chessBoard;

@@ -73,6 +73,10 @@ public class Piece {
         return true;
     }
 
+    public boolean isValidRemove(Board chessBoard, int toX, int toY)
+    {
+        return false;
+    }
 
 
 }
