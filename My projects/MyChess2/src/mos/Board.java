@@ -43,33 +43,4 @@ public class Board {
 
     }
 
-    public static Spot[] getSpotsOnTheWay(Board board, int from_i, int from_j, int to_i, int to_j)
-    {
-        Spot[] spots = new Spot[6];
-        //board.getPieceOnTheSpot()
-        if (from_i == to_i)
-        {
-            int delta = Math.abs(from_j - to_j);
-            for (int k=0; k < delta; k++)
-            {
-                int min_j = Math.min(from_j , to_j);
-                int max_j = Math.max(from_j , to_j);
-                spots[k] = board.getSpot(from_i, min_j+k+1);
-            }
-        }
-        return spots;
-    }
-
-    public static boolean isAnyPieceOnTheWay(Board board, int from_i, int from_j, int to_i, int to_j)
-    {
-
-        Spot[] spots = getSpotsOnTheWay(board,from_i, from_j, to_i, to_j);
-        for (int i = 0; i<7; i++)
-        {
-            if (spots[i].isOccupied())
-                return true;
-        }
-
-        return false;
-    }
 }

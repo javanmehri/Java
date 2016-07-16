@@ -35,6 +35,7 @@ public class ScreenBoard {
             else if (isImageViewEmpty(clickedTile)) {
                 move(event);
                 undoHighlight(event);
+                undoHighlightTheWay(event);
                 changeCursorToNormal(event);
 
             }
@@ -88,8 +89,9 @@ public class ScreenBoard {
         }
 
         if (isAnyPieceSelected && !isMouseOnSelectedPiece(event)) {
-            highlight(event);
             changeCursorToHand(event);
+            highlight(event);
+            highlightTheWay(event);
         }
     }
 
@@ -99,14 +101,78 @@ public class ScreenBoard {
             changeCursorToNormal(event);
         }
         if (isAnyPieceSelected && !isMouseOnSelectedPiece(event)) {
-            undoHighlight(event);
             changeCursorToNormal(event);
+            undoHighlight(event);
+            undoHighlightTheWay(event);
         }
     }
 
     // =============================================================
     //                    Helper Methods
     // =============================================================
+
+
+    private static void undoHighlight(ImageView imageView) {
+        imageView.setEffect(null);
+    }
+
+    private static void highlight(ImageView imageView) {
+        InnerShadow effect = new InnerShadow();
+        effect.setColor(Color.valueOf("#ffde05a5"));
+        effect.setHeight(255);
+        effect.setRadius(127);
+        effect.setWidth(255);
+        imageView.setEffect(effect);
+    }
+
+    private static void highlightTheWay(Event event)
+    {
+        int to_i = getSelectedSpot(event).get_X();
+        int to_j = getSelectedSpot(event).get_Y();
+        int from_i =  get_XIndex(selectedPiece);
+        int from_j =  get_YIndex(selectedPiece);
+        Game game = GameManager.getTheGame();
+
+        Spot[] spots = game.getSpotsOnTheWay(from_i, from_j, to_i,to_j);
+
+        //Report.report(from_i, from_j, to_i, to_j);
+        //Report.report(spots);
+
+        if (!game.isAnyPieceOnTheWay(from_i, from_j, to_i, to_j))
+        {
+            Report.report(" The way is clear ");
+            for (int i = 0; i<6; i++)
+            {
+                if (spots[i]!=null)
+                    highlight(getImageViewOfSpot(spots[i]));
+            }
+        }
+        else
+            Report.report(" !!! < The way is blocked > !!!");
+
+    }
+
+    private static void undoHighlightTheWay(Event event)
+    {
+        int to_i = getSelectedSpot(event).get_X();
+        int to_j = getSelectedSpot(event).get_Y();
+        int from_i =  get_XIndex(selectedPiece);
+        int from_j =  get_YIndex(selectedPiece);
+        Game game = GameManager.getTheGame();
+
+        Spot[] spots = game.getSpotsOnTheWay(from_i, from_j, to_i,to_j);
+        for (int i = 0; i<6; i++)
+            if (spots[i]!=null)
+                    undoHighlight(getImageViewOfSpot(spots[i]));
+
+    }
+
+    private static void undoHighlight(Event event) {
+        undoHighlight(getSelectedImageView(event));
+    }
+
+
+// =================================================================================================================
 
     private static void move(Event event) throws IOException {
 
@@ -140,23 +206,6 @@ public class ScreenBoard {
 
     }
 
-    private static void undoHighlight(ImageView imageView) {
-        imageView.setEffect(null);
-    }
-
-    private static void highlight(ImageView imageView) {
-        InnerShadow effect = new InnerShadow();
-        effect.setColor(Color.valueOf("#ffde05a5"));
-        effect.setHeight(255);
-        effect.setRadius(127);
-        effect.setWidth(255);
-        imageView.setEffect(effect);
-    }
-
-
-
-
-// =================================================================================================================
 
     private static ImageView updateTheTile(ImageView imageView, Piece.Type type, Piece.Color pieceColor, Piece.Color backgroundColor) {
         imageView.setImage(Img.getPiece(type, pieceColor, backgroundColor));
@@ -205,10 +254,6 @@ public class ScreenBoard {
         highlight(getSelectedImageView(event));
     }
 
-
-    private static void undoHighlight(Event event) {
-        undoHighlight(getSelectedImageView(event));
-    }
 
 
     private static ImageView getSelectedImageView(Event event) {
