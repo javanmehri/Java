@@ -83,18 +83,30 @@ public class Game {
         if (from_j == to_j)
         {
             int delta = Math.abs(from_i - to_i);
-            //Report.report(" delta = "+delta);
             if (delta > 1)
             {
                 for (int k=0; k < delta-1; k++)
                 {
                     int min_i = Math.min(from_i , to_i);
-                    int max_i = Math.max(from_i , to_i);
                     spots[k] = board.getSpot(min_i+k+1, from_j);
                 }
             }
-
         }
+
+        if (from_i == to_i)
+        {
+            int delta = Math.abs(from_j - to_j);
+            if (delta > 1)
+            {
+                for (int k=0; k < delta-1; k++)
+                {
+                    int min_j = Math.min(from_j , to_j);
+                    spots[k] = board.getSpot(from_i, min_j+k+1);
+                }
+            }
+        }
+
+
         return spots;
     }
 

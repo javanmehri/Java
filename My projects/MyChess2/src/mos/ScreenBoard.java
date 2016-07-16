@@ -23,7 +23,7 @@ public class ScreenBoard {
     // =============================================================
 
     public static void clickOnBoard(Event event) throws IOException {
-        ImageView clickedTile = getSelectedImageView(event);
+        ImageView clickedTile = getImageView(event);
 
         if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile) && isActivePlayer(event))
             select(event);
@@ -90,7 +90,7 @@ public class ScreenBoard {
 
         if (isAnyPieceSelected && !isMouseOnSelectedPiece(event)) {
             changeCursorToHand(event);
-            highlight(event);
+            //highlight(event);
             highlightTheWay(event);
         }
     }
@@ -127,8 +127,8 @@ public class ScreenBoard {
 
     private static void highlightTheWay(Event event)
     {
-        int to_i = getSelectedSpot(event).get_X();
-        int to_j = getSelectedSpot(event).get_Y();
+        int to_i = getSpot(event).get_X();
+        int to_j = getSpot(event).get_Y();
         int from_i =  get_XIndex(selectedPiece);
         int from_j =  get_YIndex(selectedPiece);
         Game game = GameManager.getTheGame();
@@ -146,6 +146,9 @@ public class ScreenBoard {
                 if (spots[i]!=null)
                     highlight(getImageViewOfSpot(spots[i]));
             }
+            if (!isActivePlayer(event))
+                  highlight(event);
+
         }
         else
             Report.report(" !!! < The way is blocked > !!!");
@@ -154,8 +157,8 @@ public class ScreenBoard {
 
     private static void undoHighlightTheWay(Event event)
     {
-        int to_i = getSelectedSpot(event).get_X();
-        int to_j = getSelectedSpot(event).get_Y();
+        int to_i = getSpot(event).get_X();
+        int to_j = getSpot(event).get_Y();
         int from_i =  get_XIndex(selectedPiece);
         int from_j =  get_YIndex(selectedPiece);
         Game game = GameManager.getTheGame();
@@ -168,7 +171,7 @@ public class ScreenBoard {
     }
 
     private static void undoHighlight(Event event) {
-        undoHighlight(getSelectedImageView(event));
+        undoHighlight(getImageView(event));
     }
 
 
@@ -187,7 +190,7 @@ public class ScreenBoard {
 
         game.setSelectedPlayer(player);
 
-        moveToSopt = getSelectedImageView(event);
+        moveToSopt = getImageView(event);
 
         int from_i = get_XIndex(selectedPiece);
         int from_j = get_YIndex(selectedPiece);
@@ -214,7 +217,7 @@ public class ScreenBoard {
 
 
     private static void select(Event event) {
-        selectedPiece = getSelectedImageView(event);
+        selectedPiece = getImageView(event);
         selectedPiece.setOpacity(0.5);
         isAnyPieceSelected = true;
     }
@@ -234,35 +237,35 @@ public class ScreenBoard {
 
 
     private static void changeCursorToHand(Event event) {
-        getSelectedImageView(event).setCursor(Cursor.HAND);
+        getImageView(event).setCursor(Cursor.HAND);
     }
 
 
     private static void changeCursorToNormal(Event event) {
-        getSelectedImageView(event).setCursor(Cursor.DEFAULT);
+        getImageView(event).setCursor(Cursor.DEFAULT);
     }
 
 
     private static boolean isMouseOnSelectedPiece(Event event) {
         if (isAnyPieceSelected)
-            return getSelectedImageView(event) == selectedPiece;
+            return getImageView(event) == selectedPiece;
         return false;
     }
 
 
     private static void highlight(Event event) {
-        highlight(getSelectedImageView(event));
+        highlight(getImageView(event));
     }
 
 
 
-    private static ImageView getSelectedImageView(Event event) {
+    private static ImageView getImageView(Event event) {
         return (ImageView) event.getSource();
     }
 
-    private static Spot getSelectedSpot(Event event)
+    private static Spot getSpot(Event event)
     {
-        ImageView imageView = getSelectedImageView(event);
+        ImageView imageView = getImageView(event);
         int i = get_XIndex(imageView);
         int j = get_YIndex(imageView);
         return GameManager.getTheGame().getBoard().getSpot(i,j);
@@ -270,7 +273,7 @@ public class ScreenBoard {
 
     private static boolean isTileEmpty(Event event)
     {
-        ImageView imageView = getSelectedImageView(event);
+        ImageView imageView = getImageView(event);
         return isImageViewEmpty(imageView);
     }
 
@@ -278,7 +281,7 @@ public class ScreenBoard {
     {
         if (!isTileEmpty(event))
         {
-            Piece.Color color = getColorOfPiece(getSelectedImageView(event));
+            Piece.Color color = getColorOfPiece(getImageView(event));
             Player player;
             if (color== Piece.Color.WHITE)
                 player = GameManager.getTheGame().getPlayer_White();
