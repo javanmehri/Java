@@ -21,35 +21,41 @@ public class Pawn extends Piece {
 
         if (super.isValidMove(chessBoard, toX,toY))
         {
-            //...
-
-            if (wasMoved)
+            if (getColor()==Color.WHITE)
             {
-                if (toY == fromY && Math.abs(toX-fromX)==1 )
-                {
-                    //wasMoved = true;
-                    return true;
+                if (wasMoved) {
+                    if (toY == fromY && (toX - fromX) == 1) {
+                        return true;
+                    }
+                } else {
+                    if (toY == fromY && ((toX - fromX) == 1 || (toX - fromX) == 2)) {
+                        return true;
+                    }
+
                 }
             }
-            else
+
+            else if (getColor() == Color.BLACK)
             {
-                if (toY == fromY && (Math.abs(toX-fromX)==1 || Math.abs(toX-fromX)==2))
+                if (wasMoved)
                 {
-                    //wasMoved = true;
-                    return true;
+                    if (toY == fromY && (toX-fromX)==-1 )
+                    {
+                        return true;
+                    }
                 }
+                else
+                {
+                    if (toY == fromY && ((toX-fromX)==-1 || (toX-fromX)==-2))
+                    {
+                        return true;
+                    }
+                }
+
 
             }
 
         }
-
-
-        //System.out.println(" Pawn isValideMove -> false");
-        //System.out.println(" toX: "+toX);
-        //System.out.println(" fromX: "+fromX);
-        //System.out.println(" toY: "+toY);
-        //System.out.println(" fromY: "+fromY);
-
 
 
         return false;
@@ -59,6 +65,25 @@ public class Pawn extends Piece {
     @Override
     public boolean isValidRemove(Board chessBoard, int toX, int toY)
     {
+        if (chessBoard.getSpot(toX,toY).isOccupied())
+        {
+            if (chessBoard.getPieceOnTheSpot(toX,toY).getColor()!=this.getColor())
+            {
+                int fromX = this.getSpot().get_X();
+                int fromY = this.getSpot().get_Y();
+
+                if (getColor()==Color.WHITE)
+                {
+                        if (toX==fromX+1 && ((toY==fromY+1) || (toY==fromY-1)))
+                            return true;
+                }
+                else
+                {
+                        if (toX==fromX-1 && ((toY==fromY+1) || (toY==fromY-1)))
+                            return true;
+                }
+            }
+        }
         return false;
     }
 

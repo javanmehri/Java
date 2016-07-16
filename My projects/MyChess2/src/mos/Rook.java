@@ -37,6 +37,14 @@ public class Rook extends Piece {
     @Override
     public boolean isValidRemove(Board chessBoard, int toX, int toY)
     {
+        if (chessBoard.getSpot(toX,toY).isOccupied())
+        {
+            if (chessBoard.getPieceOnTheSpot(toX,toY).getColor()!=this.getColor())
+            {
+                if (isValidMove(chessBoard,toX,toY))
+                    return true;
+            }
+        }
         return false;
     }
 
