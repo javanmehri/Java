@@ -93,28 +93,59 @@ public class Game {
     public Spot[] getSpotsOnTheWay(int from_i, int from_j, int to_i, int to_j)
     {
         Spot[] spots = new Spot[6];
-        if (from_j == to_j)
+        int delta_i = Math.abs(to_i - from_i);
+        int delta_j = Math.abs(to_j - from_j);
+        int min_i = Math.min(from_i , to_i);
+        int min_j = Math.min(from_j , to_j);
+
+        Report.report(from_i,from_j,to_i,to_j);
+
+        if (delta_j == 0)
         {
-            int delta = Math.abs(from_i - to_i);
-            if (delta > 1)
+            if (delta_i > 1)
             {
-                for (int k=0; k < delta-1; k++)
+                for (int k=0; k < delta_i-1; k++)
                 {
-                    int min_i = Math.min(from_i , to_i);
                     spots[k] = board.getSpot(min_i+k+1, from_j);
                 }
             }
         }
 
-        if (from_i == to_i)
+        else if (delta_i == 0)
         {
-            int delta = Math.abs(from_j - to_j);
-            if (delta > 1)
+            if (delta_j > 1)
             {
-                for (int k=0; k < delta-1; k++)
+                for (int k=0; k < delta_j-1; k++)
                 {
-                    int min_j = Math.min(from_j , to_j);
                     spots[k] = board.getSpot(from_i, min_j+k+1);
+                }
+            }
+        }
+
+        else if (delta_i == delta_j)
+        {
+            Report.report(" delta_i = delta_j ");
+            if (delta_i > 1)
+            {
+                for (int k=0; k<delta_i-1; k++)
+                {
+                    if ((to_i-from_i)>0 && (to_j-from_j)>0)
+                    {
+                        spots[k] = board.getSpot(from_i+(k+1),from_j+(k+1));
+                    }
+                    else if ((to_i-from_i)>0 && (to_j-from_j)<0)
+                    {
+                        spots[k] = board.getSpot(from_i+(k+1),from_j-(k+1));
+                        //Report.report(" i="+(from_i+(k+1))+" j="+(from_j-(k+1)));
+                    }
+                    else if ((to_i-from_i)<0 && (to_j-from_j)>0)
+                    {
+                        spots[k] = board.getSpot(from_i-(k+1),from_j+(k+1));
+                    }
+                    else if ((to_i-from_i)<0 && (to_j-from_j)<0)
+                    {
+                        spots[k] = board.getSpot(from_i-(k+1),from_j-(k+1));
+                    }
                 }
             }
         }
@@ -129,6 +160,10 @@ public class Game {
         int delta_i = Math.abs(from_i - to_i);
         int delta_j = Math.abs(from_j - to_j);
         int max_delta = Math.max(delta_i, delta_j);
+
+        //if (getBoard().getPieceOnTheSpot(from_i,from_j).getPieceType()== Piece.Type.KNIGHT)
+            //return true;
+
         if (max_delta>1)
         {
             Spot[] spots = getSpotsOnTheWay(from_i, from_j, to_i, to_j);
@@ -139,8 +174,11 @@ public class Game {
                          return true;
             }
         }
-
-        return false;
+        //if (delta_i==0 || delta_j==0 || delta_i==delta_j)
+        //{
+        //    return false;
+        //}
+        return true;
     }
 
 
