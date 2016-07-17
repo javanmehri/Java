@@ -63,28 +63,37 @@ public class Game {
 
 
     public boolean move(Player player, int from_i, int from_j, int to_i, int to_j) throws IOException {
-        if (player == activePlayer)
+
+        if (player != activePlayer)
+            return false;
+
+        if (isCheck() && getBoard().getPieceOnTheSpot(from_i,from_j).getPieceType()!= Piece.Type.KING)
         {
-            if (getPlayer(to_i,to_j)==null)
-            {
+            Report.report(" >>> You need to move the King! <<<");
+            return false;
+        }
+
+
+        if (getPlayer(to_i,to_j)==null)
+        {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
                 {
                     board = player.move(board, from_i, from_j, to_i, to_j);
                     return true;
                 }
 
-            }
-            else if (getPlayer(to_i,to_j)!=activePlayer)
-            {
+        }
+        else if (getPlayer(to_i,to_j)!=activePlayer)
+        {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
                 {
                     board = player.remove(board, from_i, from_j, to_i, to_j);
                     Sounds.play(Sounds.SoundEffects.REMOVE);
                     return true;
                 }
-            }
-
         }
+
+
 
         return false;
 
@@ -153,7 +162,7 @@ public class Game {
             }
         }
 
-        Report.report(spots);
+        //Report.report(spots);
         return spots;
     }
 
@@ -250,8 +259,14 @@ public class Game {
                 validRemoves = getAllValidRemoves(pieces[i]);
                 for (int k=0; k<validRemoves.length; k++)
                 {
-                    if (validRemoves[k].getPieceType()== Piece.Type.KING)
-                        return true;
+                    if (validRemoves[k]!=null)
+                    {
+                        if (validRemoves[k].getPieceType()== Piece.Type.KING)
+                        {
+                            Report.report(" >> Check <<");
+                            return true;
+                        }
+                    }
                 }
             }
         }

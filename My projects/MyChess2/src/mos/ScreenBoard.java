@@ -144,7 +144,7 @@ public class ScreenBoard {
         if (!game.isAnyPieceOnTheWay(from_i, from_j, to_i, to_j) &&
                 (game.isValidMove(from_i,from_j,to_i,to_j) || game.isValidRemove(from_i,from_j,to_i,to_j)))
         {
-            Report.report(" The way is clear ");
+            //Report.report(" The way is clear ");
             for (int i = 0; i<6; i++)
             {
                 if (spots[i]!=null)
@@ -155,7 +155,10 @@ public class ScreenBoard {
 
         }
         else
+        {
             Report.report(" !!! < The way is blocked > !!!");
+
+        }
 
     }
 
