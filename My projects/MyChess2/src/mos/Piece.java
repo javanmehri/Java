@@ -60,6 +60,7 @@ public class Piece {
     }
 
     public  boolean isValidMove(Board chessBoard, int toX, int toY){
+
         int fromX = this.getSpot().get_X();
         int fromY = this.getSpot().get_Y();
 

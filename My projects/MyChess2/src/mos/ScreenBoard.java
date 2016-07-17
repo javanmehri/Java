@@ -37,6 +37,11 @@ public class ScreenBoard {
                 undoHighlight(event);
                 undoHighlightTheWay(event);
                 changeCursorToNormal(event);
+                if (isCheck())
+                {
+                    Spot king = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
+                    highlightCheck(getImageViewOfSpot(king));
+                }
 
             }
 
@@ -110,10 +115,22 @@ public class ScreenBoard {
         }
     }
 
+    private static void highlightKingOnCheck()
+    {
+        if (isCheck())
+        {
+
+        }
+    }
+
     // =============================================================
     //                    Helper Methods
     // =============================================================
 
+    private static boolean isCheck()
+    {
+        return GameManager.getTheGame().isCheck();
+    }
 
     private static void undoHighlight(ImageView imageView) {
         imageView.setEffect(null);
@@ -126,6 +143,17 @@ public class ScreenBoard {
         effect.setRadius(127);
         effect.setWidth(255);
         imageView.setEffect(effect);
+    }
+
+    private static void highlightCheck(ImageView imageView){
+
+        InnerShadow effect = new InnerShadow();
+        effect.setColor(Color.valueOf("#aa09ea94"));
+        effect.setHeight(255);
+        effect.setRadius(127);
+        effect.setWidth(255);
+        imageView.setEffect(effect);
+
     }
 
     private static void highlightTheWay(Event event)
@@ -227,6 +255,7 @@ public class ScreenBoard {
         selectedPiece = getImageView(event);
         selectedPiece.setOpacity(0.5);
         isAnyPieceSelected = true;
+        undoHighlight(event);
     }
 
 

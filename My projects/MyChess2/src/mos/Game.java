@@ -67,13 +67,6 @@ public class Game {
         if (player != activePlayer)
             return false;
 
-        if (isCheck() && getBoard().getPieceOnTheSpot(from_i,from_j).getPieceType()!= Piece.Type.KING)
-        {
-            Report.report(" >>> You need to move the King! <<<");
-            return false;
-        }
-
-
         if (getPlayer(to_i,to_j)==null)
         {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
@@ -219,17 +212,36 @@ public class Game {
     }
 
 
-
     public boolean isValidMove(int from_i, int from_j, int to_i, int to_j)
     {
-        return board.getPieceOnTheSpot(from_i,from_j).isValidMove(board,to_i,to_j);
 
+        if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board,to_i,to_j)==false)
+            return false;
+
+        //Game game2 = new Game("w", "b");
+        //game2.setBoard(getActivePlayer().move(board,from_i,from_j,to_i,to_j));
+
+        //if (isCheck(game2))
+            //return false;
+
+        return true;
     }
 
 
     public boolean isValidRemove(int from_i, int from_j, int to_i, int to_j)
     {
-        return board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j);
+
+        if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j)==false)
+            return false;
+
+        //Game game2 = new Game("w", "b");
+        //game2.setBoard(getActivePlayer().remove(board,from_i,from_j,to_i,to_j));
+
+        //if (isCheck(game2))
+            //return false;
+
+        return true;
+
     }
 
 
@@ -245,10 +257,14 @@ public class Game {
     }
 
 
-
     public boolean isCheck()
     {
-        Player player = getUnactivePlayer();
+        return isCheck(this);
+    }
+
+    public boolean isCheck(Game game)
+    {
+        Player player = game.getUnactivePlayer();
         Piece[] pieces = player.getAllPieces();
         Piece[] validRemoves;
 

@@ -127,4 +127,16 @@ public class Player {
         return pieceBag;
     }
 
+    public Spot getSpotOfKing()
+    {
+        Piece[] allPieces = getAllPieces();
+        for (int i=0; i<allPieces.length; i++)
+        {
+            if (allPieces[i]!=null)
+                if (allPieces[i].getPieceType()== Piece.Type.KING)
+                    return allPieces[i].getSpot();
+        }
+        return null;
+    }
+
 }
