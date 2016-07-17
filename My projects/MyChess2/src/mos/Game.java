@@ -1,5 +1,7 @@
 package mos;
 
+import java.io.IOException;
+
 /**
  * Created by MOS on 2016-07-04.
  */
@@ -60,8 +62,7 @@ public class Game {
     }
 
 
-    public boolean move(Player player, int from_i, int from_j, int to_i, int to_j)
-    {
+    public boolean move(Player player, int from_i, int from_j, int to_i, int to_j) throws IOException {
         if (player == activePlayer)
         {
             if (getPlayer(to_i,to_j)==null)
@@ -78,6 +79,7 @@ public class Game {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
                 {
                     board = player.remove(board, from_i, from_j, to_i, to_j);
+                    Sounds.play(Sounds.SoundEffects.REMOVE);
                     return true;
                 }
             }
