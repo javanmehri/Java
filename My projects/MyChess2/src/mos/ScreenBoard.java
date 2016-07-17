@@ -23,6 +23,8 @@ public class ScreenBoard {
     // =============================================================
 
     public static void clickOnBoard(Event event) throws IOException {
+
+
         ImageView clickedTile = getImageView(event);
 
         if (!isAnyPieceSelected && !isImageViewEmpty(clickedTile) && isActivePlayer(event))
@@ -33,15 +35,26 @@ public class ScreenBoard {
                 de_select();
 
             else if (isImageViewEmpty(clickedTile) || !isActivePlayer(event)) {
+
+                Spot king1 = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
+                undoHighlight(getImageViewOfSpot(king1));
+
                 move(event);
                 undoHighlight(event);
                 undoHighlightTheWay(event);
                 changeCursorToNormal(event);
+
+                Spot king2 = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
+
+                if (stillCheck())
+                    highlightCheck(getImageViewOfSpot(king1));
+
+
                 if (isCheck())
-                {
-                    Spot king = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
-                    highlightCheck(getImageViewOfSpot(king));
-                }
+                    highlightCheck(getImageViewOfSpot(king2));
+
+
+
 
             }
 
@@ -115,26 +128,29 @@ public class ScreenBoard {
         }
     }
 
-    private static void highlightKingOnCheck()
-    {
-        if (isCheck())
-        {
 
-        }
-    }
 
     // =============================================================
     //                    Helper Methods
     // =============================================================
+
+
 
     private static boolean isCheck()
     {
         return GameManager.getTheGame().isCheck();
     }
 
+    private static boolean stillCheck()
+    {
+        return GameManager.getTheGame().stillCheck();
+    }
+
     private static void undoHighlight(ImageView imageView) {
         imageView.setEffect(null);
     }
+
+
 
     private static void highlight(ImageView imageView) {
         InnerShadow effect = new InnerShadow();
@@ -235,12 +251,14 @@ public class ScreenBoard {
         //Spot toSpot = game.getBoard().getSpot(to_i,to_j);
 
         if (game.move(player, from_i, from_j, to_i, to_j)) {
-            de_select();
+            //de_select();
             //Sounds.play(Sounds.SoundEffects.MOVE);
-            GameManager.updateTheGame(game);
             game.switchTheActivePlayer();
 
         }
+        de_select();
+        GameManager.updateTheGame(game);
+
 
     }
 
@@ -380,5 +398,15 @@ public class ScreenBoard {
         return backgroundColor;
 
     }
+
+
+    public static void undoAllHighlights(ImageView[][] imageViews)
+    {
+        for (int i=0; i<8; i++)
+            for (int j=0; j<8; j++)
+                imageViews[i][j].setEffect(null);
+    }
+
+
 
 }

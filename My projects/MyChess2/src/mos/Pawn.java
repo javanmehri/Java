@@ -10,7 +10,6 @@ public class Pawn extends Piece {
     {
         super(color);
         this.setPieceType(Type.PAWN);
-        wasMoved = false;
     }
 
 
@@ -23,7 +22,7 @@ public class Pawn extends Piece {
         {
             if (getColor()==Color.WHITE)
             {
-                if (wasMoved) {
+                if (isPlayed()) {
                     if (toY == fromY && (toX - fromX) == 1) {
                         return true;
                     }
@@ -37,7 +36,7 @@ public class Pawn extends Piece {
 
             else if (getColor() == Color.BLACK)
             {
-                if (wasMoved)
+                if (isPlayed())
                 {
                     if (toY == fromY && (toX-fromX)==-1 )
                     {

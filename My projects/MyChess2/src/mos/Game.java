@@ -72,6 +72,13 @@ public class Game {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
                 {
                     board = player.move(board, from_i, from_j, to_i, to_j);
+
+                    if (isCheck())
+                    {
+                        board = player.undoMove(board, from_i, from_j, to_i, to_j);
+                        return false;
+                    }
+
                     return true;
                 }
 
@@ -129,7 +136,7 @@ public class Game {
 
         else if (delta_i == delta_j)
         {
-            Report.report(" delta_i = delta_j ");
+           // Report.report(" delta_i = delta_j ");
             if (delta_i > 1)
             {
                 for (int k=0; k<delta_i-1; k++)
@@ -262,9 +269,44 @@ public class Game {
         return isCheck(this);
     }
 
-    public boolean isCheck(Game game)
+    private boolean isCheck(Game game)
     {
         Player player = game.getUnactivePlayer();
+        Piece[] pieces = player.getAllPieces();
+        Piece[] validRemoves;
+
+        for (int i=0; i<16; i++)
+        {
+            if (pieces[i].isAvailable())
+            {
+                validRemoves = getAllValidRemoves(pieces[i]);
+                for (int k=0; k<validRemoves.length; k++)
+                {
+                    if (validRemoves[k]!=null)
+                    {
+                        if (validRemoves[k].getPieceType()== Piece.Type.KING)
+                        {
+                            Report.report(" >> Check <<");
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
+    public boolean stillCheck()
+    {
+        return stillCheck(this);
+    }
+
+
+    private boolean stillCheck(Game game)
+    {
+        Player player = game.getActivePlayer();
+
         Piece[] pieces = player.getAllPieces();
         Piece[] validRemoves;
 
@@ -307,7 +349,7 @@ public class Game {
             toSpot = allSpots[i];
             to_i = toSpot.get_X();
             to_j = toSpot.get_Y();
-            if (isValidRemove(from_i,from_j,to_i,to_j) || isValidMove(from_i,from_j,to_i,to_j))
+            if (!isAnyPieceOnTheWay(from_i,from_j,to_i,to_j) && (isValidRemove(from_i,from_j,to_i,to_j) || isValidMove(from_i,from_j,to_i,to_j)))
             {
                 validSpots[counter] = board.getSpot(to_i,to_j);
                 counter ++;
@@ -343,7 +385,7 @@ public class Game {
             toSpot = allSpots[i];
             to_i = toSpot.get_X();
             to_j = toSpot.get_Y();
-            if (isValidRemove(from_i,from_j,to_i,to_j))
+            if (!isAnyPieceOnTheWay(from_i,from_j,to_i,to_j) && isValidRemove(from_i,from_j,to_i,to_j))
             {
                 validRemoves[counter] = board.getSpot(to_i,to_j).getPiece();
                 counter ++;

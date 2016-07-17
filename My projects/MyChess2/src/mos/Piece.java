@@ -29,7 +29,8 @@ public class Piece {
     private boolean available = true;
     private Spot spot = null;
 
-    public boolean wasMoved;
+    //public boolean wasMoved;
+    private int moveCounter =0;
 
     public Piece(Color color) {
 
@@ -79,6 +80,20 @@ public class Piece {
         return false;
     }
 
+    public boolean isPlayed()
+    {
+        return moveCounter>0;
+    }
+
+    public void moveCount()
+    {
+        moveCounter++;
+    }
+
+    public void undoMoveCount()
+    {
+        moveCounter --;
+    }
 
 }
 

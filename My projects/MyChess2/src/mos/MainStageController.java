@@ -270,6 +270,8 @@ public class MainStageController {
         GameManager.startAGame();
 
         ScreenBoard.updateTheChessBoard();
+
+        ScreenBoard.undoAllHighlights(getImageViewsBoard());
     }
 
     // ----------------------------------------------------

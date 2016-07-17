@@ -80,10 +80,21 @@ public class Player {
         {
             chessBoard.removePiece(from_i,from_j);
             chessBoard.occupySpot(piece,to_i,to_j);
-            piece.wasMoved = true;
+            piece.moveCount();
         }
 
         return chessBoard;
+    }
+
+    public Board undoMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
+    {
+        Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
+        chessBoard.removePiece(to_i,to_j);
+        chessBoard.occupySpot(piece,from_i,from_j);
+        piece.undoMoveCount();
+
+        return chessBoard;
+
     }
 
 
@@ -98,7 +109,7 @@ public class Player {
             chessBoard.removePiece(from_i,from_j);
             chessBoard.removePiece(to_i,to_j);
             chessBoard.occupySpot(piece1,to_i,to_j);
-            piece1.wasMoved = true;
+            piece1.moveCount();
             piece2.setAvailable(false);
         }
 
