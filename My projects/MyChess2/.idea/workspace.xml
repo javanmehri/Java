@@ -88,11 +88,12 @@
       <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+                <element signature="e#5075#5076#0" expanded="true" />
                 <element signature="e#5117#5118#0" expanded="true" />
                 <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
                 <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
@@ -104,11 +105,10 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+            <state relative-caret-position="410">
+              <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
               <folding>
                 <element signature="method#switchTheActivePlayer#0;class#Game#0" expanded="false" />
-                <element signature="method#getSpotsOnTheWay#0;class#Game#0" expanded="false" />
                 <element signature="method#isAnyPieceOnTheWay#0;class#Game#0" expanded="false" />
                 <element signature="method#getPlayer#0;class#Game#0" expanded="false" />
               </folding>
@@ -116,16 +116,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScreenBoard.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScreenBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+            <state relative-caret-position="246">
+              <caret line="141" column="31" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#highlight#0;class#ScreenBoard#0" expanded="false" />
-                <element signature="method#undoHighlightTheWay#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#de_select#0;class#ScreenBoard#0" expanded="false" />
@@ -142,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sounds.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sounds.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Sounds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="290">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -229,15 +228,15 @@
         <option value="$PROJECT_DIR$/src/mos/Board.java" />
         <option value="$PROJECT_DIR$/src/mos/Piece.java" />
         <option value="$PROJECT_DIR$/src/mos/Player.java" />
-        <option value="$PROJECT_DIR$/src/mos/ScreenBoard.java" />
         <option value="$PROJECT_DIR$/src/mos/King.java" />
         <option value="$PROJECT_DIR$/src/mos/Knight.java" />
         <option value="$PROJECT_DIR$/src/mos/Queen.java" />
         <option value="$PROJECT_DIR$/src/mos/Rook.java" />
         <option value="$PROJECT_DIR$/src/mos/Pawn.java" />
         <option value="$PROJECT_DIR$/src/mos/Bishop.java" />
-        <option value="$PROJECT_DIR$/src/mos/Game.java" />
         <option value="$PROJECT_DIR$/src/mos/Sounds.java" />
+        <option value="$PROJECT_DIR$/src/mos/Game.java" />
+        <option value="$PROJECT_DIR$/src/mos/ScreenBoard.java" />
       </list>
     </option>
   </component>
@@ -635,11 +634,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18326694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18326694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861111" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861111" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -724,12 +723,6 @@
           <line>108</line>
           <properties />
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/mos/Game.java</url>
-          <line>126</line>
-          <properties />
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="35" />
@@ -1190,20 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -1213,30 +1192,6 @@
             <element signature="e#392#393#0" expanded="true" />
             <element signature="method#occupySpot#0;class#Board#0" expanded="false" />
             <element signature="method#removePiece#0;class#Board#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#highlight#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#undoHighlightTheWay#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#de_select#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#isImageViewEmpty#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#getSpot#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#isTileEmpty#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#isActivePlayer#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#getColorOfPiece#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#get_XIndex#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
-            <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1265,24 +1220,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/Sounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        <state relative-caret-position="410">
+          <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
           <folding>
             <element signature="method#switchTheActivePlayer#0;class#Game#0" expanded="false" />
-            <element signature="method#getSpotsOnTheWay#0;class#Game#0" expanded="false" />
             <element signature="method#isAnyPieceOnTheWay#0;class#Game#0" expanded="false" />
             <element signature="method#getPlayer#0;class#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Sounds.java">
+    <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="246">
+          <caret line="141" column="31" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#highlight#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#updateTheTile#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#select#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#de_select#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#isImageViewEmpty#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#getSpot#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#isTileEmpty#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#isActivePlayer#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#getColorOfPiece#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#get_XIndex#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
+            <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

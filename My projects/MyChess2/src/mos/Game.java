@@ -90,7 +90,7 @@ public class Game {
 
     }
 
-
+    // =================================================================================================================
 
     public Spot[] getSpotsOnTheWay(int from_i, int from_j, int to_i, int to_j)
     {
@@ -100,7 +100,8 @@ public class Game {
         int min_i = Math.min(from_i , to_i);
         int min_j = Math.min(from_j , to_j);
 
-        //Report.report(from_i,from_j,to_i,to_j);
+        //if (!isValidMove(from_i,from_j,to_i,to_j) || !isValidRemove(from_i,from_j,to_i,to_j) )
+            //return spots;
 
         if (delta_j == 0)
         {
@@ -156,6 +157,8 @@ public class Game {
         return spots;
     }
 
+    // =================================================================================================================
+
     public boolean isAnyPieceOnTheWay(int from_i, int from_j, int to_i, int to_j)
     {
 
@@ -206,5 +209,19 @@ public class Game {
         return getPlayer(i,j)==activePlayer;
     }
 
+
+
+    public boolean isValidMove(int from_i, int from_j, int to_i, int to_j)
+    {
+        return board.getPieceOnTheSpot(from_i,from_j).isValidMove(board,to_i,to_j);
+
+    }
+
+
+    public boolean isValidRemove(int from_i, int from_j, int to_i, int to_j)
+    {
+        return board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j);
+    }
 }
+
 
