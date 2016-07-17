@@ -222,6 +222,109 @@ public class Game {
     {
         return board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j);
     }
+
+
+    public Player getUnactivePlayer()
+    {
+        Player player;
+        if (getActivePlayer()==getPlayer_White())
+            player = getPlayer_Black();
+        else
+            player = getPlayer_White();
+
+        return player;
+    }
+
+
+
+    public boolean isCheck()
+    {
+        Player player = getUnactivePlayer();
+        Piece[] pieces = player.getAllPieces();
+        Piece[] validRemoves;
+
+        for (int i=0; i<16; i++)
+        {
+            if (pieces[i].isAvailable())
+            {
+                validRemoves = getAllValidRemoves(pieces[i]);
+                for (int k=0; k<validRemoves.length; k++)
+                {
+                    if (validRemoves[k].getPieceType()== Piece.Type.KING)
+                        return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+    public Spot[] getAllValidMoves(Spot from_spot)
+    {
+        Spot[] validSpots = new Spot[64];
+        Spot[] allSpots = board.getAllSpots();
+        Spot toSpot;
+        int from_i = from_spot.get_X();
+        int from_j = from_spot.get_Y();
+        int to_i;
+        int to_j;
+
+        int counter = 0;
+
+        for (int i=0; i<64; i++)
+        {
+            toSpot = allSpots[i];
+            to_i = toSpot.get_X();
+            to_j = toSpot.get_Y();
+            if (isValidRemove(from_i,from_j,to_i,to_j) || isValidMove(from_i,from_j,to_i,to_j))
+            {
+                validSpots[counter] = board.getSpot(to_i,to_j);
+                counter ++;
+            }
+        }
+        return validSpots;
+    }
+
+
+    public Spot[] getAllValidMoves(Piece piece)
+    {
+        return getAllValidMoves(piece.getSpot());
+    }
+
+
+    public Piece[] getAllValidRemoves(Piece piece)
+    {
+        Piece[] validRemoves = new Piece[32];
+
+        Spot[] allSpots = board.getAllSpots();
+        Spot toSpot;
+
+        int from_i = piece.getSpot().get_X();
+        int from_j = piece.getSpot().get_Y();
+
+        int to_i;
+        int to_j;
+
+        int counter = 0;
+
+        for (int i=0; i<64; i++)
+        {
+            toSpot = allSpots[i];
+            to_i = toSpot.get_X();
+            to_j = toSpot.get_Y();
+            if (isValidRemove(from_i,from_j,to_i,to_j))
+            {
+                validRemoves[counter] = board.getSpot(to_i,to_j).getPiece();
+                counter ++;
+            }
+        }
+
+
+        return validRemoves;
+    }
+
+
 }
+
 
 

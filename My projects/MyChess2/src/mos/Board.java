@@ -43,4 +43,18 @@ public class Board {
 
     }
 
+    public Spot[] getAllSpots()
+    {
+        Spot[] allSpots = new Spot[64];
+        for (int i = 0; i<8; i++)
+        {
+            for (int j = 0; j<8; j++)
+            {
+                allSpots[8*i+j] = spots[i][j];
+            }
+        }
+        return allSpots;
+    }
+
+
 }

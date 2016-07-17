@@ -9,7 +9,7 @@ public class Player {
     private String name;
     private Piece.Color color;
     private Piece[][] pieces = new Piece[2][8];
-    private Piece[] pieceBag = new Piece[15];
+    private Piece[] pieceBag = new Piece[16];
 
     public Player(String name, Piece.Color color)
     {
@@ -37,6 +37,8 @@ public class Player {
         for (int i=0; i<8; i++) { pieces[1][i] = new Pawn(color); }
 
     }
+
+
 
     public Board setUpPieces(Board board)
     {
@@ -67,7 +69,7 @@ public class Player {
         return chessBoard;
     }
 
-    public Piece[] getPieceBag() { return pieceBag; }
+
 
 
     public Board move(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
@@ -101,6 +103,28 @@ public class Player {
         }
 
         return chessBoard;
+    }
+
+
+    public Piece[] getAllPieces()
+    {
+        Piece[] allPieces = new Piece[16];
+
+        for (int i = 0; i<2; i++)
+        {
+            for (int j=0; j<8; j++)
+            {
+                    allPieces[(8*i+j)]= pieces[i][j];
+            }
+        }
+        return allPieces;
+    }
+
+
+    public Piece[] getPieceBag()
+    {
+
+        return pieceBag;
     }
 
 }
