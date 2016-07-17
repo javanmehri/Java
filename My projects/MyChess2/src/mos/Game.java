@@ -98,7 +98,7 @@ public class Game {
         int min_i = Math.min(from_i , to_i);
         int min_j = Math.min(from_j , to_j);
 
-        Report.report(from_i,from_j,to_i,to_j);
+        //Report.report(from_i,from_j,to_i,to_j);
 
         if (delta_j == 0)
         {
@@ -150,7 +150,7 @@ public class Game {
             }
         }
 
-
+        Report.report(spots);
         return spots;
     }
 
@@ -178,7 +178,7 @@ public class Game {
         //{
         //    return false;
         //}
-        return true;
+        return false;
     }
 
 
