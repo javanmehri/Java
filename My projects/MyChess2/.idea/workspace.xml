@@ -63,7 +63,7 @@
       <file leaf-file-name="Piece.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="407">
               <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
               <folding>
                 <element signature="method#isValidMove#0;class#Piece#0" expanded="false" />
@@ -94,7 +94,7 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="525">
               <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
               <folding>
                 <element signature="method#Player#0;class#Player#0" expanded="false" />
@@ -107,38 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pawn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mos/Pawn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainStageController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="267" column="47" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
-                <element signature="e#5075#5076#0" expanded="true" />
-                <element signature="e#5117#5118#0" expanded="true" />
-                <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
-                <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="306" column="4" selection-start-line="306" selection-start-column="4" selection-end-line="306" selection-end-column="4" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="method#switchTheActivePlayer#0;class#Game#0" expanded="false" />
                 <element signature="method#getSpotsOnTheWay#0;class#Game#0" expanded="false" />
@@ -158,21 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bishop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mos/Bishop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="240">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#268#269#0" expanded="true" />
                 <element signature="e#298#299#0" expanded="true" />
@@ -181,11 +144,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Report.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mos/Report.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+              <folding>
+                <element signature="e#127#128#0" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ScreenBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="405" column="35" selection-start-line="405" selection-start-column="35" selection-end-line="405" selection-end-column="35" />
+            <state relative-caret-position="4125">
+              <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
@@ -206,6 +182,39 @@
                 <element signature="method#get_YIndex#0;class#ScreenBoard#0" expanded="false" />
                 <element signature="method#getBackgroundColor#0;class#ScreenBoard#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainStage.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mos/MainStage.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="916" column="62" selection-start-line="916" selection-start-column="62" selection-end-line="916" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainStage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mos/MainStage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Img.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="85" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,7 +245,6 @@
         <option value="$PROJECT_DIR$/src/mos/img.java" />
         <option value="$PROJECT_DIR$/src/mos/Images.java" />
         <option value="$PROJECT_DIR$/src/mos/Spot.java" />
-        <option value="$PROJECT_DIR$/src/mos/MainStage.java" />
         <option value="$PROJECT_DIR$/src/mos/Img.java" />
         <option value="$PROJECT_DIR$/src/mos/Interface.java" />
         <option value="$PROJECT_DIR$/src/mos/ScreenManager.java" />
@@ -256,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/mos/Game.java" />
         <option value="$PROJECT_DIR$/src/mos/MainStageController.java" />
         <option value="$PROJECT_DIR$/src/mos/ScreenBoard.java" />
+        <option value="$PROJECT_DIR$/src/mos/MainStage.java" />
       </list>
     </option>
   </component>
@@ -825,8 +834,8 @@
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#549#550#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -919,8 +928,8 @@
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#549#550#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -980,8 +989,8 @@
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#549#550#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1041,8 +1050,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#549#550#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1081,8 +1090,8 @@
         <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#549#550#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1127,38 +1136,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Interface.java" />
-    <entry file="file://$PROJECT_DIR$/src/mos/MainStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="1773" column="0" selection-start-line="1773" selection-start-column="0" selection-end-line="1773" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#127#128#0" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1194,17 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/MainStage.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="916" column="62" selection-start-line="916" selection-start-column="62" selection-end-line="916" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Knight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1221,9 +1192,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/Bishop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
+            <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#makePieces#0;class#Player#0" expanded="false" />
+            <element signature="method#setUpPieces#0;class#Player#0" expanded="false" />
+            <element signature="method#getAllPieces#0;class#Player#0" expanded="false" />
+            <element signature="method#getSpotOfKing#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="407">
           <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
           <folding>
             <element signature="method#isValidMove#0;class#Piece#0" expanded="false" />
@@ -1232,14 +1240,6 @@
             <element signature="e#2168#2169#0" expanded="true" />
             <element signature="e#2198#2199#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,57 +1256,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-          <folding>
-            <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="method#makePieces#0;class#Player#0" expanded="false" />
-            <element signature="method#setUpPieces#0;class#Player#0" expanded="false" />
-            <element signature="method#getAllPieces#0;class#Player#0" expanded="false" />
-            <element signature="method#getSpotOfKing#0;class#Player#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="306" column="4" selection-start-line="306" selection-start-column="4" selection-end-line="306" selection-end-column="4" />
-          <folding>
-            <element signature="method#switchTheActivePlayer#0;class#Game#0" expanded="false" />
-            <element signature="method#getSpotsOnTheWay#0;class#Game#0" expanded="false" />
-            <element signature="method#isAnyPieceOnTheWay#0;class#Game#0" expanded="false" />
-            <element signature="method#getPlayer#0;class#Game#0" expanded="false" />
-            <element signature="method#getUnactivePlayer#0;class#Game#0" expanded="false" />
-            <element signature="e#7185#7186#0" expanded="true" />
-            <element signature="e#7221#7222#0" expanded="true" />
-            <element signature="e#8063#8064#0" expanded="true" />
-            <element signature="e#8102#8103#0" expanded="true" />
-            <element signature="method#stillCheck#1;class#Game#0" expanded="false" />
-            <element signature="method#getAllValidMoves#0;class#Game#0" expanded="false" />
-            <element signature="e#9731#9732#0" expanded="true" />
-            <element signature="e#9787#9788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mos/ScreenBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="405" column="35" selection-start-line="405" selection-start-column="35" selection-end-line="405" selection-end-column="35" />
+        <state relative-caret-position="4125">
+          <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateTheChessBoard#0;class#ScreenBoard#0" expanded="false" />
@@ -1330,18 +1283,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mos/MainStageController.java">
+    <entry file="file://$PROJECT_DIR$/src/mos/Report.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="267" column="47" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#MainStageController#0" expanded="false" />
-            <element signature="e#5075#5076#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="method#setUpTheBoard#0;class#MainStageController#0" expanded="false" />
-            <element signature="method#setUpTiles#0;class#MainStageController#0" expanded="false" />
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="method#switchTheActivePlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#getSpotsOnTheWay#0;class#Game#0" expanded="false" />
+            <element signature="method#isAnyPieceOnTheWay#0;class#Game#0" expanded="false" />
+            <element signature="method#getPlayer#0;class#Game#0" expanded="false" />
+            <element signature="method#getUnactivePlayer#0;class#Game#0" expanded="false" />
+            <element signature="e#7185#7186#0" expanded="true" />
+            <element signature="e#7221#7222#0" expanded="true" />
+            <element signature="e#8063#8064#0" expanded="true" />
+            <element signature="e#8102#8103#0" expanded="true" />
+            <element signature="method#stillCheck#1;class#Game#0" expanded="false" />
+            <element signature="method#getAllValidMoves#0;class#Game#0" expanded="false" />
+            <element signature="e#9731#9732#0" expanded="true" />
+            <element signature="e#9787#9788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/MainStage.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="916" column="62" selection-start-line="916" selection-start-column="62" selection-end-line="916" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/Img.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="85" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mos/MainStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
