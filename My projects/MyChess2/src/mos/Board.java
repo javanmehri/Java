@@ -57,4 +57,20 @@ public class Board {
     }
 
 
+    public Board clone()
+    {
+        Board newBoard = new Board();
+
+        for(int i=0; i<spots.length; i++)
+        {
+            for(int j=0; j<spots.length; j++)
+            {
+                newBoard.spots[i][j] = this.getSpot(i,j);
+            }
+        }
+
+        return newBoard;
+    }
+
+
 }

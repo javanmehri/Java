@@ -88,9 +88,9 @@ public class ScreenBoard {
 
                 } else {
                     if (backgroundColor == Piece.Color.BLACK)
-                        imageViewOfSpot.setImage(Img.Tile_Black);
+                        imageViewOfSpot.setImage(IMG.Tile_Black);
                     else
-                        imageViewOfSpot.setImage(Img.Tile_White);
+                        imageViewOfSpot.setImage(IMG.Tile_White);
                 }
 
             }
@@ -264,7 +264,7 @@ public class ScreenBoard {
 
 
     private static ImageView updateTheTile(ImageView imageView, Piece.Type type, Piece.Color pieceColor, Piece.Color backgroundColor) {
-        imageView.setImage(Img.getPiece(type, pieceColor, backgroundColor));
+        imageView.setImage(IMG.getPiece(type, pieceColor, backgroundColor));
         return imageView;
     }
 
@@ -284,7 +284,7 @@ public class ScreenBoard {
 
 
     private static boolean isImageViewEmpty(ImageView imageView) {
-        if (imageView.getImage() == Img.Tile_Black || imageView.getImage() == Img.Tile_White)
+        if (imageView.getImage() == IMG.Tile_Black || imageView.getImage() == IMG.Tile_White)
             return true;
         return false;
     }

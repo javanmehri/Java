@@ -3,10 +3,8 @@ package mos;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 
-import java.awt.geom.Rectangle2D;
 import java.io.IOException;
 
 public class MainStageController {
@@ -363,11 +361,11 @@ public class MainStageController {
 
                     if ((i+j)%2 == 0)
                     {
-                        imageViewsBoard[i][j].setImage(Img.Tile_Black);
+                        imageViewsBoard[i][j].setImage(IMG.Tile_Black);
                     }
                     else
                     {
-                        imageViewsBoard[i][j].setImage(Img.Tile_White);
+                        imageViewsBoard[i][j].setImage(IMG.Tile_White);
                     }
 
 

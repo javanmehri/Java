@@ -86,6 +86,18 @@ public class Player {
         return chessBoard;
     }
 
+
+    public void move(Board chessBoard, Spot from, Spot to)
+    {
+        int from_i = from.get_X();
+        int from_j = from.get_Y();
+        int to_i = to.get_X();
+        int to_j = to.get_Y();
+        move(chessBoard, from_i, from_j, to_i, to_j);
+
+    }
+
+
     public Board undoMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
         Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
@@ -129,6 +141,22 @@ public class Player {
             }
         }
         return allPieces;
+    }
+
+
+    public Piece[] getAvailablePieces()
+    {
+        Piece[] availablePieces = new Piece[16];
+        Piece[] allPieces = getAllPieces();
+        int count = 0;
+
+        for (int i=0; i<16; i++)
+        {
+            if (allPieces[i].isAvailable())
+                availablePieces[count] = allPieces[i];
+        }
+
+        return availablePieces;
     }
 
 

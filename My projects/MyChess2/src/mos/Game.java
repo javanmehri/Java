@@ -13,6 +13,9 @@ public class Game {
     private Player activePlayer;
     private Player selectedPlayer;
 
+    private Game parent;
+    private Game[] children;
+
 
 
     public Game(String player_White, String player_Black)
@@ -24,8 +27,12 @@ public class Game {
 
         activePlayer = getPlayer_White();
 
-        board = player1.setUpPieces(board);
-        board = player2.setUpPieces(board);
+        //board = player1.setUpPieces(board);
+        //board = player2.setUpPieces(board);
+
+        player1.setUpPieces(board);
+        player2.setUpPieces(board);
+
 
     }
 
@@ -397,6 +404,44 @@ public class Game {
     }
 
 
+    public Game clone()
+    {
+        Game newGame = new Game(this.getPlayer_White().getName(), this.getPlayer_Black().getName());
+        newGame.setBoard(this.getBoard().clone());
+
+        if (this.activePlayer==getPlayer_White())
+                newGame.activePlayer = newGame.getPlayer_White();
+        else
+                newGame.activePlayer = newGame.getPlayer_Black();
+
+        // set selected Payer
+       // ...
+        return newGame;
+    }
+
+
+    public void setParent(Game game)
+    {
+        parent = game;
+    }
+
+
+    public Game getParent()
+    {
+        return parent;
+    }
+
+
+    public void setChildren(Game[] chidrenGames)
+    {
+        children = chidrenGames;
+    }
+
+
+    public Game[] getChildren()
+    {
+        return children;
+    }
 }
 
 

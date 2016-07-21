@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 /**
  * Created by MOS on 2016-07-03.
  */
-public class Img
+public class IMG
 {
 
     public static final Image Tile_Black = new Image("file:./img/Black.png");
