@@ -3,6 +3,7 @@ package mos;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
@@ -12,6 +13,9 @@ public class MainStageController {
     // ----------------------------------------
     @FXML
     private Button start_button = new Button();
+
+    @FXML
+    private TextArea textArea = new TextArea();
 
     // --------------- 1 ----------------------
     @FXML
@@ -218,35 +222,30 @@ public class MainStageController {
 
     private static ImageView[][] imageViewsBoard = new ImageView[8][8];
 
+
+
     // ===================================================================
-    //                            METHODS
+    //                            CONTROL METHODS
     // ===================================================================
-
-    public static ImageView[][] getImageViewsBoard()
-    {
-        return imageViewsBoard;
-    }
-
-
-    public static void setImageViewsBoard(ImageView[][] board)
-    {
-        imageViewsBoard = board;
-    }
 
 
     @FXML
-    private void initialize()
-    {
+    private void initialize() {
         setUpTheBoard();
 
     }
 
+
     @FXML
-    private void mouseClick(Event event) throws IOException {
+    private void mouseClick(Event event) throws IOException, CloneNotSupportedException {
 
         ScreenBoard.clickOnBoard(event);
 
+        textArea.setText(GameManager.getTheGame().note);
+
+        //addNote(Integer.toString(COMP.possibleMoveSize(GameManager.getTheGame(), event)));
     }
+
 
     @FXML
     private void mouseOn(Event event)
@@ -254,29 +253,39 @@ public class MainStageController {
         ScreenBoard.mouseOn(event);
     }
 
+
     @FXML
     private void mouseOut(Event event)
     {
         ScreenBoard.mouseOut(event);
     }
 
+
     @FXML
     private void start() throws IOException {
 
-        Sounds.play(Sounds.SoundEffects.START);
 
         GameManager.startAGame();
 
         ScreenBoard.updateTheChessBoard();
 
-        ScreenBoard.undoAllHighlights(getImageViewsBoard());
+        textArea.setText(GameManager.getTheGame().note);
+
+        //addNote(GameManager.getTheGame().note);
+
+        //ScreenBoard.undoAllHighlights(getImageViewsBoard());
     }
 
-    // ----------------------------------------------------
+
+    // ===================================================================
+    //                            HELPER METHODS
+    // ===================================================================
 
 
-    private void setUpTheBoard()
-    {
+    //private void addNote(String note) {textArea.appendText(note);}
+
+
+    private void setUpTheBoard() {
         imageViewsBoard[0][0] = A1;
         imageViewsBoard[0][1] = B1;
         imageViewsBoard[0][2] = C1;
@@ -352,21 +361,21 @@ public class MainStageController {
         setUpTiles();
     }
 
-    private void setUpTiles()
-    {
+
+    private void setUpTiles() {
         for (int i = 0; i<8; i++)
         {
             for(int j = 0; j<8; j++)
             {
 
-                    if ((i+j)%2 == 0)
-                    {
-                        imageViewsBoard[i][j].setImage(IMG.Tile_Black);
-                    }
-                    else
-                    {
-                        imageViewsBoard[i][j].setImage(IMG.Tile_White);
-                    }
+                if ((i+j)%2 == 0)
+                {
+                    imageViewsBoard[i][j].setImage(IMG.Tile_Black);
+                }
+                else
+                {
+                    imageViewsBoard[i][j].setImage(IMG.Tile_White);
+                }
 
 
             }
@@ -374,16 +383,14 @@ public class MainStageController {
     }
 
 
+    // ===================================================================
+    //                            PUBLIC METHODS
+    // ===================================================================
+
+    public static ImageView[][] getImageViewsBoard() { return imageViewsBoard; }
 
 
-
-
-
-
-
-
-
-
+    //public static void setImageViewsBoard(ImageView[][] board) {imageViewsBoard = board;}
 
 
 

@@ -22,7 +22,7 @@ public class ScreenBoard {
     //                           Methods
     // =============================================================
 
-    public static void clickOnBoard(Event event) throws IOException {
+    public static void clickOnBoard(Event event) throws IOException, CloneNotSupportedException {
 
 
         ImageView clickedTile = getImageView(event);
@@ -115,6 +115,7 @@ public class ScreenBoard {
 
 
     }
+
 
     public static void mouseOut(Event event) {
         if (!isAnyPieceSelected && isActivePlayer(event))
@@ -269,11 +270,15 @@ public class ScreenBoard {
     }
 
 
-    private static void select(Event event) {
+    private static void select(Event event) throws CloneNotSupportedException {
         selectedPiece = getImageView(event);
         selectedPiece.setOpacity(0.5);
         isAnyPieceSelected = true;
         undoHighlight(event);
+
+        //String text = Integer.toString(COMP.possibleMoveSize(GameManager.getTheGame(), getSpot(event).getPiece()));
+
+        //MainStageController.textArea.setText("  !!! ");
     }
 
 
@@ -317,7 +322,7 @@ public class ScreenBoard {
         return (ImageView) event.getSource();
     }
 
-    private static Spot getSpot(Event event)
+    public static Spot getSpot(Event event)
     {
         ImageView imageView = getImageView(event);
         int i = get_XIndex(imageView);

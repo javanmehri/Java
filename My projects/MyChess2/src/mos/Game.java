@@ -1,11 +1,15 @@
 package mos;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by MOS on 2016-07-04.
  */
 public class Game {
+
+    Date date = new Date();
+    public String note = " > Start Time: " + date+"\n"+"  ================  "+"\n";
 
     private Board board;
     private Player player1;
@@ -18,8 +22,7 @@ public class Game {
 
 
 
-    public Game(String player_White, String player_Black)
-    {
+    public Game(String player_White, String player_Black) {
         board = new Board();
 
         player1 = new Player(player_White, Piece.Color.WHITE);
@@ -42,26 +45,32 @@ public class Game {
         return activePlayer;
     }
 
+
     public void setSelectedPlayer(Player player)
     {
         selectedPlayer = player;
     }
 
-    public void switchTheActivePlayer()
-    {
+
+    public void switchTheActivePlayer() {
         if (activePlayer == player1)
             activePlayer = player2;
         else
             activePlayer = player1;
     }
 
+
     public Player getPlayer_White() { return player1; }
+
 
     public Player getPlayer_Black() { return player2; }
 
+
     public Board getBoard() { return board; }
 
+
     public void setBoard(Board board) { this.board = board; }
+
 
     public boolean isActivePlayer(Player player)
     {
@@ -86,6 +95,7 @@ public class Game {
                         return false;
                     }
 
+                    note = note+ player.getName()+": move from "+from_i+" , "+from_j+" to "+to_i+" , "+to_j+"\n";
                     return true;
                 }
 
@@ -108,8 +118,7 @@ public class Game {
 
     // =================================================================================================================
 
-    public Spot[] getSpotsOnTheWay(int from_i, int from_j, int to_i, int to_j)
-    {
+    public Spot[] getSpotsOnTheWay(int from_i, int from_j, int to_i, int to_j) {
         Spot[] spots = new Spot[6];
         int delta_i = Math.abs(to_i - from_i);
         int delta_j = Math.abs(to_j - from_j);
@@ -175,8 +184,7 @@ public class Game {
 
     // =================================================================================================================
 
-    public boolean isAnyPieceOnTheWay(int from_i, int from_j, int to_i, int to_j)
-    {
+    public boolean isAnyPieceOnTheWay(int from_i, int from_j, int to_i, int to_j) {
 
         int delta_i = Math.abs(from_i - to_i);
         int delta_j = Math.abs(from_j - to_j);
@@ -203,8 +211,18 @@ public class Game {
     }
 
 
-    public Player getPlayer(int i, int j)
+    public boolean isAnyPieceOnTheWay(Piece piece, Spot spot)
     {
+        int from_i = piece.getSpot().get_X();
+        int from_j = piece.getSpot().get_Y();
+        int to_i = spot.get_X();
+        int to_j = spot.get_Y();
+
+        return isAnyPieceOnTheWay(from_i, from_j, to_i, to_j);
+    }
+
+
+    public Player getPlayer(int i, int j) {
         if (board.getSpot(i,j).isOccupied())
         {
             if (board.getPieceOnTheSpot(i,j).getColor()== Piece.Color.WHITE)
@@ -220,14 +238,14 @@ public class Game {
 
     }
 
+
     public boolean isActivePlayer(int i, int j)
     {
         return getPlayer(i,j)==activePlayer;
     }
 
 
-    public boolean isValidMove(int from_i, int from_j, int to_i, int to_j)
-    {
+    public boolean isValidMove(int from_i, int from_j, int to_i, int to_j) {
 
         if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board,to_i,to_j)==false)
             return false;
@@ -242,8 +260,7 @@ public class Game {
     }
 
 
-    public boolean isValidRemove(int from_i, int from_j, int to_i, int to_j)
-    {
+    public boolean isValidRemove(int from_i, int from_j, int to_i, int to_j) {
 
         if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j)==false)
             return false;
@@ -259,8 +276,7 @@ public class Game {
     }
 
 
-    public Player getUnactivePlayer()
-    {
+    public Player getUnactivePlayer() {
         Player player;
         if (getActivePlayer()==getPlayer_White())
             player = getPlayer_Black();
@@ -276,8 +292,8 @@ public class Game {
         return isCheck(this);
     }
 
-    private boolean isCheck(Game game)
-    {
+
+    private boolean isCheck(Game game) {
         Player player = game.getUnactivePlayer();
         Piece[] pieces = player.getAllPieces();
         Piece[] validRemoves;
@@ -310,8 +326,7 @@ public class Game {
     }
 
 
-    private boolean stillCheck(Game game)
-    {
+    private boolean stillCheck(Game game) {
         Player player = game.getActivePlayer();
 
         Piece[] pieces = player.getAllPieces();
@@ -339,8 +354,7 @@ public class Game {
     }
 
 
-    public Spot[] getAllValidMoves(Spot from_spot)
-    {
+    public Spot[] getAllValidMoves(Spot from_spot) {
         Spot[] validSpots = new Spot[64];
         Spot[] allSpots = board.getAllSpots();
         Spot toSpot;
@@ -372,8 +386,7 @@ public class Game {
     }
 
 
-    public Piece[] getAllValidRemoves(Piece piece)
-    {
+    public Piece[] getAllValidRemoves(Piece piece) {
         Piece[] validRemoves = new Piece[32];
 
         Spot[] allSpots = board.getAllSpots();
@@ -404,8 +417,9 @@ public class Game {
     }
 
 
-    public Game clone()
-    {
+    public Game clone() {
+
+
         Game newGame = new Game(this.getPlayer_White().getName(), this.getPlayer_Black().getName());
         newGame.setBoard(this.getBoard().clone());
 
@@ -417,6 +431,8 @@ public class Game {
         // set selected Payer
        // ...
         return newGame;
+
+        //return (Game)super.clone();
     }
 
 

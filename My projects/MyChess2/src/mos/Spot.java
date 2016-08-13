@@ -54,4 +54,12 @@ public class Spot {
         return releasedPiece;
     }
 
+
+    @Override
+    protected Spot clone() throws CloneNotSupportedException {
+        Spot spot = new Spot(this.get_X(), this.get_Y());
+        spot.occupy(this.getPiece());
+
+        return spot;
+    }
 }

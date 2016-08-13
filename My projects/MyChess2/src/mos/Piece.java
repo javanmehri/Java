@@ -29,12 +29,14 @@ public class Piece {
     private boolean available = true;
     private Spot spot = null;
 
+    private Player player;
+
     //public boolean wasMoved;
     private int moveCounter =0;
 
-    public Piece(Color color) {
-
-        this.color = color;
+    public Piece(Player player) {
+        this.player = player;
+        this.color = player.getColor();
         this.available = true;
     }
 
@@ -94,6 +96,12 @@ public class Piece {
     {
         moveCounter --;
     }
+
+    public Player getPlayer()
+    {
+        return player;
+    }
+
 
 }
 

@@ -25,16 +25,16 @@ public class Player {
 
     private void makePieces()
     {
-        pieces[0][0] = new Rook(color);
-        pieces[0][1] = new Knight(color);
-        pieces[0][2] = new Bishop(color);
-        pieces[0][3] = new King(color);
-        pieces[0][4] = new Queen(color);
-        pieces[0][5] = new Bishop(color);
-        pieces[0][6] = new Knight(color);
-        pieces[0][7] = new Rook(color);
+        pieces[0][0] = new Rook(this);
+        pieces[0][1] = new Knight(this);
+        pieces[0][2] = new Bishop(this);
+        pieces[0][3] = new King(this);
+        pieces[0][4] = new Queen(this);
+        pieces[0][5] = new Bishop(this);
+        pieces[0][6] = new Knight(this);
+        pieces[0][7] = new Rook(this);
 
-        for (int i=0; i<8; i++) { pieces[1][i] = new Pawn(color); }
+        for (int i=0; i<8; i++) { pieces[1][i] = new Pawn(this); }
 
     }
 

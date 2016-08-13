@@ -6,9 +6,9 @@ package mos;
 public class Pawn extends Piece {
 
 
-    public Pawn(Color color)
+    public Pawn(Player player)
     {
-        super(color);
+        super(player);
         this.setPieceType(Type.PAWN);
     }
 

@@ -5,9 +5,9 @@ package mos;
  */
 public class Rook extends Piece {
 
-    public Rook(Color color)
+    public Rook(Player player)
     {
-        super(color);
+        super(player);
         this.setPieceType(Type.ROOK);
     }
 
