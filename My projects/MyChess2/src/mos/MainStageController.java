@@ -3,6 +3,7 @@ package mos;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 
@@ -16,6 +17,9 @@ public class MainStageController {
 
     @FXML
     private TextArea textArea = new TextArea();
+
+    @FXML
+    Label comment = new Label();
 
     // --------------- 1 ----------------------
     @FXML

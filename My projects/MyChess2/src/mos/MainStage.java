@@ -17,7 +17,7 @@ public class MainStage extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainStage.fxml"));
         primaryStage.setTitle("My Chess");
-        primaryStage.setScene(new Scene(root, 900, 700));
+        primaryStage.setScene(new Scene(root, 1000, 700));
         primaryStage.show();
     }
 
@@ -31,7 +31,7 @@ public class MainStage extends Application {
 
         //System.setIn(new FileInputStream(filename));
 
-        System.out.println("********");
+        //System.out.println("********");
         launch(args);
     }
 }

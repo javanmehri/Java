@@ -9,7 +9,6 @@ import java.util.Date;
 public class Game {
 
     Date date = new Date();
-    public String note = " > Start Time: " + date+"\n"+"  ================  "+"\n";
 
     private Board board;
     private Player player1;
@@ -20,6 +19,7 @@ public class Game {
     private Game parent;
     private Game[] children;
 
+    public String note;
 
 
     public Game(String player_White, String player_Black) {
@@ -36,6 +36,8 @@ public class Game {
         player1.setUpPieces(board);
         player2.setUpPieces(board);
 
+        note = " Start Time: " + date+"\n\n"+
+                " White: "+ player1.getName()+"\t"+" Black: "+player2.getName()+"\n\n";
 
     }
 
@@ -95,7 +97,7 @@ public class Game {
                         return false;
                     }
 
-                    note = note+ player.getName()+": move from "+from_i+" , "+from_j+" to "+to_i+" , "+to_j+"\n";
+                    noteThePlay(player, to_i, to_j);
                     return true;
                 }
 
@@ -105,6 +107,7 @@ public class Game {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
                 {
                     board = player.remove(board, from_i, from_j, to_i, to_j);
+                    noteThePlay(player, to_i, to_j);
                     Sounds.play(Sounds.SoundEffects.REMOVE);
                     return true;
                 }
@@ -458,7 +461,35 @@ public class Game {
     {
         return children;
     }
+
+    private void noteThePlay(Player player, int to_i, int to_j)
+    {
+        note = note+ player.getTotalMoves()+". " +player.getColor().toString().substring(0,1)+" :  ";
+        Piece piece = board.getSpot(to_i,to_j).getPiece();
+        note = note + piece.getPieceType().toString().substring(0,2) + " to ";
+
+        switch (to_j)
+        {
+            case 0: note = note + "A"; break;
+            case 1: note = note + "B"; break;
+            case 2: note = note + "C"; break;
+            case 3: note = note + "D"; break;
+            case 4: note = note + "E"; break;
+            case 5: note = note + "F"; break;
+            case 6: note = note + "G"; break;
+            case 7: note = note + "H"; break;
+        }
+        note = note + (to_i+1);
+
+        if (player.getColor()== Piece.Color.WHITE)
+            note = note + "\t";
+        else
+            note = note +"\n";
+
+
+    }
 }
+
 
 
 

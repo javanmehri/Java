@@ -10,6 +10,7 @@ public class Player {
     private Piece.Color color;
     private Piece[][] pieces = new Piece[2][8];
     private Piece[] pieceBag = new Piece[16];
+    private int totalMoves = 0;
 
     public Player(String name, Piece.Color color)
     {
@@ -81,6 +82,7 @@ public class Player {
             chessBoard.removePiece(from_i,from_j);
             chessBoard.occupySpot(piece,to_i,to_j);
             piece.moveCount();
+            totalMoves++;
         }
 
         return chessBoard;
@@ -94,7 +96,6 @@ public class Player {
         int to_i = to.get_X();
         int to_j = to.get_Y();
         move(chessBoard, from_i, from_j, to_i, to_j);
-
     }
 
 
@@ -104,6 +105,7 @@ public class Player {
         chessBoard.removePiece(to_i,to_j);
         chessBoard.occupySpot(piece,from_i,from_j);
         piece.undoMoveCount();
+        totalMoves --;
 
         return chessBoard;
 
@@ -123,6 +125,7 @@ public class Player {
             chessBoard.occupySpot(piece1,to_i,to_j);
             piece1.moveCount();
             piece2.setAvailable(false);
+            totalMoves ++;
         }
 
         return chessBoard;
@@ -176,6 +179,11 @@ public class Player {
                     return allPieces[i].getSpot();
         }
         return null;
+    }
+
+    public int getTotalMoves()
+    {
+        return totalMoves;
     }
 
 }
