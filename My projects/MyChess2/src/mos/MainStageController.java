@@ -246,6 +246,7 @@ public class MainStageController {
         ScreenBoard.clickOnBoard(event);
 
         textArea.setText(GameManager.getTheGame().note);
+        comment.setText(GameManager.getTheGame().comment);
 
         //addNote(Integer.toString(COMP.possibleMoveSize(GameManager.getTheGame(), event)));
     }

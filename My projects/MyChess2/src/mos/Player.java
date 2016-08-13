@@ -12,6 +12,8 @@ public class Player {
     private Piece[] pieceBag = new Piece[16];
     private int totalMoves = 0;
 
+    private Piece lastRemoved;
+
     public Player(String name, Piece.Color color)
     {
         this.name = name;
@@ -111,6 +113,19 @@ public class Player {
 
     }
 
+    public Board undoRemove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
+    {
+        Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
+        chessBoard.removePiece(to_i,to_j);
+        chessBoard.occupySpot(piece,from_i,from_j);
+        lastRemoved.setAvailable(true);
+        chessBoard.occupySpot(lastRemoved, to_i, to_j);
+        piece.undoMoveCount();
+        totalMoves --;
+
+        return chessBoard;
+
+    }
 
     public Board remove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
@@ -125,6 +140,7 @@ public class Player {
             chessBoard.occupySpot(piece1,to_i,to_j);
             piece1.moveCount();
             piece2.setAvailable(false);
+            lastRemoved = piece2;
             totalMoves ++;
         }
 

@@ -20,6 +20,7 @@ public class Game {
     private Game[] children;
 
     public String note;
+    public String comment;
 
 
     public Game(String player_White, String player_Black) {
@@ -94,6 +95,7 @@ public class Game {
                     if (isCheck())
                     {
                         board = player.undoMove(board, from_i, from_j, to_i, to_j);
+                        comment = " ! Still Check !";
                         return false;
                     }
 
@@ -107,6 +109,14 @@ public class Game {
                 if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
                 {
                     board = player.remove(board, from_i, from_j, to_i, to_j);
+
+                    if (isCheck())
+                    {
+                        board = player.undoRemove(board, from_i, from_j, to_i, to_j);
+                        comment = " ! Still Check !";
+                        return false;
+                    }
+
                     noteThePlay(player, to_i, to_j);
                     Sounds.play(Sounds.SoundEffects.REMOVE);
                     return true;
