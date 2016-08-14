@@ -1,12 +1,10 @@
 package mos;
 
+import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
@@ -26,8 +24,10 @@ public class MainStageController {
     Label comment = new Label();
 
     @FXML
-    CheckBox highlightPossibleMoves = new CheckBox();
+    CheckBox checkBox_highlightPossibleMoves = new CheckBox();
 
+    @FXML
+    CheckMenuItem checkMenuItem_highlightPossibleMoves = new CheckMenuItem();
 
     // --------------- 1 ----------------------
     @FXML
@@ -296,6 +296,26 @@ public class MainStageController {
     private void setHighlightPossibleMoves()
     {
         ScreenBoard.switch_HighlightPossibleMoves();
+
+        if (ScreenBoard.get_HighlightPossibleMoves() && !checkBox_highlightPossibleMoves.isSelected())
+            checkBox_highlightPossibleMoves.setSelected(true);
+
+        if (!ScreenBoard.get_HighlightPossibleMoves() && checkBox_highlightPossibleMoves.isSelected())
+            checkBox_highlightPossibleMoves.setSelected(false);
+
+        if (ScreenBoard.get_HighlightPossibleMoves() && !checkMenuItem_highlightPossibleMoves.isSelected())
+            checkMenuItem_highlightPossibleMoves.setSelected(true);
+
+        if (!ScreenBoard.get_HighlightPossibleMoves() && checkMenuItem_highlightPossibleMoves.isSelected())
+            checkMenuItem_highlightPossibleMoves.setSelected(false);
+
+    }
+
+    @FXML
+    private void exit()
+    {
+        Platform.exit();
+        System.exit(0);
     }
 
     // ===================================================================

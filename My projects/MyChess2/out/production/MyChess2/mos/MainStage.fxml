@@ -959,7 +959,7 @@
                         <Font name="Arial Bold Italic" size="14.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="highlightPossibleMoves" layoutX="712.0" layoutY="172.0" mnemonicParsing="false" onAction="#setHighlightPossibleMoves" text="Highlight the possible moves" />
+                  <CheckBox fx:id="checkBox_highlightPossibleMoves" layoutX="712.0" layoutY="172.0" mnemonicParsing="false" onAction="#setHighlightPossibleMoves" text="Highlight the possible moves" />
                </children>
                <BorderPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -972,14 +972,15 @@
          <top>
             <MenuBar blendMode="EXCLUSION" prefHeight="29.0" prefWidth="1010.0" BorderPane.alignment="CENTER">
               <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="My Chess">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Quit My Chess" />
+                    <MenuItem mnemonicParsing="false" onAction="#exit" text="Quit My Chess" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Game">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Start a New Game" />
+                        <CheckMenuItem fx:id="checkMenuItem_highlightPossibleMoves" mnemonicParsing="false" onAction="#setHighlightPossibleMoves" text="Highlight the Possible Moves" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">

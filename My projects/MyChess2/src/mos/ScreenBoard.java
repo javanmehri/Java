@@ -475,4 +475,9 @@ public class ScreenBoard {
             highlightPossibleMoves = true;
     }
 
+    public static boolean get_HighlightPossibleMoves()
+    {
+        return highlightPossibleMoves;
+    }
+
 }
