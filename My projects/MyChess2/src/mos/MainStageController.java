@@ -2,10 +2,14 @@ package mos;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 
 import java.io.IOException;
 
@@ -20,6 +24,10 @@ public class MainStageController {
 
     @FXML
     Label comment = new Label();
+
+    @FXML
+    CheckBox highlightPossibleMoves = new CheckBox();
+
 
     // --------------- 1 ----------------------
     @FXML
@@ -244,7 +252,6 @@ public class MainStageController {
     private void mouseClick(Event event) throws IOException, CloneNotSupportedException {
 
         ScreenBoard.clickOnBoard(event);
-
         textArea.setText(GameManager.getTheGame().note);
         comment.setText(GameManager.getTheGame().comment);
 
@@ -269,10 +276,13 @@ public class MainStageController {
     @FXML
     private void start() throws IOException {
 
-
         GameManager.startAGame();
 
         ScreenBoard.updateTheChessBoard();
+
+        ScreenBoard.undoAllHighlights(imageViewsBoard);
+
+        ScreenBoard.de_select();
 
         textArea.setText(GameManager.getTheGame().note);
 
@@ -281,6 +291,12 @@ public class MainStageController {
         //ScreenBoard.undoAllHighlights(getImageViewsBoard());
     }
 
+
+    @FXML
+    private void setHighlightPossibleMoves()
+    {
+        ScreenBoard.switch_HighlightPossibleMoves();
+    }
 
     // ===================================================================
     //                            HELPER METHODS
@@ -386,6 +402,7 @@ public class MainStageController {
             }
         }
     }
+
 
 
     // ===================================================================

@@ -15,7 +15,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mos.MainStageController">
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mos.MainStageController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -23,9 +23,9 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <BorderPane prefHeight="700.0" prefWidth="1000.0">
+      <BorderPane prefHeight="740.0" prefWidth="1000.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <center>
-            <Pane prefHeight="700.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" layoutX="40.0" layoutY="40.0" mouseTransparent="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="620.0" />
                   <Group>
@@ -88,50 +88,50 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                     </children>
-                  </Group>
-                  <Group layoutX="594.0" layoutY="-1.0">
-                     <children>
-                        <Label layoutX="48.0" layoutY="300.0" text="5">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="230.0" text="6">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="162.0" text="7">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="586.0" text="1">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="442.0" text="3">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="371.0" text="4">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="92.0" text="8">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="512.0" text="2">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
+                        <Group layoutX="595.0">
+                           <children>
+                              <Label layoutX="48.0" layoutY="300.0" text="5">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="230.0" text="6">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="162.0" text="7">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="586.0" text="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="442.0" text="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="371.0" text="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="92.0" text="8">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="48.0" layoutY="512.0" text="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Group>
                      </children>
                   </Group>
                   <Group>
@@ -178,7 +178,7 @@
                         </Label>
                      </children>
                   </Group>
-                  <Group layoutX="-1.0" layoutY="-587.0">
+                  <Group layoutY="-590.0">
                      <children>
                         <Label layoutX="587.0" layoutY="632.0" text="H">
                            <font>
@@ -928,39 +928,68 @@
                               <Cursor fx:constant="DEFAULT" />
                            </cursor>
                         </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Rectangle>
                      </children>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Group>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
-                     <effect>
-                        <Glow />
-                     </effect></Rectangle>
-               </children></Pane>
-         </center>
-         <right>
-            <Pane prefHeight="600.0" prefWidth="330.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="start_button" alignment="CENTER" contentDisplay="TEXT_ONLY" graphicTextGap="5.0" layoutX="93.0" layoutY="44.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
+                  <TextArea fx:id="textArea" editable="false" layoutX="700.0" layoutY="214.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="448.0" prefWidth="257.0" wrapText="true">
+                     <font>
+                        <Font name="Arial Italic" size="11.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="start_button" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="753.0" layoutY="52.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
                      <effect>
                         <ColorAdjust brightness="0.12" contrast="0.07" hue="-1.0" saturation="0.04" />
-                     </effect></Button>
-                  <TextArea fx:id="textArea" editable="false" layoutX="36.0" layoutY="160.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="497.0" prefWidth="257.0" wrapText="true">
-                     <font>
-                        <Font name="Arial Italic" size="11.0" />
-                     </font>
-                  </TextArea>
-                  <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="100.0" prefHeight="35.0" prefWidth="256.0" text="Label" textAlignment="CENTER" textFill="#1e07f0" wrapText="true">
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="698.0" layoutY="108.0" prefHeight="35.0" prefWidth="256.0" textAlignment="CENTER" textFill="#1e07f0" wrapText="true">
                      <font>
                         <Font name="Arial Bold Italic" size="14.0" />
                      </font>
                   </Label>
-               </children></Pane>
-         </right>
+                  <CheckBox fx:id="highlightPossibleMoves" layoutX="712.0" layoutY="172.0" mnemonicParsing="false" onAction="#setHighlightPossibleMoves" text="Highlight the possible moves" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </Pane>
+         </center>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <top>
+            <MenuBar blendMode="EXCLUSION" prefHeight="29.0" prefWidth="1010.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Quit My Chess" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Game">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Start a New Game" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
       </BorderPane>
    </children>
 </GridPane>

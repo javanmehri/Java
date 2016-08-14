@@ -1,29 +1,43 @@
 package mos;
 
+//==============================================================================
+// File         : ScreenBoard.java
+//
+// Current Author: Mostafa Javanmehri
+//
+// Contact Info: m.javanmehri@gmail.com
+//
+// Purpose : This file containes the methods that are needed to interact the game
+// codes and the graphical scene which are used in the  MainStageController.java
+//
+// Dependencies: MainStage.fxml
+//
+// Modification Log :
+//    --> Created Jul-12-2016
+//    --> Updated Aug-14-2016
+//
+// =============================================================================
+
 import javafx.event.Event;
 import javafx.scene.Cursor;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
-
 import java.io.IOException;
 
-/**
- * Created by MOS on 2016-07-12.
- */
+
 public class ScreenBoard {
 
     private static boolean isAnyPieceSelected = false;
     private static ImageView selectedPiece;
     private static ImageView moveToSopt;
+    private static boolean highlightPossibleMoves = false;
 
 
-    // =============================================================
-    //                           Methods
-    // =============================================================
+    // =====================================<<<  Linked Controller Methods   >>>===================================== \\
+
 
     public static void clickOnBoard(Event event) throws IOException, CloneNotSupportedException {
-
 
         ImageView clickedTile = getImageView(event);
 
@@ -36,8 +50,8 @@ public class ScreenBoard {
 
             else if (isImageViewEmpty(clickedTile) || !isActivePlayer(event)) {
 
-                Spot king1 = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
-                undoHighlight(getImageViewOfSpot(king1));
+                Spot kingSpot = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
+                undoHighlight(getImageViewOfSpot(kingSpot));
 
                 move(event);
                 undoHighlight(event);
@@ -47,14 +61,10 @@ public class ScreenBoard {
                 Spot king2 = GameManager.getTheGame().getActivePlayer().getSpotOfKing();
 
                 if (stillCheck())
-                    highlightCheck(getImageViewOfSpot(king1));
-
+                    highlightCheck(getImageViewOfSpot(kingSpot));
 
                 if (isCheck())
                     highlightCheck(getImageViewOfSpot(king2));
-
-
-
 
             }
 
@@ -63,7 +73,23 @@ public class ScreenBoard {
     }
 
 
+    // ==============================================================================
+    // Method : updateTheChessBoard()
+    //
+    // Current Author: Mostafa Javanmehri
+    //
+    // Purpose : It checks out what image should be on each tile of the board, and calls
+    // the updateTheTile() method to update tiles. It calls by MainStageController.java
+    //
+    // Dependencies: updateTheTile(...), GameManager.getTheGame()
+    //
+    // Modification Log :
+    // --> Created Jul-12-2016
+    // --> Updated MMM-DD-YYYY
+    //
+    // =============================================================================
     public static void updateTheChessBoard() {
+
         Spot spot;
         Piece piece;
         ImageView imageViewOfSpot;
@@ -74,7 +100,9 @@ public class ScreenBoard {
         Game game = GameManager.getTheGame();
 
         for (int i = 0; i < 8; i++) {
+
             for (int j = 0; j < 8; j++) {
+
                 spot = game.getBoard().getSpot(i, j);
                 imageViewOfSpot = getImageViewOfSpot(spot);
                 backgroundColor = getBackgroundColor(i, j);
@@ -96,27 +124,53 @@ public class ScreenBoard {
             }
         }
 
-
     }
 
 
+    // ==============================================================================
+    // Method : mouseOn(Event event)
+    //
+    // Current Author: Mostafa Javanmehri
+    //
+    // Purpose : It manage effects that needed to occure when the mouse is on the tile
+    //
+    // Dependencies: isAnyPieceSelected, isActivePlayer(event), isMouseOnSelectedPiece(event),
+    // highlightPossibleMoves
+    //
+    // Modification Log :
+    // --> Created Jul-12-2016
+    // --> Updated MMM-DD-YYYY
+    //
+    // =============================================================================
     public static void mouseOn(Event event) {
 
         if (!isAnyPieceSelected && isActivePlayer(event))
+            changeCursorToHand(event);
+
+        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event))
         {
             changeCursorToHand(event);
+            if (highlightPossibleMoves)
+                highlightTheWay(event);
         }
-
-        if (isAnyPieceSelected && !isMouseOnSelectedPiece(event)) {
-            changeCursorToHand(event);
-            //highlight(event);
-            highlightTheWay(event);
-        }
-
 
     }
 
-
+    // ==============================================================================
+    // Method : mouseOut(Event event)
+    //
+    // Current Author: Mostafa Javanmehri
+    //
+    // Purpose : It manage effects that needed to occure when the mouse exit from the tile
+    //
+    // Dependencies: isAnyPieceSelected, isActivePlayer(event), isMouseOnSelectedPiece(event),
+    // highlightPossibleMoves
+    //
+    // Modification Log :
+    // --> Created Jul-12-2016
+    // --> Updated MMM-DD-YYYY
+    //
+    // =============================================================================
     public static void mouseOut(Event event) {
         if (!isAnyPieceSelected && isActivePlayer(event))
         {
@@ -128,7 +182,6 @@ public class ScreenBoard {
             undoHighlightTheWay(event);
         }
     }
-
 
 
     // =============================================================
@@ -282,9 +335,11 @@ public class ScreenBoard {
     }
 
 
-    private static void de_select() {
-        selectedPiece.setOpacity(1);
-        isAnyPieceSelected = false;
+    public static void de_select() {
+        if (isAnyPieceSelected) {
+            selectedPiece.setOpacity(1);
+            isAnyPieceSelected = false;
+        }
     }
 
 
@@ -317,10 +372,10 @@ public class ScreenBoard {
     }
 
 
-
     private static ImageView getImageView(Event event) {
         return (ImageView) event.getSource();
     }
+
 
     public static Spot getSpot(Event event)
     {
@@ -412,6 +467,12 @@ public class ScreenBoard {
                 imageViews[i][j].setEffect(null);
     }
 
-
+    public static void switch_HighlightPossibleMoves()
+    {
+        if (highlightPossibleMoves)
+            highlightPossibleMoves = false;
+        else
+            highlightPossibleMoves = true;
+    }
 
 }
