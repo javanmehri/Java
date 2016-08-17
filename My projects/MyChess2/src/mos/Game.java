@@ -20,7 +20,7 @@ public class Game {
     private Game[] children;
 
     public String note;
-    public String comment;
+    private String comment;
 
 
     public Game(String player_White, String player_Black) {
@@ -80,33 +80,90 @@ public class Game {
         return player==activePlayer;
     }
 
+    public boolean isValidMove(int from_i, int from_j, int to_i, int to_j) {
+
+        // -----------------------------------------------------------------------------
+        // The following block manages the validation of the (KING and ROOK) move.
+        // -----------------------------------------------------------------------------
+        if (isAValidKingRook(from_i, from_j, to_i, to_j))
+            return true;
+
+        /*
+        if (getPlayer(to_i,to_j)!=null)
+        {
+            if (getActivePlayer() == getPlayer(to_i, to_j))
+            {
+                Piece piece1 = getPiece(from_i, from_j);
+                Piece piece2 = getPiece(to_i, to_j);
+                //Report.report(" << Both pices are not null >> ");
+                //Report.report(" >> piece1 : "+piece1.getPieceType() + "  piece2 : "+ piece2.getPieceType());
+                if ((piece1.getPieceType() == Piece.Type.KING && piece2.getPieceType() == Piece.Type.ROOK) ||
+                        (piece2.getPieceType() == Piece.Type.KING && piece1.getPieceType() == Piece.Type.ROOK))
+                {
+                    //Report.report(" << Pices are King and Rook >> ");
+                    if (!piece1.isPlayed() && !piece2.isPlayed()) {
+                        //Report.report(" << Both King and Rook are not moved before >> ");
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+
+            }
+
+        }
+
+        */
+
+        else if (getPlayer(from_i, from_j) == getPlayer(to_i, to_j))
+            return false;
+
+        else if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board,to_i,to_j)==false || isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
+            return false;
+
+
+        else
+            return true;
+    }
+
 
     public boolean move(Player player, int from_i, int from_j, int to_i, int to_j) throws IOException {
 
         if (player != activePlayer)
             return false;
 
-        if (getPlayer(to_i,to_j)==null)
+
+        if (isValidMove(from_i, from_j, to_i,to_j))
         {
-                if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
-                {
-                    board = player.move(board, from_i, from_j, to_i, to_j);
+            if (isAValidKingRook(from_i, from_j, to_i, to_j))
+            {
+                // ...
+                Report.report(">>> *** King and Rook *** <<<");
+                comment = "*** KING-ROOK ***";
+                board = player.KingRookMove(board, from_i, from_j, to_i, to_j);
+                return true;
+            }
+            else if (getPlayer(from_i, from_j) != getPlayer(to_i, to_j))
+            {
+                board = player.move(board, from_i, from_j, to_i, to_j);
 
-                    if (isCheck())
-                    {
-                        board = player.undoMove(board, from_i, from_j, to_i, to_j);
-                        comment = " ! Still Check !";
-                        return false;
-                    }
-
-                    noteThePlay(player, to_i, to_j);
-                    return true;
+                if (isCheck()) {
+                    board = player.undoMove(board, from_i, from_j, to_i, to_j);
+                    comment = " ! Not a Valid Move !";
+                    return false;
                 }
 
+                noteThePlay(player, to_i, to_j);
+                return true;
+            }
         }
+
+
         else if (getPlayer(to_i,to_j)!=activePlayer)
         {
-                if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board, to_i,to_j) && !isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
+                if (isValidRemove(from_i, from_j, to_i,to_j))
                 {
                     board = player.remove(board, from_i, from_j, to_i, to_j);
 
@@ -122,6 +179,8 @@ public class Game {
                     return true;
                 }
         }
+
+
 
 
 
@@ -203,9 +262,6 @@ public class Game {
         int delta_j = Math.abs(from_j - to_j);
         int max_delta = Math.max(delta_i, delta_j);
 
-        //if (getBoard().getPieceOnTheSpot(from_i,from_j).getPieceType()== Piece.Type.KNIGHT)
-            //return true;
-
         if (max_delta>1)
         {
             Spot[] spots = getSpotsOnTheWay(from_i, from_j, to_i, to_j);
@@ -216,10 +272,7 @@ public class Game {
                          return true;
             }
         }
-        //if (delta_i==0 || delta_j==0 || delta_i==delta_j)
-        //{
-        //    return false;
-        //}
+
         return false;
     }
 
@@ -258,33 +311,17 @@ public class Game {
     }
 
 
-    public boolean isValidMove(int from_i, int from_j, int to_i, int to_j) {
-
-        if (board.getPieceOnTheSpot(from_i,from_j).isValidMove(board,to_i,to_j)==false)
-            return false;
-
-        //Game game2 = new Game("w", "b");
-        //game2.setBoard(getActivePlayer().move(board,from_i,from_j,to_i,to_j));
-
-        //if (isCheck(game2))
-            //return false;
-
-        return true;
-    }
-
 
     public boolean isValidRemove(int from_i, int from_j, int to_i, int to_j) {
 
-        if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j)==false)
+        if (getPlayer(from_i,from_j)==getPlayer(to_i,to_j))
             return false;
 
-        //Game game2 = new Game("w", "b");
-        //game2.setBoard(getActivePlayer().remove(board,from_i,from_j,to_i,to_j));
+        else if (board.getPieceOnTheSpot(from_i,from_j).isValidRemove(board,to_i,to_j)==false || isAnyPieceOnTheWay(from_i,from_j,to_i,to_j))
+            return false;
 
-        //if (isCheck(game2))
-            //return false;
-
-        return true;
+        else
+            return true;
 
     }
 
@@ -307,6 +344,7 @@ public class Game {
 
 
     private boolean isCheck(Game game) {
+
         Player player = game.getUnactivePlayer();
         Piece[] pieces = player.getAllPieces();
         Piece[] validRemoves;
@@ -322,7 +360,8 @@ public class Game {
                     {
                         if (validRemoves[k].getPieceType()== Piece.Type.KING)
                         {
-                            Report.report(" >> Check <<");
+                            //comment = "CHECK";
+                            //Report.report(" >> Check <<");
                             return true;
                         }
                     }
@@ -341,7 +380,6 @@ public class Game {
 
     private boolean stillCheck(Game game) {
         Player player = game.getActivePlayer();
-
         Piece[] pieces = player.getAllPieces();
         Piece[] validRemoves;
 
@@ -356,7 +394,7 @@ public class Game {
                     {
                         if (validRemoves[k].getPieceType()== Piece.Type.KING)
                         {
-                            Report.report(" >> Check <<");
+                            //Report.report(" >> Check <<");
                             return true;
                         }
                     }
@@ -498,6 +536,57 @@ public class Game {
 
 
     }
+
+    public void comment(String str)
+    {
+        comment = str;
+    }
+
+    public String getComment()
+    {
+        return comment;
+    }
+
+    public Piece getPiece(int i, int j)
+    {
+        if (board.getSpot(i, j).isOccupied())
+            return board.getSpot(i , j).getPiece();
+
+        return null;
+    }
+
+
+    private boolean isAValidKingRook(int from_i, int from_j, int to_i, int to_j)
+    {
+        if (getPlayer(to_i,to_j)!=null)
+        {
+            if (getActivePlayer() == getPlayer(to_i, to_j))
+            {
+                Piece piece1 = getPiece(from_i, from_j);
+                Piece piece2 = getPiece(to_i, to_j);
+                //Report.report(" << Both pices are not null >> ");
+                //Report.report(" >> piece1 : "+piece1.getPieceType() + "  piece2 : "+ piece2.getPieceType());
+                if ((piece1.getPieceType() == Piece.Type.KING && piece2.getPieceType() == Piece.Type.ROOK) ||
+                        (piece2.getPieceType() == Piece.Type.KING && piece1.getPieceType() == Piece.Type.ROOK))
+                {
+                    //Report.report(" << Pices are King and Rook >> ");
+                    if (!piece1.isPlayed() && !piece2.isPlayed() && Math.abs(from_j-to_j)==4) {
+                        // apply distance condition here !
+                        Report.report(" << ! King and Rook move validated ! >> ");
+                        return true;
+                    }
+
+                }
+
+
+            }
+
+        }
+
+        return false;
+    }
+
+
 }
 
 

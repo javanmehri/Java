@@ -1,0 +1,52 @@
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+ << Both pices are not null >> 
+ >> piece1 : ROOK  piece2 : KING
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+ << Both pices are not null >> 
+ >> piece1 : ROOK  piece2 : KING
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : false
+game.isValidMove(from_i,from_j,to_i,to_j) : false
+ << Both pices are not null >> 
+ >> piece1 : KING  piece2 : ROOK
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+ << Both pices are not null >> 
+ >> piece1 : KING  piece2 : ROOK
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+game.isValidMove(from_i,from_j,to_i,to_j) : false
+game.isValidMove(from_i,from_j,to_i,to_j) : false
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+game.isValidMove(from_i,from_j,to_i,to_j) : false
+game.isValidMove(from_i,from_j,to_i,to_j) : false
+ << Both pices are not null >> 
+ >> piece1 : KING  piece2 : ROOK
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+ << Both pices are not null >> 
+ >> piece1 : KING  piece2 : ROOK
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+ << Both pices are not null >> 
+ >> piece1 : KING  piece2 : ROOK
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 
+game.isValidMove(from_i,from_j,to_i,to_j) : true
+ << Both pices are not null >> 
+ >> piece1 : KING  piece2 : ROOK
+ << Pices are King and Rook >> 
+ << Both King and Rook are not moved before >> 

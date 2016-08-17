@@ -77,6 +77,7 @@ public class Player {
 
     public Board move(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
+        Report.report("> Player.move ");
         Piece piece = chessBoard.getPieceOnTheSpot(from_i,from_j);
 
         if (piece.isValidMove(chessBoard, to_i,to_j))
@@ -87,6 +88,54 @@ public class Player {
             totalMoves++;
         }
 
+        return chessBoard;
+    }
+
+
+    public Board KingRookMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j) {
+
+        Report.report("  Player.KingRookMove "+"\n"+"  {");
+
+        Piece King ;
+        Piece Rook ;
+
+        // It is assumed that it is a valid king-Rook move!
+
+        if (from_j == 3)
+        {
+            King = chessBoard.getPieceOnTheSpot(from_i, from_j);
+            Rook = chessBoard.getPieceOnTheSpot(to_i, to_j);
+        }
+
+        else if (to_j == 3)
+        {
+            King = chessBoard.getPieceOnTheSpot(to_i, to_j);
+            Rook = chessBoard.getPieceOnTheSpot(from_i, from_j);
+        }
+
+        else {
+            Report.report("  }");
+            return chessBoard;
+        }
+
+        int i = King.getSpot().get_X();
+        int j = King.getSpot().get_Y();
+
+
+        chessBoard.removePiece( i, j);
+        chessBoard.occupySpot(King, i, j+1);
+
+        i = Rook.getSpot().get_X();
+        j = Rook.getSpot().get_Y();
+
+        chessBoard.removePiece(i,j);
+        chessBoard.occupySpot(Rook, i , j-1);
+
+        King.moveCount();
+        Rook.moveCount();
+        totalMoves++;
+
+        Report.report("  }");
         return chessBoard;
     }
 
@@ -103,6 +152,7 @@ public class Player {
 
     public Board undoMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
+        Report.report("> Player.undoMove ");
         Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
         chessBoard.removePiece(to_i,to_j);
         chessBoard.occupySpot(piece,from_i,from_j);
@@ -115,6 +165,7 @@ public class Player {
 
     public Board undoRemove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
+        Report.report("> Player.undoRemove ");
         Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
         chessBoard.removePiece(to_i,to_j);
         chessBoard.occupySpot(piece,from_i,from_j);
@@ -129,9 +180,10 @@ public class Player {
 
     public Board remove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
+        Report.report("> Player.remove ");
+
         Piece piece1 = chessBoard.getPieceOnTheSpot(from_i,from_j);
         Piece piece2 = chessBoard.getPieceOnTheSpot(to_i,to_j);
-
 
         if (piece1.isValidRemove(chessBoard, to_i,to_j))
         {
