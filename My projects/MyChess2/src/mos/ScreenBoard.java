@@ -55,6 +55,9 @@ public class ScreenBoard {
     // =============================================================================
     public static void clickOnBoard(Event event) throws IOException, CloneNotSupportedException {
 
+        //Report.report("\n"+"ScreenBoard.clickOnBoard(Event) :"+"\n"+"{");
+        Report.open_report(1, "ScreenBoard.clickOnBoard(Event)");
+
         ImageView clickedTile = getImageView(event);
 
         // select a piece
@@ -75,18 +78,24 @@ public class ScreenBoard {
             // check if it's CHECK!
 
             //else if (isImageViewEmpty(clickedTile) || !isActivePlayer(event)) {
+
             else
-
             {
+                //Report.report("   ScreenBoard.move(Event) :"+"\n"+"   {");
                 move(event);
+                //Report.report("   }");
 
+                //Report.report("   ScreenBoard.watchForCheck() :"+"\n"+"   {");
                 watchForCheck();
+                //Report.report("   }");
 
             }
 
         }
 
         updateTheChessBoard();
+        //Report.report("}"+"\n");
+        Report.close_report(1);
     }
 
 
@@ -159,7 +168,7 @@ public class ScreenBoard {
     // --> Updated MMM-DD-YYYY
     //
     // =============================================================================
-    public static void mouseOn(Event event) {
+    public static void mouseOn(Event event) throws CloneNotSupportedException {
 
         if (!isAnyPieceSelected && isActivePlayer(event))
             changeCursorToHand(event);
@@ -220,8 +229,7 @@ public class ScreenBoard {
     // --> Updated MMM-DD-YYYY
     //
     // =============================================================================
-    private static void highlightTheWay(Event event)
-    {
+    private static void highlightTheWay(Event event) throws CloneNotSupportedException {
 
         //Report.report(" > ScreenBoard.highlightTheWay"+"\n"+"{");
         int from_i =  get_XIndex(selectedPiece);
@@ -244,8 +252,8 @@ public class ScreenBoard {
             }
 
             //if (!isActivePlayer(event))
-            Report.report("game.isValidMove(from_i,from_j,to_i,to_j) : " + game.isValidMove(from_i,from_j,to_i,to_j));
-            Report.report("game.isValidRemove(from_i,from_j,to_i,to_j) : " + game.isValidRemove(from_i,from_j,to_i,to_j));
+            //Report.report("game.isValidMove(from_i,from_j,to_i,to_j) : " + game.isValidMove(from_i,from_j,to_i,to_j));
+            //Report.report("game.isValidRemove(from_i,from_j,to_i,to_j) : " + game.isValidRemove(from_i,from_j,to_i,to_j));
             highlight(event);
 
         }
@@ -286,14 +294,16 @@ public class ScreenBoard {
     }
 
 
-    private static void move(Event event) throws IOException {
+    private static void move(Event event) throws IOException, CloneNotSupportedException {
 
-        Report.report(" > ScreenBoard.move"+"\n"+"{");
+        //Report.report("\n"+"   ScreenBoard.move(Event)"+"\n"+"   {");
+        Report.open_report(2, "ScreenBoard.move(Event)");
 
         Game game = GameManager.getTheGame();
 
         Piece.Color color = getColorOfPiece(selectedPiece);
         Player player;
+
         if (color == Piece.Color.WHITE)
             player = game.getPlayer_White();
         else
@@ -324,34 +334,36 @@ public class ScreenBoard {
         undoHighlightTheWay(event);
         changeCursorToNormal(event);
 
-
         /*
         if (game.isValidMove(from_i, from_j, to_i, to_j) || game.isValidRemove(from_i, from_j, to_i, to_j) )
         {
             game.move(player, from_i, from_j, to_i, to_j);
             game.switchTheActivePlayer();
-
         }
         */
 
+        game.move(player, from_i, from_j, to_i, to_j);
 
-        if (game.move(player, from_i, from_j, to_i, to_j)) {
+        //if (game.move(player, from_i, from_j, to_i, to_j)) {
             //de_select();
             //Sounds.play(Sounds.SoundEffects.MOVE);
             //Report.report("> ScreenBoard.move: game.move -> true");
-            game.switchTheActivePlayer();
+            //game.switchTheActivePlayer();
 
-        }
-
+        //}
 
         de_select();
         GameManager.updateTheGame(game);
 
-        Report.report("}");
+        //Report.report("   }"+"\n");
+        Report.close_report(2);
     }
 
 
     private static void watchForCheck() throws IOException {
+
+        //Report.report("\n"+"   ScreenBoard.watchForCheck()"+"\n"+"   {");
+        Report.open_report(2, "ScreenBoard.watchForCheck()");
 
         Game game = GameManager.getTheGame();
         Spot kingSpot = game.getActivePlayer().getSpotOfKing();
@@ -365,6 +377,8 @@ public class ScreenBoard {
             //System.out.println(" > Check ");
         }
 
+        //Report.report("   }"+"\n");
+        Report.close_report(2);
     }
 
 

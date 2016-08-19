@@ -13,6 +13,7 @@ public class Player {
     private int totalMoves = 0;
 
     private Piece lastRemoved;
+    private String KingRookNote = "";
 
     public Player(String name, Piece.Color color)
     {
@@ -31,8 +32,8 @@ public class Player {
         pieces[0][0] = new Rook(this);
         pieces[0][1] = new Knight(this);
         pieces[0][2] = new Bishop(this);
-        pieces[0][3] = new King(this);
-        pieces[0][4] = new Queen(this);
+        pieces[0][3] = new Queen(this);
+        pieces[0][4] = new King(this);
         pieces[0][5] = new Bishop(this);
         pieces[0][6] = new Knight(this);
         pieces[0][7] = new Rook(this);
@@ -77,7 +78,7 @@ public class Player {
 
     public Board move(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
-        Report.report("> Player.move ");
+        Report.open_report(4, "Player.move(...)");
         Piece piece = chessBoard.getPieceOnTheSpot(from_i,from_j);
 
         if (piece.isValidMove(chessBoard, to_i,to_j))
@@ -88,59 +89,115 @@ public class Player {
             totalMoves++;
         }
 
+        Report.close_report(4);
         return chessBoard;
     }
 
 
     public Board KingRookMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j) {
 
-        Report.report("  Player.KingRookMove "+"\n"+"  {");
+        // It is assumed that it is a valid king-Rook move!
+
+        Piece fromPiece = chessBoard.getSpot(from_i,from_j).getPiece();
+        Piece toPiece = chessBoard.getSpot(to_i,to_j).getPiece();
 
         Piece King ;
         Piece Rook ;
 
-        // It is assumed that it is a valid king-Rook move!
-
-        if (from_j == 3)
+        if (from_j == 4)
         {
             King = chessBoard.getPieceOnTheSpot(from_i, from_j);
             Rook = chessBoard.getPieceOnTheSpot(to_i, to_j);
         }
 
-        else if (to_j == 3)
+        else {
+            return chessBoard;
+        }
+
+        int K_i = King.getSpot().get_X();
+        int K_j = King.getSpot().get_Y();
+        int R_i = Rook.getSpot().get_X();
+        int R_j = Rook.getSpot().get_Y();
+
+        if (R_j == 0)
+        {
+
+            chessBoard.removePiece( K_i, K_j);
+            chessBoard.occupySpot(King, K_i, K_j-2);
+
+            chessBoard.removePiece(R_i,R_j);
+            chessBoard.occupySpot(Rook, R_i , R_j+3);
+
+            KingRookNote = "O-O-O";
+        }
+        else
+        {
+            chessBoard.removePiece( K_i, K_j);
+            chessBoard.occupySpot(King, K_i, K_j+2);
+
+            chessBoard.removePiece(R_i,R_j);
+            chessBoard.occupySpot(Rook, R_i , R_j-2);
+
+            KingRookNote = "O-O";
+        }
+
+
+        King.moveCount();
+        Rook.moveCount();
+        totalMoves++;
+
+        return chessBoard;
+    }
+
+    public Board undo_KingRookMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j) {
+
+        //Report.report("  Player.KingRookMove "+"\n"+"  {");
+        Report.open_report(4, "Player.KingRookMove(...)");
+
+        Piece King ;
+        Piece Rook ;
+
+        if (from_j == 4)
+        {
+            King = chessBoard.getPieceOnTheSpot(from_i, from_j);
+            Rook = chessBoard.getPieceOnTheSpot(to_i, to_j);
+        }
+
+        else if (to_j == 4)
         {
             King = chessBoard.getPieceOnTheSpot(to_i, to_j);
             Rook = chessBoard.getPieceOnTheSpot(from_i, from_j);
         }
 
         else {
-            Report.report("  }");
+            Report.close_report(4);
+            //Report.report("  }");
             return chessBoard;
         }
 
         int i = King.getSpot().get_X();
         int j = King.getSpot().get_Y();
 
-
         chessBoard.removePiece( i, j);
-        chessBoard.occupySpot(King, i, j+1);
+        chessBoard.occupySpot(King, i, j-1);
 
         i = Rook.getSpot().get_X();
         j = Rook.getSpot().get_Y();
 
         chessBoard.removePiece(i,j);
-        chessBoard.occupySpot(Rook, i , j-1);
+        chessBoard.occupySpot(Rook, i , j+1);
 
-        King.moveCount();
-        Rook.moveCount();
-        totalMoves++;
+        King.undoMoveCount();
+        Rook.undoMoveCount();
+        totalMoves--;
 
-        Report.report("  }");
+        //Report.report("  }");
+        Report.close_report(4);
         return chessBoard;
     }
 
 
-    public void move(Board chessBoard, Spot from, Spot to)
+        public void move(Board chessBoard, Spot from, Spot to)
     {
         int from_i = from.get_X();
         int from_j = from.get_Y();
@@ -152,20 +209,25 @@ public class Player {
 
     public Board undoMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
-        Report.report("> Player.undoMove ");
+        //Report.report("> Player.undoMove ");
+        Report.open_report(4, "Player.undoMove(...)");
+
         Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
         chessBoard.removePiece(to_i,to_j);
         chessBoard.occupySpot(piece,from_i,from_j);
         piece.undoMoveCount();
         totalMoves --;
 
+        Report.close_report(4);
         return chessBoard;
 
     }
 
     public Board undoRemove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
-        Report.report("> Player.undoRemove ");
+        //Report.report("> Player.undoRemove ");
+        Report.open_report(4, "Player.undoRemove(...)");
+
         Piece piece = chessBoard.getPieceOnTheSpot(to_i, to_j);
         chessBoard.removePiece(to_i,to_j);
         chessBoard.occupySpot(piece,from_i,from_j);
@@ -174,13 +236,15 @@ public class Player {
         piece.undoMoveCount();
         totalMoves --;
 
+        Report.close_report(4);
         return chessBoard;
 
     }
 
     public Board remove(Board chessBoard, int from_i, int from_j, int to_i, int to_j)
     {
-        Report.report("> Player.remove ");
+        //Report.report("> Player.remove ");
+        Report.open_report(4, "Player.remove(...)");
 
         Piece piece1 = chessBoard.getPieceOnTheSpot(from_i,from_j);
         Piece piece2 = chessBoard.getPieceOnTheSpot(to_i,to_j);
@@ -196,6 +260,7 @@ public class Player {
             totalMoves ++;
         }
 
+        Report.close_report(4);
         return chessBoard;
     }
 
@@ -254,4 +319,9 @@ public class Player {
         return totalMoves;
     }
 
+
+    public String getKingRookNote()
+    {
+        return KingRookNote;
+    }
 }

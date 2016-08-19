@@ -1,220 +1,776 @@
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
-{
-> Player.move 
-}
- > ScreenBoard.move
+ScreenBoard.clickOnBoard(Event):
 {
 }
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > Not a valid Move or Remove!
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- << ! King and Rook move validated ! >> 
- << ! King and Rook move validated ! >> 
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
- << ! King and Rook move validated ! >> 
- << ! King and Rook move validated ! >> 
->>> *** King and Rook *** <<<
-  Player.KingRookMove 
-  {
-  }
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > Not a valid Move or Remove!
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- << ! King and Rook move validated ! >> 
- << ! King and Rook move validated ! >> 
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
- << ! King and Rook move validated ! >> 
- << ! King and Rook move validated ! >> 
->>> *** King and Rook *** <<<
-  Player.KingRookMove 
-  {
-  }
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
-> Player.move 
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > Not a valid Move or Remove!
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
 }
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- << ! King and Rook move validated ! >> 
- << ! King and Rook move validated ! >> 
-game.isValidMove(from_i,from_j,to_i,to_j) : true
-game.isValidRemove(from_i,from_j,to_i,to_j) : false
- > ScreenBoard.move
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
 {
- << ! King and Rook move validated ! >> 
- << ! King and Rook move validated ! >> 
->>> *** King and Rook *** <<<
-  Player.KingRookMove 
-  {
-  }
 }
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+             > *** KING-ROOK ***
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+             > *** KING-ROOK ***
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+             > The Remove is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                   > Not a valid Move or Remove!
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------

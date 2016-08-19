@@ -1,0 +1,137 @@
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                  Player.move(...):
+                  {
+                  }
+
+             > The Move is safe and done
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.watchForCheck():
+      {
+      }
+
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+}
+----------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                  Player.move(...):
+                  {
+                  }
+
+                  Player.undoMove(...):
+                  {
+                  }
+
+             >  Not a valid move! It will cause a CHECK!
+            }
+
+      }
+
+      ScreenBoard.watchForCheck():
+      {

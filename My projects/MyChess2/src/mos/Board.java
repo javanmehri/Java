@@ -6,6 +6,7 @@ package mos;
 public class Board {
 
     private Spot[][] spots = new Spot[8][8];
+    public static enum Direction {UP, DOWN, RIGHT, LEFT}
 
     public Board() {
 
@@ -57,20 +58,45 @@ public class Board {
     }
 
 
-    public Board clone()
-    {
+    public Board clone() throws CloneNotSupportedException {
         Board newBoard = new Board();
 
         for(int i=0; i<spots.length; i++)
         {
             for(int j=0; j<spots.length; j++)
             {
-                newBoard.spots[i][j] = this.getSpot(i,j);
+                newBoard.spots[i][j] = this.getSpot(i,j).clone();
             }
         }
 
         return newBoard;
     }
+
+    public void movePiceOneTile(Piece piece, Direction direct)
+    {
+
+        int from_i = piece.getSpot().get_X();
+        int from_j = piece.getSpot().get_Y();
+
+        switch (direct)
+        {
+            case RIGHT:
+            {
+                removePiece(from_i, from_j);
+                occupySpot(piece, from_i, from_j+1);
+                break;
+            }
+            case LEFT:
+            {
+                removePiece(from_i, from_j);
+                occupySpot(piece, from_i, from_j-1);
+                break;
+            }
+
+        }
+
+    }
+
 
 
 }

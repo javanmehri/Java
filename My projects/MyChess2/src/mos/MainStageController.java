@@ -260,8 +260,7 @@ public class MainStageController {
 
 
     @FXML
-    private void mouseOn(Event event)
-    {
+    private void mouseOn(Event event) throws CloneNotSupportedException {
         ScreenBoard.mouseOn(event);
     }
 
