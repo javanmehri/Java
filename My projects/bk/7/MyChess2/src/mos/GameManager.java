@@ -16,7 +16,6 @@ public class GameManager {
         Sounds.play(Sounds.SoundEffects.START);
 
         game = new Game("Player 1", "Player 2");
-
     }
 
 

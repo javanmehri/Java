@@ -14,10 +14,11 @@ package mos;
 //
 // Modification Log :
 //    --> Created Jul-12-2016
-//    --> Updated Aug-21-2016
+//    --> Updated Aug-14-2016
 //
 // =============================================================================
 
+import com.sun.org.apache.regexp.internal.RE;
 import javafx.event.Event;
 import javafx.scene.Cursor;
 import javafx.scene.effect.InnerShadow;
@@ -29,9 +30,7 @@ import java.io.IOException;
 public class ScreenBoard {
 
     private static boolean isAnyPieceSelected = false;
-    private static boolean switch_highlightTheRoute = false;
-    private static boolean switch_highlightChecks = false;
-    private static boolean switch_soundEffects = false;
+    private static boolean highlightTheRoute = false;
     private static ImageView selectedPiece;
     private static ImageView moveToSopt;
 
@@ -54,8 +53,9 @@ public class ScreenBoard {
     // --> Updated MMM-DD-YYYY
     //
     // =============================================================================
-    public static void clickOnBoard(Event event) throws CloneNotSupportedException, InterruptedException {
+    public static void clickOnBoard(Event event) throws IOException, CloneNotSupportedException {
 
+        //Report.report("\n"+"ScreenBoard.clickOnBoard(Event) :"+"\n"+"{");
         Report.open_report(1, "ScreenBoard.clickOnBoard(Event)");
 
         ImageView clickedTile = getImageView(event);
@@ -71,16 +71,25 @@ public class ScreenBoard {
 
                 de_select();
 
+                watchForCheck();
+
             }
 
             else
             {
+                //Report.report("   ScreenBoard.move(Event) :"+"\n"+"   {");
                 move(event);
+                //Report.report("   }");
+
+                //Report.report("   ScreenBoard.watchForCheck() :"+"\n"+"   {");
+                watchForCheck();
+                //Report.report("   }");
 
             }
 
         }
 
+        updateTheChessBoard();
         //Report.report("}"+"\n");
         Report.close_report(1);
     }
@@ -163,7 +172,7 @@ public class ScreenBoard {
         if (isAnyPieceSelected && !isMouseOnSelectedPiece(event))
         {
             changeCursorToHand(event);
-            if (switch_highlightTheRoute)
+            if (highlightTheRoute)
                 highlightTheWay(event);
         }
 
@@ -216,7 +225,7 @@ public class ScreenBoard {
     // --> Updated MMM-DD-YYYY
     //
     // =============================================================================
-    public static void highlightTheWay(Event event) throws CloneNotSupportedException {
+    private static void highlightTheWay(Event event) throws CloneNotSupportedException {
 
         int from_i =  get_XIndex(selectedPiece);
         int from_j =  get_YIndex(selectedPiece);
@@ -263,7 +272,7 @@ public class ScreenBoard {
     // --> Updated MMM-DD-YYYY
     //
     // =============================================================================
-    public static void undoHighlightTheWay(Event event)
+    private static void undoHighlightTheWay(Event event)
     {
         int to_i = getSpot(event).get_X();
         int to_j = getSpot(event).get_Y();
@@ -278,7 +287,7 @@ public class ScreenBoard {
     }
 
 
-    private static void move(Event event) throws CloneNotSupportedException {
+    private static void move(Event event) throws IOException, CloneNotSupportedException {
 
         Report.open_report(2, "ScreenBoard.move(Event)");
 
@@ -289,6 +298,8 @@ public class ScreenBoard {
         Player player;
         if (color == Piece.Color.WHITE) player = game.getPlayer_White();
         else player = game.getPlayer_Black();
+
+        //game.setSelectedPlayer(player);
 
         moveToSopt = getImageView(event);
 
@@ -314,40 +325,50 @@ public class ScreenBoard {
         game.move(player, from_i, from_j, to_i, to_j);
 
         de_select();
-
         GameManager.updateTheGame(game);
-        updateTheChessBoard();
 
         Report.close_report(2);
     }
 
 
-    public static void watchForCheck() throws IOException, InterruptedException {
+    private static void watchForCheck() throws IOException {
 
+        //Report.report("\n"+"   ScreenBoard.watchForCheck()"+"\n"+"   {");
         Report.open_report(2, "ScreenBoard.watchForCheck()");
 
         Game game = GameManager.getTheGame();
         Spot kingSpot = game.getActivePlayer().getSpotOfKing();
         ImageView kingImageView = getImageViewOfSpot(kingSpot);
 
-        if (CU.isCheck(GameManager.getTheGame()))
+        if (game.isCheck())
         {
-            if (switch_highlightChecks)
-            {
-                highlightCheck(kingImageView);
-                //highlight(getImageViewOfSpot(game.checker.getSpot()));
-                highlightChecker();
-            }
-            //blinkTheChecker();
-
+            highlightCheck(kingImageView);
+            game.comment(" ! CHECK !");
             Sounds.play(Sounds.SoundEffects.CHECK);
+            //System.out.println(" > Check ");
         }
 
+        //Report.report("   }"+"\n");
         Report.close_report(2);
     }
 
 
-    public static void undoHighlight(ImageView imageView) {
+    private static boolean stillCheck()
+    {
+        Game game = GameManager.getTheGame();
+        Spot kingSpot = game.getActivePlayer().getSpotOfKing();
+        ImageView kingImageView = getImageViewOfSpot(kingSpot);
+
+        if (game.stillCheck())
+        {
+            highlightCheck(kingImageView);
+        }
+
+        return game.stillCheck();
+    }
+
+
+    private static void undoHighlight(ImageView imageView) {
         imageView.setEffect(null);
     }
 
@@ -355,25 +376,13 @@ public class ScreenBoard {
         undoHighlight(getImageView(event));
     }
 
-    public static void highlight(ImageView imageView) {
+    private static void highlight(ImageView imageView) {
         InnerShadow effect = new InnerShadow();
         effect.setColor(Color.valueOf("#ffde05a5"));
         effect.setHeight(255);
         effect.setRadius(127);
         effect.setWidth(255);
         imageView.setEffect(effect);
-    }
-
-
-    public static void highlightChecker() {
-        //Report.report(4, GameManager.getTheGame().checker.toString());
-        if (GameManager.getTheGame()!=null && GameManager.getTheGame().checker!=null)
-             highlight(getImageViewOfSpot(GameManager.getTheGame().checker.getSpot()));
-    }
-
-
-    public static void highlight(Event event) {
-        highlight(getImageView(event));
     }
 
 
@@ -412,6 +421,9 @@ public class ScreenBoard {
         isAnyPieceSelected = true;
         undoHighlight(event);
 
+        //String text = Integer.toString(COMP.possibleMoveSize(GameManager.getTheGame(), getSpot(event).getPiece()));
+
+        //MainStageController.textArea.setText("  !!! ");
     }
 
 
@@ -420,17 +432,6 @@ public class ScreenBoard {
             selectedPiece.setOpacity(1);
             isAnyPieceSelected = false;
         }
-
-        try
-        {
-            watchForCheck();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
     }
 
 
@@ -455,6 +456,11 @@ public class ScreenBoard {
         if (isAnyPieceSelected)
             return getImageView(event) == selectedPiece;
         return false;
+    }
+
+
+    private static void highlight(Event event) {
+        highlight(getImageView(event));
     }
 
 
@@ -493,7 +499,7 @@ public class ScreenBoard {
         return false;
     }
 
-    public static ImageView getImageViewOfSpot(Spot spot) {
+    private static ImageView getImageViewOfSpot(Spot spot) {
         int x = spot.get_X();
         int y = spot.get_Y();
         return MainStageController.getImageViewsBoard()[x][y];
@@ -553,63 +559,17 @@ public class ScreenBoard {
                 imageViews[i][j].setEffect(null);
     }
 
-
-    // ===========================================<<<  Option Methods  >>>=========================================== \\
-
-
-    public static boolean get_switch_highlightTheRoute()
+    public static void switch_highlightTheRoute()
     {
-        return switch_highlightTheRoute;
+        if (highlightTheRoute)
+            highlightTheRoute = false;
+        else
+            highlightTheRoute = true;
     }
 
-    public static void turnOn_highlightTheRoute()
+    public static boolean get_HighlightPossibleMoves()
     {
-        if (!switch_highlightTheRoute)
-            switch_highlightTheRoute = true;
+        return highlightTheRoute;
     }
-
-    public static void turnOff_highlightTheRoute()
-    {
-        if (switch_highlightTheRoute)
-            switch_highlightTheRoute = false;
-    }
-
-    public static boolean get_switch_highlightChecks()
-    {
-        return switch_highlightChecks;
-    }
-
-    public static void turnOn_highlightChecks()
-    {
-        if (!switch_highlightChecks)
-            switch_highlightChecks = true;
-    }
-
-    public static void turnOff_highlightChecks()
-    {
-        if (switch_highlightChecks)
-            switch_highlightChecks = false;
-    }
-
-    public static boolean get_switch_soundEffects()
-    {
-        return switch_soundEffects;
-
-    }
-
-    public static void turnOn_soundEffects()
-    {
-        if (!switch_soundEffects)
-            switch_soundEffects = true;
-    }
-
-    public static void turnOff_soundEffects()
-    {
-        if (switch_soundEffects)
-            switch_soundEffects = false;
-    }
-
-
 
 }
-

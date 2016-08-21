@@ -954,12 +954,14 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="708.0" layoutY="108.0" prefHeight="35.0" prefWidth="246.0" textAlignment="CENTER" textFill="#1e07f0" wrapText="true">
+                  <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="708.0" layoutY="103.0" prefHeight="40.0" prefWidth="246.0" textFill="#0e0479" wrapText="true">
                      <font>
-                        <Font name="Arial Bold Italic" size="14.0" />
+                        <Font name="Arial Bold Italic" size="13.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="checkBox_highlightTheRoute" layoutX="719.0" layoutY="172.0" mnemonicParsing="false" onAction="#set_highlightTheRoute" text="Highlight The Routes" />
+                  <CheckBox fx:id="checkBox_highlightChecks" layoutX="719.0" layoutY="175.0" mnemonicParsing="false" onAction="#set_checkBox_highlightChecks" text="Highlight Checks" />
+                  <CheckBox fx:id="checkBox_highlightTheRoute" layoutX="719.0" layoutY="146.0" mnemonicParsing="false" onAction="#set_checkBox_highlightTheRoute" text="Highlight The Routes" />
+                  <CheckBox fx:id="checkBox_soundEffects" layoutX="861.0" layoutY="175.0" mnemonicParsing="false" onAction="#set_checkBox_soundEffects" text="Sound Effects" />
                </children>
                <BorderPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -980,7 +982,9 @@
                 <Menu mnemonicParsing="false" text="Game">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Start a New Game" />
-                        <CheckMenuItem fx:id="checkMenuItem_highlightTheRoute" mnemonicParsing="false" onAction="#set_highlightTheRoute" text="Highlight The Routes" />
+                        <CheckMenuItem fx:id="checkMenuItem_highlightTheRoute" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightTheRoute" text="Highlight The Routes" />
+                        <CheckMenuItem fx:id="checkMenuItem_highlightChecks" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightChecks" text="Highlight Checks" />
+                        <CheckMenuItem fx:id="checkMenuItem_soundEffects" mnemonicParsing="false" onAction="#set_checkMenuItem_soundEffects" text="Sound Effects" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">

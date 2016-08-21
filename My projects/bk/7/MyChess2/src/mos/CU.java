@@ -7,7 +7,6 @@ package mos;
  */
 public class CU {
 
-
     public static boolean isCheck(Game game) {
 
         Player player = game.getUnactivePlayer();
@@ -25,8 +24,8 @@ public class CU {
                     {
                         if (validRemoves[k].getPieceType()== Piece.Type.KING)
                         {
-                            game.checker = pieces[i];
-                            game.comment(" ! CHECK by "+game.checker.getColor()+" "+game.checker.getPieceType()+" !");
+                            //comment = "CHECK";
+                            //Report.report(" >> Check <<");
                             return true;
                         }
                     }

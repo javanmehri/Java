@@ -16,15 +16,13 @@ public class Game {
     private Player player1;
     private Player player2;
     private Player activePlayer;
+    //private Player selectedPlayer;
 
     private Game parent;
     private Game[] children;
 
     public String note;
     private String comment;
-
-    public Spot spotToHighlight;
-    public Piece checker=null;
 
 
     public Game(String player_White, String player_Black) {
@@ -34,6 +32,9 @@ public class Game {
         player2 = new Player(player_Black, Piece.Color.BLACK);
 
         activePlayer = getPlayer_White();
+
+        //board = player1.setUpPieces(board);
+        //board = player2.setUpPieces(board);
 
         player1.setUpPieces(board);
         player2.setUpPieces(board);
@@ -48,6 +49,9 @@ public class Game {
     {
         return activePlayer;
     }
+
+
+    //public void setSelectedPlayer(Player player) {selectedPlayer = player;}
 
 
     public void switchTheActivePlayer() {
@@ -99,7 +103,7 @@ public class Game {
     }
 
 
-    public boolean move(Player player, int from_i, int from_j, int to_i, int to_j) throws CloneNotSupportedException {
+    public boolean move(Player player, int from_i, int from_j, int to_i, int to_j) throws IOException, CloneNotSupportedException {
 
         Report.open_report(3,"Came.move(...)");
 
@@ -126,6 +130,16 @@ public class Game {
                 //Report.report(">>> *** King and Rook *** <<<");
                 comment = "*** KING-ROOK ***";
                 board = player.KingRookMove(board, from_i, from_j, to_i, to_j);
+
+                if (stillCheck())
+                {
+                    board = player.undo_KingRookMove(board, from_i, from_j, to_i, to_j);
+                    comment = " ! Not a Valid Move !";
+                    Report.report(3, " Not a valid move! It will cause a CHECK!");
+                    Report.close_report(3);
+
+                    return false;
+                }
 
                 noteKingRook(player);
                 Report.report(3, "*** KING-ROOK ***");
@@ -318,6 +332,7 @@ public class Game {
     {
         return getPlayer(i,j)==activePlayer;
     }
+
 
 
     public boolean isValidRemove(int from_i, int from_j, int to_i, int to_j) {
@@ -608,8 +623,6 @@ public class Game {
             board.movePiceOneTile(King, Board.Direction.LEFT);
             if (isCheck())
             {
-                spotToHighlight = King.getSpot();
-                comment = "The route of the King is threaten by ...";
                 board.movePiceOneTile(King, Board.Direction.RIGHT);
                 return false;
             }
@@ -618,8 +631,6 @@ public class Game {
                 board.movePiceOneTile(King, Board.Direction.LEFT);
                 if (isCheck())
                 {
-                    spotToHighlight = King.getSpot();
-                    comment = "The route of the King is threaten by ...";
                     board.movePiceOneTile(King, Board.Direction.RIGHT);
                     board.movePiceOneTile(King, Board.Direction.RIGHT);
                     return false;

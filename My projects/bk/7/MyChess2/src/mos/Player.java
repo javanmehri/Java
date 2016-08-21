@@ -149,7 +149,6 @@ public class Player {
         return chessBoard;
     }
 
-    /*
     public Board undo_KingRookMove(Board chessBoard, int from_i, int from_j, int to_i, int to_j) {
 
         //Report.report("  Player.KingRookMove "+"\n"+"  {");
@@ -197,7 +196,6 @@ public class Player {
         return chessBoard;
     }
 
-    */
 
         public void move(Board chessBoard, Spot from, Spot to)
     {

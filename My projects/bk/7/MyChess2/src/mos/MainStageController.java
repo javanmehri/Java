@@ -27,20 +27,7 @@ public class MainStageController {
     CheckBox checkBox_highlightTheRoute = new CheckBox();
 
     @FXML
-    CheckBox checkBox_highlightChecks = new CheckBox();
-
-    @FXML
-    CheckBox checkBox_soundEffects = new CheckBox();
-
-    @FXML
     CheckMenuItem checkMenuItem_highlightTheRoute = new CheckMenuItem();
-
-    @FXML
-    CheckMenuItem checkMenuItem_highlightChecks = new CheckMenuItem();
-
-    @FXML
-    CheckMenuItem checkMenuItem_soundEffects = new CheckMenuItem();
-
 
     // --------------- 1 ----------------------
     @FXML
@@ -262,7 +249,7 @@ public class MainStageController {
 
 
     @FXML
-    private void mouseClick(Event event) throws IOException, CloneNotSupportedException, InterruptedException {
+    private void mouseClick(Event event) throws IOException, CloneNotSupportedException {
 
         ScreenBoard.clickOnBoard(event);
         textArea.setText(GameManager.getTheGame().note);
@@ -298,102 +285,29 @@ public class MainStageController {
 
         textArea.setText(GameManager.getTheGame().note);
 
+        //addNote(GameManager.getTheGame().note);
+
+        //ScreenBoard.undoAllHighlights(getImageViewsBoard());
     }
 
 
     @FXML
-    private void set_checkBox_highlightTheRoute()
+    private void set_highlightTheRoute()
     {
-        if (checkBox_highlightTheRoute.isSelected())
-        {
-            ScreenBoard.turnOn_highlightTheRoute();
-            checkMenuItem_highlightTheRoute.setSelected(true);
-        }
-        else
-        {
-            ScreenBoard.turnOff_highlightTheRoute();
-            checkMenuItem_highlightTheRoute.setSelected(false);
-        }
-    }
+        ScreenBoard.switch_highlightTheRoute();
 
-    @FXML
-    private void set_checkMenuItem_highlightTheRoute()
-    {
-        if (checkMenuItem_highlightTheRoute.isSelected())
-        {
-            ScreenBoard.turnOn_highlightTheRoute();
+        if (ScreenBoard.get_HighlightPossibleMoves() && !checkBox_highlightTheRoute.isSelected())
             checkBox_highlightTheRoute.setSelected(true);
-        }
-        else
-        {
-            ScreenBoard.turnOff_highlightTheRoute();
+
+        if (!ScreenBoard.get_HighlightPossibleMoves() && checkBox_highlightTheRoute.isSelected())
             checkBox_highlightTheRoute.setSelected(false);
-        }
-    }
 
+        if (ScreenBoard.get_HighlightPossibleMoves() && !checkMenuItem_highlightTheRoute.isSelected())
+            checkMenuItem_highlightTheRoute.setSelected(true);
 
-    @FXML
-    private void set_checkBox_highlightChecks()
-    {
-        if (checkBox_highlightChecks.isSelected())
-        {
-            ScreenBoard.turnOn_highlightChecks();
-            checkMenuItem_highlightChecks.setSelected(true);
-        }
-        else
-        {
-            ScreenBoard.turnOff_highlightChecks();
-            checkMenuItem_highlightChecks.setSelected(false);
-        }
+        if (!ScreenBoard.get_HighlightPossibleMoves() && checkMenuItem_highlightTheRoute.isSelected())
+            checkMenuItem_highlightTheRoute.setSelected(false);
 
-        watchForCheck();
-    }
-
-    @FXML
-    private void set_checkMenuItem_highlightChecks()
-    {
-        if (checkMenuItem_highlightChecks.isSelected())
-        {
-            ScreenBoard.turnOn_highlightChecks();
-            checkBox_highlightChecks.setSelected(true);
-        }
-        else
-        {
-            ScreenBoard.turnOff_highlightChecks();
-            checkBox_highlightChecks.setSelected(false);
-        }
-
-        watchForCheck();
-    }
-
-    @FXML
-    private void set_checkBox_soundEffects()
-    {
-        if (checkBox_soundEffects.isSelected())
-        {
-            ScreenBoard.turnOn_soundEffects();
-            checkMenuItem_soundEffects.setSelected(true);
-        }
-        else
-        {
-            ScreenBoard.turnOff_soundEffects();
-            checkMenuItem_soundEffects.setSelected(false);
-        }
-    }
-
-    @FXML
-    private void set_checkMenuItem_soundEffects()
-    {
-        if (checkMenuItem_soundEffects.isSelected())
-        {
-            ScreenBoard.turnOn_soundEffects();
-            checkBox_soundEffects.setSelected(true);
-        }
-        else
-        {
-            ScreenBoard.turnOff_soundEffects();
-            checkBox_soundEffects.setSelected(false);
-        }
     }
 
     @FXML
@@ -408,23 +322,8 @@ public class MainStageController {
     // ===================================================================
 
 
-    private void watchForCheck()
-    {
-        if (GameManager.getTheGame()!=null && ScreenBoard.get_switch_highlightChecks())
-        {
-            try {
-                ScreenBoard.watchForCheck();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            ScreenBoard.highlightChecker();
-        }
-        else
-            ScreenBoard.undoAllHighlights(imageViewsBoard);
+    //private void addNote(String note) {textArea.appendText(note);}
 
-    }
 
     private void setUpTheBoard() {
         imageViewsBoard[0][0] = A1;
