@@ -19,7 +19,7 @@ package mos;
 //
 // =============================================================================
 
-public class Piece implements java.io.Serializable {
+public class Piece {
 
     public static enum Type { PAWN , KING, QUEEN, KNIGHT, ROOK, BISHOP }
     public static enum Color { WHITE, BLACK}

@@ -31,11 +31,8 @@ import java.io.PrintStream;
 
 public class MainStage extends Application {
 
-    public static Stage saveDialog;
-
     @Override
     public void start(Stage primaryStage) throws Exception{
-
         Parent root = FXMLLoader.load(getClass().getResource("MainStage.fxml"));
         primaryStage.setTitle("My Chess");
         primaryStage.setScene(new Scene(root, 1000, 740));

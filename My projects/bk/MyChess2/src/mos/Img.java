@@ -19,7 +19,8 @@ package mos;
 
 import javafx.scene.image.Image;
 
-public class Img implements java.io.Serializable {
+public class Img
+{
 
     public static final Image Tile_Black = new Image("file:./img/Black.png");
     public static final Image Tile_White = new Image("file:./img/White.png");

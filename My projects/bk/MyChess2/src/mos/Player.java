@@ -4,7 +4,7 @@ package mos;
  * Created by MOS on 2016-07-04.
  */
 
-public class Player implements java.io.Serializable {
+public class Player {
 
     private String name;
     private Piece.Color color;

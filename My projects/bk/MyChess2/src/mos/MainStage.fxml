@@ -943,7 +943,7 @@
                         <Font name="Arial Italic" size="11.0" />
                      </font>
                   </TextArea>
-                  <Button fx:id="button_startAnewGame" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="752.0" layoutY="36.0" mnemonicParsing="false" onAction="#set_button_startAnewGame" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
+                  <Button fx:id="start_button" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="752.0" layoutY="36.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
@@ -987,9 +987,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Game">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#set_button_startAnewGame" text="Start a New Game" />
-                        <MenuItem mnemonicParsing="false" onAction="#set_menuItem_openAGame" text="Load a Game" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Start a New Game" />
                         <CheckMenuItem fx:id="checkMenuItem_highlightTheRoute" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightTheRoute" text="Highlight The Routes" />
                         <CheckMenuItem fx:id="checkMenuItem_highlightChecks" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightChecks" text="Highlight Checks" />
                         <CheckMenuItem fx:id="checkMenuItem_soundEffects" mnemonicParsing="false" onAction="#set_checkMenuItem_soundEffects" text="Sound Effects" />

@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
 
 // updated: Aug 23
 
-public class Spot implements java.io.Serializable {
+public class Spot {
 
     private int x;
     private int y;

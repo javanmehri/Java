@@ -938,12 +938,12 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Group>
-                  <TextArea fx:id="textArea" editable="false" layoutX="718.0" layoutY="214.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="448.0" prefWidth="240.0" wrapText="true">
+                  <TextArea fx:id="textArea" editable="false" layoutX="718.0" layoutY="309.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="353.0" prefWidth="240.0" wrapText="true">
                      <font>
                         <Font name="Arial Italic" size="11.0" />
                      </font>
                   </TextArea>
-                  <Button fx:id="start_button" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="753.0" layoutY="52.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
+                  <Button fx:id="button_startAnewGame" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="752.0" layoutY="36.0" mnemonicParsing="false" onAction="#set_button_startAnewGame" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
@@ -954,14 +954,20 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label fx:id="comment" alignment="CENTER" contentDisplay="CENTER" layoutX="708.0" layoutY="103.0" prefHeight="40.0" prefWidth="246.0" textFill="#0e0479" wrapText="true">
+                  <Label fx:id="comment" layoutX="715.0" layoutY="260.0" prefHeight="40.0" prefWidth="246.0" textFill="#0e0479" wrapText="true">
                      <font>
-                        <Font name="Arial Bold Italic" size="13.0" />
+                        <Font name="Arial Italic" size="12.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="checkBox_highlightChecks" layoutX="719.0" layoutY="175.0" mnemonicParsing="false" onAction="#set_checkBox_highlightChecks" text="Highlight Checks" />
-                  <CheckBox fx:id="checkBox_highlightTheRoute" layoutX="719.0" layoutY="146.0" mnemonicParsing="false" onAction="#set_checkBox_highlightTheRoute" text="Highlight The Routes" />
-                  <CheckBox fx:id="checkBox_soundEffects" layoutX="861.0" layoutY="175.0" mnemonicParsing="false" onAction="#set_checkBox_soundEffects" text="Sound Effects" />
+                  <VBox layoutX="715.0" layoutY="103.0" prefHeight="138.0" prefWidth="148.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="checkBox_highlightTheRoute" layoutX="715.0" layoutY="103.0" mnemonicParsing="false" onAction="#set_checkBox_highlightTheRoute" text="Highlight The Routes" />
+                        <CheckBox fx:id="checkBox_highlightChecks" layoutX="718.0" layoutY="137.0" mnemonicParsing="false" onAction="#set_checkBox_highlightChecks" text="Highlight Checks" />
+                        <CheckBox fx:id="checkBox_soundEffects" layoutX="718.0" layoutY="171.0" mnemonicParsing="false" onAction="#set_checkBox_soundEffects" text="Sound Effects" />
+                        <CheckBox fx:id="checkBox_comments" layoutX="718.0" layoutY="208.0" mnemonicParsing="false" onAction="#set_checkBox_comments" text="Comments" />
+                        <CheckBox fx:id="checkBox_notes" layoutX="718.0" layoutY="242.0" mnemonicParsing="false" onAction="#set_checkBox_notes" text="Notes" />
+                     </children>
+                  </VBox>
                </children>
                <BorderPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -981,10 +987,14 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Game">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Start a New Game" />
+                    <MenuItem mnemonicParsing="false" onAction="#set_button_startAnewGame" text="Start a New Game" />
+                        <MenuItem mnemonicParsing="false" onAction="#set_menuItem_openAGame" text="Load a Game" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
                         <CheckMenuItem fx:id="checkMenuItem_highlightTheRoute" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightTheRoute" text="Highlight The Routes" />
                         <CheckMenuItem fx:id="checkMenuItem_highlightChecks" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightChecks" text="Highlight Checks" />
                         <CheckMenuItem fx:id="checkMenuItem_soundEffects" mnemonicParsing="false" onAction="#set_checkMenuItem_soundEffects" text="Sound Effects" />
+                        <CheckMenuItem fx:id="checkMenuItem_comments" mnemonicParsing="false" onAction="#set_checkMenuItem_comments" text="Comments" />
+                        <CheckMenuItem fx:id="checkMenuItem_notes" mnemonicParsing="false" onAction="#set_checkMenuItem_notes" text="Notes" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">

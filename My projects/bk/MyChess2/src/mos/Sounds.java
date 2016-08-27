@@ -11,7 +11,7 @@ import java.io.InputStream;
 /**
  * Created by MOS on 2016-07-06.
  */
-public class Sounds implements java.io.Serializable {
+public class Sounds {
 
     public enum SoundEffects  { START, SELECT, MOVE, REMOVE, CHECK, CHECKMATE }
     private static SoundEffects sound = null;

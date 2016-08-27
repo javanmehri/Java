@@ -19,8 +19,6 @@ package mos;
 // =============================================================================
 
 import javafx.event.Event;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 
 
@@ -34,12 +32,11 @@ public class ScreenBoard {
 
     public static void start(ImageView[][] imageViewsBoard)
     {
-            GameManager.startAGame();
-            updateTheScreen();
-            Options.cancel_all_highlights(imageViewsBoard);
-            cancel_selection();
-            Options.playSoundEffect();
-
+        GameManager.startAGame();
+        updateTheScreen();
+        Options.cancel_all_highlights(imageViewsBoard);
+        cancel_selection();
+        Options.playSoundEffect();
     }
 
     // ==============================================================================

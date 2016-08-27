@@ -20,13 +20,8 @@ package mos;
 import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -34,10 +29,10 @@ public class MainStageController {
 
     // ----------------------------------------
     @FXML
-    private Button button_startAnewGame = new Button();
+    private Button start_button = new Button();
 
     @FXML
-    private static TextArea textArea = new TextArea();
+    private TextArea textArea = new TextArea();
 
     @FXML
     Label comment = new Label();
@@ -316,42 +311,13 @@ public class MainStageController {
 
 
     @FXML
-    private void set_button_startAnewGame()
-    {
-        if (GameManager.getTheGame()==null)
-        {
-            startAGame();
-        }
-        else
-        {
-            try{
-
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SaveStage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                //stage.initModality(Modality.APPLICATION_MODAL);
-                stage.initStyle(StageStyle.UNDECORATED);
-                stage.setTitle("Save");
-                stage.setScene(new Scene(root1));
-                stage.setAlwaysOnTop(true);
-                stage.setResizable(false);
-                //stage.sizeToScene();
-
-                stage.show();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-    }
-
-    public static void  startAGame()
+    private void start()
     {
         ScreenBoard.start(imageViewsBoard);
+
         Options.notes(textArea);
     }
+
 
     @FXML
     private void set_checkBox_highlightTheRoute()
@@ -512,31 +478,6 @@ public class MainStageController {
             checkBox_notes.setSelected(false);
         }
         Options.notes(textArea);
-    }
-
-    @FXML
-    private void set_menuItem_openAGame()
-    {
-
-            try{
-
-
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OpenStage.fxml"));
-                Parent root2 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.initStyle(StageStyle.UNDECORATED);
-                stage.setTitle("Load a Game");
-                stage.setScene(new Scene(root2));
-                stage.setAlwaysOnTop(true);
-                stage.setResizable(false);
-                stage.show();
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-
     }
 
     @FXML

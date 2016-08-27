@@ -23,7 +23,7 @@ import javafx.scene.image.ImageView;
 import java.util.Date;
 
 
-public class Game implements java.io.Serializable {
+public class Game {
 
     Date date = new Date();
 

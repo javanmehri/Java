@@ -16,6 +16,13 @@ public class GameManager {
         game = new Game("Player 1", "Player 2");
     }
 
+/*
+
+    public static void updateTheGame(Game newGame)
+    {
+        game = newGame;
+    }
+*/
 
 
     public static Game getTheGame()

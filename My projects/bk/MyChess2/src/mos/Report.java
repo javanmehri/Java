@@ -3,7 +3,7 @@ package mos;
 /**
  * Created by MOS on 2016-07-15.
  */
-public class Report implements java.io.Serializable{
+public class Report {
 
     public static void report(Object object) {
         System.out.println(object);

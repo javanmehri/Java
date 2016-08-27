@@ -19,7 +19,7 @@ package mos;
 // =============================================================================
 
 
-public class Board implements java.io.Serializable{
+public class Board {
 
     private Spot[][] spots = new Spot[8][8];
 
