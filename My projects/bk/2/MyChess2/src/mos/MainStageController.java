@@ -37,7 +37,7 @@ public class MainStageController {
     private Button button_startAnewGame = new Button();
 
     @FXML
-    private TextArea textArea = new TextArea();
+    private static TextArea textArea = new TextArea();
 
     @FXML
     Label comment = new Label();
@@ -321,8 +321,6 @@ public class MainStageController {
         if (GameManager.getTheGame()==null)
         {
             startAGame();
-            Options.notes(textArea);
-
         }
         else
         {
@@ -352,6 +350,7 @@ public class MainStageController {
     public static void  startAGame()
     {
         ScreenBoard.start(imageViewsBoard);
+        Options.notes(textArea);
     }
 
     @FXML

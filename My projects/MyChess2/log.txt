@@ -1,0 +1,16 @@
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
