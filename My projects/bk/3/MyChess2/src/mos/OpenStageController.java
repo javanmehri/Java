@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,28 +47,7 @@ public class OpenStageController {
     {
         String selectedFile;
         selectedFile = (String)listView.getSelectionModel().getSelectedItem();
-        System.out.println("./saves/"+selectedFile+".mos");
-
-        try {
-
-            FileInputStream fis = new FileInputStream("./saves/"+selectedFile+".mos");
-            ObjectInputStream oin = new ObjectInputStream(fis);
-            Game game = (Game) oin.readObject();
-            GameManager.setGame(game);
-
-            ScreenBoard.updateTheScreen();
-            close();
-
-            //System.out.println();
-
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //System.out.println(" *** selected file:"+selectedFile+"***");
 
     }
 
@@ -79,7 +58,6 @@ public class OpenStageController {
         close();
     }
 
-
     private void close()
     {
         // get a handle to the stage
@@ -87,6 +65,7 @@ public class OpenStageController {
         // do what you have to do
         stage.close();
     }
+
 
 
     public void listFilesForFolder(final File folder) {

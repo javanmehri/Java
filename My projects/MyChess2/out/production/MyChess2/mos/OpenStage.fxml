@@ -14,7 +14,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <ListView layoutX="47.0" layoutY="72.0" prefHeight="114.0" prefWidth="242.0" />
+      <ListView fx:id="listView" layoutX="47.0" layoutY="72.0" prefHeight="114.0" prefWidth="242.0" />
       <Button fx:id="button_cancel" layoutX="47.0" layoutY="204.0" mnemonicParsing="false" onAction="#set_cancel" text="Cancel" />
       <Button fx:id="button_load" layoutX="241.0" layoutY="204.0" mnemonicParsing="false" onAction="#set_load" text="Load" />
    </children>
