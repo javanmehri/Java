@@ -17,6 +17,5 @@
       <ListView fx:id="listView" layoutX="47.0" layoutY="72.0" prefHeight="114.0" prefWidth="242.0" />
       <Button fx:id="button_cancel" layoutX="47.0" layoutY="204.0" mnemonicParsing="false" onAction="#set_cancel" text="Cancel" />
       <Button fx:id="button_load" layoutX="241.0" layoutY="204.0" mnemonicParsing="false" onAction="#set_load" text="Load" />
-      <Button fx:id="button_cancel1" layoutX="138.0" layoutY="204.0" mnemonicParsing="false" onAction="#set_delete" text="Delete" />
    </children>
 </Pane>

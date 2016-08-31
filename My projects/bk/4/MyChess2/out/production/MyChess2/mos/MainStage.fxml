@@ -982,15 +982,14 @@
               <menus>
                 <Menu mnemonicParsing="false" text="My Chess">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#set_button_startAnewGame" text="Start a New Game" />
-                        <MenuItem fx:id="menuItem_saveTheGame" mnemonicParsing="false" onAction="#set_menuItem_saveTheGame" text="Save The Game" />
-                        <MenuItem mnemonicParsing="false" onAction="#set_menuItem_openAGame" text="Load a Game" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
                     <MenuItem mnemonicParsing="false" onAction="#exit" text="Quit My Chess" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Game">
                   <items>
+                    <MenuItem mnemonicParsing="false" onAction="#set_button_startAnewGame" text="Start a New Game" />
+                        <MenuItem mnemonicParsing="false" onAction="#set_menuItem_openAGame" text="Load a Game" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
                         <CheckMenuItem fx:id="checkMenuItem_highlightTheRoute" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightTheRoute" text="Highlight The Routes" />
                         <CheckMenuItem fx:id="checkMenuItem_highlightChecks" mnemonicParsing="false" onAction="#set_checkMenuItem_highlightChecks" text="Highlight Checks" />
                         <CheckMenuItem fx:id="checkMenuItem_soundEffects" mnemonicParsing="false" onAction="#set_checkMenuItem_soundEffects" text="Sound Effects" />

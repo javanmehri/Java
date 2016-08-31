@@ -28,8 +28,7 @@ public class OpenStageController {
     ListView listView = new ListView();
 
 
-    File folder = new File("./saves/");
-
+    final File folder = new File("./saves/");
 
     List<String> list = new ArrayList<String>();
     ObservableList<String> observableList = FXCollections.observableList(list);
@@ -39,9 +38,6 @@ public class OpenStageController {
     @FXML
     private void initialize()
     {
-        list = new ArrayList<String>();
-        observableList = FXCollections.observableList(list);
-
         listFilesForFolder(folder);
         listView.setItems(observableList);
     }
@@ -49,12 +45,21 @@ public class OpenStageController {
     @FXML
     private void set_load()
     {
+        String selectedFile;
+        selectedFile = (String)listView.getSelectionModel().getSelectedItem();
+        //System.out.println("./saves/"+selectedFile+".mos");
+
         try {
 
-            FileInputStream fis = new FileInputStream("./saves/"+get_selectedFile());
+            FileInputStream fis = new FileInputStream("./saves/"+selectedFile+".mos");
             ObjectInputStream oin = new ObjectInputStream(fis);
             Game game = (Game) oin.readObject();
             GameManager.setGame(game);
+
+            ScreenBoard.updateTheScreen();
+            close();
+
+            //System.out.println();
 
         }
         catch (FileNotFoundException e) {
@@ -65,22 +70,11 @@ public class OpenStageController {
             e.printStackTrace();
         }
 
-        ScreenBoard.updateTheScreen();
-        close();
-
-
     }
 
     @FXML
     private void set_delete()
     {
-        File f;
-        // create new file
-        f = new File("./saves/"+get_selectedFile());
-        // tries to delete the file
-        boolean delete = f.delete();
-
-        initialize();
 
     }
 
@@ -103,8 +97,7 @@ public class OpenStageController {
 
     public void listFilesForFolder(final File folder) {
 
-        for (final File fileEntry : folder.listFiles())
-        {
+        for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory())
             {
                 listFilesForFolder(fileEntry);
@@ -174,12 +167,6 @@ public class OpenStageController {
 
     }
 
-    private String get_selectedFile()
-    {
-        String selectedFile;
-        selectedFile = (String)listView.getSelectionModel().getSelectedItem();
-        return selectedFile+".mos";
-    }
 
 
 

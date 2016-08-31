@@ -1,0 +1,216 @@
+ full name:0005.mos
+ name:<0005>
+ type:<mos>
+ full name:001.mos
+ name:<001>
+ type:<mos>
+ full name:01.mos
+ name:<01>
+ type:<mos>
+ full name:02.mos
+ name:<02>
+ type:<mos>
+ full name:03.mos
+ name:<03>
+ type:<mos>
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game09.mos
+ name:<game09>
+ type:<mos>
+ full name:zahra.mos
+ name:<zahra>
+ type:<mos>
+./saves/zahra.mos
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on E4 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK KNIGHT on D7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ full name:0005.mos
+ name:<0005>
+ type:<mos>
+ full name:001.mos
+ name:<001>
+ type:<mos>
+ full name:01.mos
+ name:<01>
+ type:<mos>
+ full name:02.mos
+ name:<02>
+ type:<mos>
+ full name:03.mos
+ name:<03>
+ type:<mos>
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game09.mos
+ name:<game09>
+ type:<mos>
+ full name:zahra.mos
+ name:<zahra>
+ type:<mos>
+./saves/01.mos
+./saves/001.mos
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:0005.mos
+ name:<0005>
+ type:<mos>
+ full name:001.mos
+ name:<001>
+ type:<mos>
+ full name:01.mos
+ name:<01>
+ type:<mos>
+ full name:02.mos
+ name:<02>
+ type:<mos>
+ full name:03.mos
+ name:<03>
+ type:<mos>
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game09.mos
+ name:<game09>
+ type:<mos>
+ full name:zahra.mos
+ name:<zahra>
+ type:<mos>
+./saves/0005.mos
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on F7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------

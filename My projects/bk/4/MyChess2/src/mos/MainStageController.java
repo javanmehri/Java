@@ -33,8 +33,8 @@ import java.io.IOException;
 public class MainStageController {
 
     // ----------------------------------------
-    //@FXML
-    //private Button button_startAnewGame = new Button();
+    @FXML
+    private Button button_startAnewGame = new Button();
 
     @FXML
     private TextArea textArea = new TextArea();
@@ -71,9 +71,6 @@ public class MainStageController {
 
     @FXML
     CheckMenuItem checkMenuItem_notes = new CheckMenuItem();
-
-    @FXML
-    MenuItem menuItem_saveTheGame = new MenuItem();
 
     // --------------- 1 ----------------------
     @FXML
@@ -291,9 +288,6 @@ public class MainStageController {
     private void initialize() {
         setUpTheBoard();
         Options.notes(textArea);
-
-        if (GameManager.getTheGame()==null)
-            menuItem_saveTheGame.setDisable(true);
     }
 
 
@@ -332,66 +326,28 @@ public class MainStageController {
         }
         else
         {
-            lunch_SaveStage();
-        }
+            try{
 
-        menuItem_saveTheGame.setDisable(false);
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SaveStage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                //stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("Save");
+                stage.setScene(new Scene(root1));
+                stage.setAlwaysOnTop(true);
+                stage.setResizable(false);
+                //stage.sizeToScene();
 
-    }
+                stage.show();
 
-    @FXML
-    private void set_menuItem_saveTheGame()
-    {
-        lunch_SaveStage();
-    }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-    private void lunch_SaveStage()
-    {
-        try{
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SaveStage.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            //stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("Save");
-            stage.setScene(new Scene(root1));
-            stage.setAlwaysOnTop(true);
-            stage.setResizable(false);
-            //stage.sizeToScene();
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
     }
-
-    @FXML
-    private void set_menuItem_openAGame()
-    {
-
-        try{
-
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OpenStage.fxml"));
-            Parent root2 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("Load a Game");
-            stage.setScene(new Scene(root2));
-            stage.setAlwaysOnTop(true);
-            stage.setResizable(false);
-            stage.show();
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
-
 
     public static void  startAGame()
     {
@@ -559,7 +515,30 @@ public class MainStageController {
         Options.notes(textArea);
     }
 
+    @FXML
+    private void set_menuItem_openAGame()
+    {
 
+            try{
+
+
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OpenStage.fxml"));
+                Parent root2 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("Load a Game");
+                stage.setScene(new Scene(root2));
+                stage.setAlwaysOnTop(true);
+                stage.setResizable(false);
+                stage.show();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+    }
 
     @FXML
     private void exit()
