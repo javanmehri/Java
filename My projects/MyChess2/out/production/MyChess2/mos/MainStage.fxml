@@ -23,927 +23,1319 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <BorderPane prefHeight="740.0" prefWidth="1000.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <BorderPane prefHeight="740.0" prefWidth="1050.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <center>
-            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1260.0" BorderPane.alignment="CENTER">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" layoutX="40.0" layoutY="40.0" mouseTransparent="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="620.0" />
-                  <Group>
+                  <AnchorPane layoutX="30.0" layoutY="70.0">
                      <children>
-                        <Line endX="560.0" layoutX="70.0" layoutY="420.0" />
-                        <Line endY="560.0" layoutX="140.0" layoutY="70.0" />
-                        <Line endX="560.0" layoutX="70.0" layoutY="140.0" />
-                        <Line endY="560.0" layoutX="490.0" layoutY="70.0" />
-                        <Line endY="560.0" layoutX="560.0" layoutY="70.0" />
-                        <Line endX="560.0" layoutX="70.0" layoutY="280.0" />
-                        <Line endY="560.0" layoutX="420.0" layoutY="70.0" />
-                        <Line endX="560.0" layoutX="70.0" layoutY="490.0" />
-                        <Line endY="560.0" layoutX="350.0" layoutY="70.0" />
-                        <Line endX="560.0" layoutX="70.0" layoutY="350.0" />
-                        <Line endY="560.0" layoutX="280.0" layoutY="70.0" />
-                        <Line endX="560.0" layoutX="70.0" layoutY="560.0" />
-                        <Line endY="560.0" layoutX="210.0" layoutY="70.0" />
-                        <Line endX="560.0" layoutX="70.0" layoutY="210.0" />
-                     </children>
-                  </Group>
-                  <Group>
-                     <children>
-                        <Label layoutX="48.0" layoutY="300.0" text="5">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="230.0" text="6">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="162.0" text="7">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="586.0" text="1">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="442.0" text="3">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="371.0" text="4">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="92.0" text="8">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="512.0" text="2">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Group layoutX="595.0">
+                        <Group AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Label layoutX="48.0" layoutY="300.0" text="5">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="230.0" text="6">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="162.0" text="7">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="586.0" text="1">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="442.0" text="3">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="371.0" text="4">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="92.0" text="8">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="48.0" layoutY="512.0" text="2">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
+                              <Group>
+                                 <children>
+                                    <ImageView fx:id="L09" fitHeight="70.0" fitWidth="70.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L10" fitHeight="70.0" fitWidth="70.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L11" fitHeight="70.0" fitWidth="70.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L12" fitHeight="70.0" fitWidth="70.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L13" fitHeight="70.0" fitWidth="70.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L14" fitHeight="70.0" fitWidth="70.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L15" fitHeight="70.0" fitWidth="70.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L16" fitHeight="70.0" fitWidth="70.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                              <Group layoutX="70.0">
+                                 <children>
+                                    <ImageView fx:id="L01" fitHeight="70.0" fitWidth="70.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L02" fitHeight="70.0" fitWidth="70.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L03" fitHeight="70.0" fitWidth="70.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L04" fitHeight="70.0" fitWidth="70.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L05" fitHeight="70.0" fitWidth="70.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L06" fitHeight="70.0" fitWidth="70.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L07" fitHeight="70.0" fitWidth="70.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="L08" fitHeight="70.0" fitWidth="70.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </Group>
                            </children>
                         </Group>
                      </children>
-                  </Group>
-                  <Group>
+                  </AnchorPane>
+                  <AnchorPane layoutX="205.0">
                      <children>
-                        <Label layoutX="587.0" layoutY="632.0" text="H">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="449.0" layoutY="632.0" text="F">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="519.0" layoutY="632.0" text="G">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="168.0" layoutY="632.0" text="B">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="308.0" layoutY="632.0" text="D">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="238.0" layoutY="632.0" text="C">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="378.0" layoutY="632.0" text="E">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="99.0" layoutY="632.0" text="A">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
+                        <Group AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Group layoutY="-590.0">
+                                 <children>
+                                    <Label layoutX="587.0" layoutY="632.0" text="H">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="449.0" layoutY="632.0" text="F">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="519.0" layoutY="632.0" text="G">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="168.0" layoutY="632.0" text="B">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="308.0" layoutY="632.0" text="D">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="238.0" layoutY="632.0" text="C">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="378.0" layoutY="632.0" text="E">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="99.0" layoutY="632.0" text="A">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group>
+                                 <children>
+                                    <ImageView fx:id="D3" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H4" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E1" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G3" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C5" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G4" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F4" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D8" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H6" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A6" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D6" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H2" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C7" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D5" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G8" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B8" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G2" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D1" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A7" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G7" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G1" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D4" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B5" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B2" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B4" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H1" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E7" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C8" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E6" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A4" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E4" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A2" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C1" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F3" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H5" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C3" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A5" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B7" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F8" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E3" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C2" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B6" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E8" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F2" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D7" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C4" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="C6" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E5" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A3" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="D2" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B3" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G5" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A8" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F7" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H8" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H7" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F1" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F6" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="E2" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="G6" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="H3" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="70.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../img/Black.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="140.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="F5" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Rectangle>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Group>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" layoutX="40.0" layoutY="40.0" mouseTransparent="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="620.0" />
+                              <Group>
+                                 <children>
+                                    <Label layoutX="587.0" layoutY="632.0" text="H">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="449.0" layoutY="632.0" text="F">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="519.0" layoutY="632.0" text="G">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="168.0" layoutY="632.0" text="B">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="308.0" layoutY="632.0" text="D">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="238.0" layoutY="632.0" text="C">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="378.0" layoutY="632.0" text="E">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="99.0" layoutY="632.0" text="A">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group>
+                                 <children>
+                                    <Line endX="560.0" layoutX="70.0" layoutY="420.0" />
+                                    <Line endY="560.0" layoutX="140.0" layoutY="70.0" />
+                                    <Line endX="560.0" layoutX="70.0" layoutY="140.0" />
+                                    <Line endY="560.0" layoutX="490.0" layoutY="70.0" />
+                                    <Line endY="560.0" layoutX="560.0" layoutY="70.0" />
+                                    <Line endX="560.0" layoutX="70.0" layoutY="280.0" />
+                                    <Line endY="560.0" layoutX="420.0" layoutY="70.0" />
+                                    <Line endX="560.0" layoutX="70.0" layoutY="490.0" />
+                                    <Line endY="560.0" layoutX="350.0" layoutY="70.0" />
+                                    <Line endX="560.0" layoutX="70.0" layoutY="350.0" />
+                                    <Line endY="560.0" layoutX="280.0" layoutY="70.0" />
+                                    <Line endX="560.0" layoutX="70.0" layoutY="560.0" />
+                                    <Line endY="560.0" layoutX="210.0" layoutY="70.0" />
+                                    <Line endX="560.0" layoutX="70.0" layoutY="210.0" />
+                                 </children>
+                              </Group>
+                              <Group>
+                                 <children>
+                                    <Label layoutX="48.0" layoutY="300.0" text="5">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="230.0" text="6">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="162.0" text="7">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="586.0" text="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="442.0" text="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="371.0" text="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="92.0" text="8">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="512.0" text="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Group layoutX="595.0">
+                                       <children>
+                                          <Label layoutX="48.0" layoutY="300.0" text="5">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="230.0" text="6">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="162.0" text="7">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="586.0" text="1">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="442.0" text="3">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="371.0" text="4">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="92.0" text="8">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="48.0" layoutY="512.0" text="2">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Group>
+                                 </children>
+                              </Group>
+                           </children>
+                        </Group>
                      </children>
-                  </Group>
-                  <Group layoutY="-590.0">
+                  </AnchorPane>
+                  <AnchorPane layoutX="870.0" layoutY="70.0">
                      <children>
-                        <Label layoutX="587.0" layoutY="632.0" text="H">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="449.0" layoutY="632.0" text="F">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="519.0" layoutY="632.0" text="G">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="168.0" layoutY="632.0" text="B">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="308.0" layoutY="632.0" text="D">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="238.0" layoutY="632.0" text="C">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="378.0" layoutY="632.0" text="E">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="99.0" layoutY="632.0" text="A">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
+                        <Group AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Group>
+                                 <children>
+                                    <ImageView fx:id="R01" fitHeight="70.0" fitWidth="70.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R02" fitHeight="70.0" fitWidth="70.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R03" fitHeight="70.0" fitWidth="70.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R04" fitHeight="70.0" fitWidth="70.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R05" fitHeight="70.0" fitWidth="70.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R06" fitHeight="70.0" fitWidth="70.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R07" fitHeight="70.0" fitWidth="70.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R08" fitHeight="70.0" fitWidth="70.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                              <Group layoutX="70.0">
+                                 <children>
+                                    <ImageView fx:id="R09" fitHeight="70.0" fitWidth="70.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R10" fitHeight="70.0" fitWidth="70.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R11" fitHeight="70.0" fitWidth="70.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R12" fitHeight="70.0" fitWidth="70.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R13" fitHeight="70.0" fitWidth="70.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R14" fitHeight="70.0" fitWidth="70.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R15" fitHeight="70.0" fitWidth="70.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <ImageView fx:id="R16" fitHeight="70.0" fitWidth="70.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="@../../img/White.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                           </children>
+                        </Group>
                      </children>
-                  </Group>
-                  <Group>
-                     <children>
-                        <ImageView fx:id="D3" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H4" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E1" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G3" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C5" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G4" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F4" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D8" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H6" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A6" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D6" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H2" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C7" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D5" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G8" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B8" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G2" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D1" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A7" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G7" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G1" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D4" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B5" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B2" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B4" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H1" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E7" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C8" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E6" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A4" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E4" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A2" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C1" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F3" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H5" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C3" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A5" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B7" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F8" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E3" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C2" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B6" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E8" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F2" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D7" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C4" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="350.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="C6" fitHeight="70.0" fitWidth="70.0" layoutX="210.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E5" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A3" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="D2" fitHeight="70.0" fitWidth="70.0" layoutX="280.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B3" fitHeight="70.0" fitWidth="70.0" layoutX="140.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G5" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A8" fitHeight="70.0" fitWidth="70.0" layoutX="70.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F7" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H8" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="70.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H7" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="140.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F1" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F6" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="E2" fitHeight="70.0" fitWidth="70.0" layoutX="350.0" layoutY="490.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="G6" fitHeight="70.0" fitWidth="70.0" layoutX="490.0" layoutY="210.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="H3" fitHeight="70.0" fitWidth="70.0" layoutX="560.0" layoutY="420.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="A1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="70.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <image>
-                              <Image url="@../../img/Black.png" />
-                           </image>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="B1" fitHeight="70.0" fitWidth="70.0" focusTraversable="true" layoutX="140.0" layoutY="560.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fx:id="F5" fitHeight="70.0" fitWidth="70.0" layoutX="420.0" layoutY="280.0" onDragEntered="#mouseOn" onDragExited="#mouseOut" onMouseClicked="#mouseClick" onMouseEntered="#mouseOn" onMouseExited="#mouseOut" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/White.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="560.0" layoutX="70.0" layoutY="70.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="560.0">
-                           <effect>
-                              <Glow />
-                           </effect>
-                        </Rectangle>
-                     </children>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Group>
-                  <TextArea fx:id="textArea" editable="false" layoutX="718.0" layoutY="309.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="353.0" prefWidth="240.0" wrapText="true">
+                  </AnchorPane>
+                  <TextArea fx:id="textArea" editable="false" layoutX="1044.0" layoutY="344.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="319.0" prefWidth="179.0" wrapText="true">
                      <font>
                         <Font name="Arial Italic" size="11.0" />
                      </font>
                   </TextArea>
-                  <Button fx:id="button_startAnewGame" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="752.0" layoutY="36.0" mnemonicParsing="false" onAction="#set_button_startAnewGame" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
+                  <Button fx:id="button_startAnewGame" alignment="CENTER" blendMode="DIFFERENCE" cacheHint="SPEED" contentDisplay="TEXT_ONLY" depthTest="ENABLE" graphicTextGap="0.0" layoutX="1021.0" layoutY="27.0" mnemonicParsing="false" onAction="#set_button_startAnewGame" prefHeight="35.0" prefWidth="147.0" snapToPixel="false" text="Start a new game" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
@@ -954,12 +1346,12 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label fx:id="comment" layoutX="715.0" layoutY="260.0" prefHeight="40.0" prefWidth="246.0" textFill="#0e0479" wrapText="true">
+                  <Label fx:id="comment" layoutX="1024.0" layoutY="222.0" prefHeight="104.0" prefWidth="178.0" textFill="#0e0479" wrapText="true">
                      <font>
                         <Font name="Arial Italic" size="12.0" />
                      </font>
                   </Label>
-                  <VBox layoutX="715.0" layoutY="103.0" prefHeight="138.0" prefWidth="148.0" spacing="10.0">
+                  <VBox layoutX="1027.0" layoutY="78.0" prefHeight="138.0" prefWidth="148.0" spacing="10.0">
                      <children>
                         <CheckBox fx:id="checkBox_highlightTheRoute" layoutX="715.0" layoutY="103.0" mnemonicParsing="false" onAction="#set_checkBox_highlightTheRoute" text="Highlight The Routes" />
                         <CheckBox fx:id="checkBox_highlightChecks" layoutX="718.0" layoutY="137.0" mnemonicParsing="false" onAction="#set_checkBox_highlightChecks" text="Highlight Checks" />
