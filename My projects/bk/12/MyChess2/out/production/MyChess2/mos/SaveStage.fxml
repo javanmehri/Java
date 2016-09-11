@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mos.SaveStageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="142.0" layoutX="11.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="278.0" />
+      <Label layoutX="35.0" layoutY="27.0" prefHeight="26.0" prefWidth="229.0" text="Do you want to save your game?" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font></Label>
+      <HBox layoutX="35.0" layoutY="105.0" prefHeight="26.0" prefWidth="229.0" spacing="120.0">
+         <children>
+            <Button fx:id="button_cancel" layoutX="35.0" layoutY="107.0" mnemonicParsing="false" onAction="#setButton_cancel" text="Cancel" />
+            <Button fx:id="button_save" layoutX="135.0" layoutY="107.0" mnemonicParsing="false" onAction="#setButton_save" text="Save" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <TextField fx:id="saveName" layoutX="35.0" layoutY="68.0" prefHeight="26.0" prefWidth="229.0" promptText="Enter a name for your game" />
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</Pane>

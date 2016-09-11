@@ -1,0 +1,397 @@
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on D2 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on E7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on D4 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on F7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on E5 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+ full name:h1.mos
+ name:<h1>
+ type:<mos>
+ full name:o.mos
+ name:<o>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+ full name:h1.mos
+ name:<h1>
+ type:<mos>
+ full name:o.mos
+ name:<o>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on G7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on G7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on G7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+ full name:h1.mos
+ name:<h1>
+ type:<mos>
+ full name:h2.mos
+ name:<h2>
+ type:<mos>
+ full name:o.mos
+ name:<o>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+

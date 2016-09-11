@@ -1,0 +1,124 @@
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on D2 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on E7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on D4 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------

@@ -1,0 +1,302 @@
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on D2 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ full name:kk.mos
+ name:<kk>
+ type:<mos>
+ full name:oo.mos
+ name:<oo>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on E6 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on H7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on A7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on A2 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ full name:kk.mos
+ name:<kk>
+ type:<mos>
+ full name:kkk.mos
+ name:<kkk>
+ type:<mos>
+ full name:kkkkk.mos
+ name:<kkkkk>
+ type:<mos>
+ full name:oo.mos
+ name:<oo>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > BLACK PAWN on B7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > > It's a avalid Move.
+                  Player.move(...):
+                  {
+                  }
+
+                   > The Move is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.select(Event):
+      {
+             > WHITE PAWN on H7 is selected.
+      }
+
+}
+--------------------------------------------------------------------------------
+ScreenBoard.clickOnBoard(Event):
+{
+      ScreenBoard.move(Event):
+      {
+            Came.move(...):
+            {
+                         > It's a valid Remove.
+                  Player.remove(...):
+                  {
+                  }
+
+                   > The Remove is safe and done
+            }
+
+      ScreenBoard.cancel_selection():
+      {
+             > 
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+      }
+
+}
+--------------------------------------------------------------------------------

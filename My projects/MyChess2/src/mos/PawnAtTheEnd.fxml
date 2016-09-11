@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="196.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mos.PawnAtTheEndController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="229.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" width="189.0" />
+      <ListView fx:id="listView" layoutX="23.0" layoutY="50.0" prefHeight="133.0" prefWidth="149.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="23.0" text="Select one " textAlignment="CENTER" />
+      <Button fx:id="button_replace" layoutX="106.0" layoutY="195.0" mnemonicParsing="false" onAction="#set_replace" text="Replace" />
+      <Button fx:id="button_cancel" layoutX="23.0" layoutY="195.0" mnemonicParsing="false" onAction="#set_cancel" prefHeight="26.0" prefWidth="66.0" text="Close" />
+   </children>
+</Pane>

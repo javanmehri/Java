@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="172.0" prefWidth="141.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="149.0" layoutX="13.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="113.0" />
+      <ListView layoutX="31.0" layoutY="65.0" prefHeight="79.0" prefWidth="80.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="34.0" text="Select one " textAlignment="CENTER" />
+   </children>
+</Pane>

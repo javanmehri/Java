@@ -1,0 +1,100 @@
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
+ full name:game01.mos
+ name:<game01>
+ type:<mos>
+ full name:game02.mos
+ name:<game02>
+ type:<mos>
+ full name:game03.mos
+ name:<game03>
+ type:<mos>
+ full name:game04.mos
+ name:<game04>
+ type:<mos>
+      ScreenBoard.cancel_selection():
+      {
+            ScreenBoard.watchForCheck():
+            {
+            }
+
+      }
+
